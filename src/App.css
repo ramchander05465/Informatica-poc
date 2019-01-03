@@ -1,0 +1,228 @@
+.flex--cont--def{
+  display: flex
+}
+
+.app--container{
+  flex-direction:column;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  max-width: 100%;
+}
+
+.app-header--cont{
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 60px;
+  border-bottom: solid 1px #C7C7C7;
+}
+
+.app--footer--container{
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 60px;
+  border-bottom: solid 1px #C7C7C7;
+}
+
+.app-middle--container{
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: solid 1px #C7C7C7;
+}
+
+.app-sidebar--container{
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex:1 1 0;
+  border-right: 1px solid #C7C7C7;
+  padding-left: 5px;
+}
+
+.app-grid--container{
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex:10 10 0;
+}
+
+.user-actions--container{
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.user-actions--child--a{
+  flex: 10 10 0;
+}
+
+.user-actions--child--b{
+  flex: 0.3 1 0;
+}
+
+.user-actions--child--c{
+  flex: 0.3 1 0;
+}
+
+.user-actions--child--d{
+  flex: 1 1 0;
+}
+
+.grid-headers--container{
+  padding: 5px 10px;
+  border-bottom: 2px solid #C7C7C7;
+  border-top: 1px solid #000000;
+}
+
+.grid-headers--container--child--def{
+  flex: 1 1 0;
+}
+
+.grid--rows--container{
+  min-height:365px;
+  max-height:365px;
+  overflow-y: scroll;
+}
+.grid-add-row-container{
+  
+}
+.grid--row--container{
+  padding: 10px 1px;
+  border-bottom: 1px solid #C7C7C7;
+}
+
+.grid--row--child--container{
+  flex: 1 1 0;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.react-datepicker-wrapper, .react-datepicker__input-container, .grid--calender--field{
+  width: 100%;
+  height: 100%;
+}
+
+.react-datepicker-wrapper, .react-datepicker__input-container{
+  border-style: none;
+}
+
+.grid--calender--field{
+  border: 1px solid #C7C7C7;
+  border-radius: 5px;
+}
+
+/*suhas*/
+.flex--cont--def{
+  display: flex
+}
+
+.app--container{
+  flex-direction:column;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  max-width: 100%;
+}
+
+.app-header--cont{
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 60px;
+  border-bottom: solid 1px #C7C7C7;
+}
+
+.app--footer--container{
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 60px;
+  border-bottom: solid 1px #C7C7C7;
+}
+
+.app-middle--container{
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: solid 1px #C7C7C7;
+}
+
+.app-sidebar--container{
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex:1 1 0;
+  border-right: 1px solid #C7C7C7;
+  padding-left: 5px;
+}
+
+.app-grid--container{
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex:10 10 0;
+}
+
+.user-actions--container{
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.user-actions--child--a{
+  flex: 10 10 0;
+}
+
+.user-actions--child--b{
+  flex: 0.3 1 0;
+}
+
+.user-actions--child--c{
+  flex: 0.3 1 0;
+}
+
+.user-actions--child--d{
+  flex: 1 1 0;
+}
+
+.grid-headers--container{
+  padding: 5px 10px;
+  border-bottom: 2px solid #C7C7C7;
+  border-top: 1px solid #000000;
+}
+
+.grid-headers--container--child--def{
+  flex: 1 1 0;
+}
+
+.grid--rows--container{
+  min-height:430px;
+  max-height:430px;
+  overflow-y: scroll;
+}
+
+.grid--row--container{
+  padding: 10px 1px;
+  border-bottom: 1px solid #C7C7C7;
+}
+
+.grid--row--child--container{
+  flex: 1 1 0;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.react-datepicker-wrapper, .react-datepicker__input-container, .grid--calender--field{
+  width: 100%;
+  height: 100%;
+}
+
+.react-datepicker-wrapper, .react-datepicker__input-container{
+  border-style: none;
+}
+
+.grid--calender--field{
+  border: 1px solid #C7C7C7;
+  border-radius: 5px;
+}
