@@ -10,6 +10,10 @@ const INIT_STATE = {
         { order: 6, Name: '', type: '' },
 
     ],
+    pagingSize: ["10", "20", "50"],
+    canUserSort: true,
+    canPaggingApply : true,
+    canUserSearchData : true,
     gridInfo: [{
             "id": 1,
             "name_val": 3,

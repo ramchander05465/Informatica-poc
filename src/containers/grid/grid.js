@@ -33,7 +33,10 @@ class GridContent extends Component {
             totalRecord:0,
             sortingtype : "",
             currentsortingcolumn : "",
-            displaysortarrow : ""
+            displaysortarrow : "",
+            canusersort : this.props.UserSort,
+            enablepaging : this.props.UserPagging,
+            enablesearch : this.props.UserSearch
         }
     }
 
@@ -103,37 +106,41 @@ class GridContent extends Component {
 
 
     sortColumn = (columnName,evt,event) =>{
-        debugger;
-        if(this.state.currentsortingcolumn == columnName){
-            this.setState({
-                currentsortingcolumn : columnName
-            })
-        }
-        else
-        {
-            this.setState({
-                sortingtype : "",
-                currentsortingcolumn : columnName
-            })
-        }
-        if(this.state.sortingtype == ""){
-            this.SortData(columnName,"ASC",event);
-            this.setState({
-                sortingtype : "DESC"
-            })
-          }
-        else if(this.state.sortingtype == "ASC")
-        {
-            this.SortData(columnName,this.state.sortingtype,event);
-            this.setState({
-                sortingtype : "DESC"
-            })
+        if(this.state.canusersort){
+            if(this.state.currentsortingcolumn == columnName){
+                this.setState({
+                    currentsortingcolumn : columnName
+                })
+            }
+            else
+            {
+                this.setState({
+                    sortingtype : "",
+                    currentsortingcolumn : columnName
+                })
+            }
+            if(this.state.sortingtype == ""){
+                this.SortData(columnName,"ASC",event);
+                this.setState({
+                    sortingtype : "DESC"
+                })
+            }
+            else if(this.state.sortingtype == "ASC")
+            {
+                this.SortData(columnName,this.state.sortingtype,event);
+                this.setState({
+                    sortingtype : "DESC"
+                })
+            }
+            else{
+                this.SortData(columnName,this.state.sortingtype,event);
+                this.setState({
+                    sortingtype : "ASC"
+                })
+            }
         }
         else{
-            this.SortData(columnName,this.state.sortingtype,event);
-            this.setState({
-                sortingtype : "ASC"
-            })
+            alert("No Permission for Sorting");
         }
     }
 
@@ -215,7 +222,7 @@ class GridContent extends Component {
                         <FiFilter size={22} />
                     </div>
                     <div className="user-actions--child user-actions--child--d">
-                        <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Search here' />
+                        { this.state.enablesearch === true ?  <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Search here' /> : ''}
                     </div>
                 </div>
                 <div className="flex--cont--def grid-headers--container">
@@ -236,6 +243,8 @@ class GridContent extends Component {
                 </div>
                 
                 <div className="grid--rows--container">
+                {
+                    this.state.enablepaging === true ?
                     <Pagination
                         selectedPageClass={'wekcine'}
                         onPageChange={this.pageChangeHandler}
@@ -244,8 +253,8 @@ class GridContent extends Component {
                         activePage={this.state.current}
                         recordPerPage={this.state.recPerPage}                        
                         defaultConfiguration={{pageDropDown:['10', '20', '30']}}
-                        />
-                
+                        /> : ''
+                }
                 </div>                
             </React.Fragment>
         )
@@ -255,7 +264,11 @@ class GridContent extends Component {
 const mapStateToProps = state => {
     return {
         gridInfo: state.grid.gridInfo,
-        colInfo : state.grid.gridColumncolumnMap
+        colInfo : state.grid.gridColumncolumnMap,
+        pagingInfo : state.grid.pagingSize,
+        UserSort : state.grid.canUserSort,
+        UserPagging : state.grid.canPaggingApply,
+        UserSearch : state.grid.canUserSearchData
     }
 }
 
