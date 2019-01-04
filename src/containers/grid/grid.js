@@ -170,6 +170,7 @@ class GridContent extends Component {
                 discount={filterdData[count].discount}
                 in_stock={filterdData[count].in_stock}
                 newRecord={false}
+                editMode={false}
             />)
         }
         
