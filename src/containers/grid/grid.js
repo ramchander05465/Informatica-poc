@@ -61,7 +61,7 @@ class GridContent extends Component {
     renderGridColumn = () =>{
         let columnList = [];
         columnList = this.props.colInfo;
-        alert(this.state.currentsortingcolumn);
+        
         const column_list = columnList.map((item,index) =>
             
             <div onClick={(evt) => this.sortColumn(item.Name,this,evt)} className="grid-headers--container--child--def">{item.Name}
