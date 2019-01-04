@@ -26,3 +26,11 @@ code {
   background-color:"transparent"; 
   border:"none";
 }
+
+.displayBlock{
+  display:inline-block;
+}
+
+.displayNone{
+  display: none;
+}

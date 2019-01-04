@@ -7,6 +7,8 @@ import { Input} from 'reactstrap'
 
 const GridRecord = (props) => {
   
+  var isEdit;
+
   var data = {
     id:props.id,
     name_val: props.name_val,
@@ -40,7 +42,19 @@ const GridRecord = (props) => {
 
   const editData=()=>{
     document.getElementById("row"+props.id).className = 'flex--cont--def grid--row--container'    
+    document.getElementById("edit"+props.id).className ="displayNone";
+    document.getElementById("save"+props.id).className = "displayBlock";
+    document.getElementById("cancel"+props.id).className = "displayBlock";
     //props.editInfo(data);
+  }
+
+  const saveEditedData=()=>{
+    props.editInfo(data);
+    document.getElementById("edit"+props.id).className ="displayBlock";
+    document.getElementById("save"+props.id).className = "displayNone";
+    document.getElementById("cancel"+props.id).className = "displayNone";
+    document.getElementById("row"+props.id).className = 'flex--cont--def grid--row--container noneEditableGrid'    
+    
   }
   const deleteData=()=>{    
     props.deleteInfo(data);
@@ -89,7 +103,12 @@ const GridRecord = (props) => {
             {props.newRecord ? 
               <button onClick={()=> saveData()}>Save</button> 
               : 
-              <span><button onClick={()=> editData()}>Edit</button><button onClick={()=> deleteData()}>Delete</button></span>}
+              (<span>
+                <button id={"edit"+props.id} onClick={()=> editData()}>Edit</button>
+                <button className="displayNone" id={"save"+props.id} onClick={()=> saveEditedData()}>Save</button>
+                <button  className="displayNone" id={"cancel"+props.id} onClick={()=> editData()}>Cancel</button>
+                <button onClick={()=> deleteData()}>Delete</button>
+                </span>)}
           </div>
         </div>
 
