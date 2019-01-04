@@ -10,7 +10,7 @@ const INIT_STATE = {
         { order: 6, Name: '', type: '' },
 
     ],
-    pagingSize: ["10", "20", "50"],
+    pagingSize: [{ num: 10 }, { num: 20 }, { num: 50 }],
     canUserSort: true,
     canPaggingApply: true,
     canUserSearchData: true,

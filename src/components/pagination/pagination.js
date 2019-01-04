@@ -2,13 +2,13 @@ import React from 'react';
 
 const Pagination = (props) => {
     
-    const {pageDropDown} = props.defaultConfiguration
+    debugger;
     const {activePage, recordPerPage, total} = props
 
     const renderCurrentPageRecord = () => {
         if(activePage === 1 && total > recordPerPage) return ("1 - "+ recordPerPage + " of " + total); 
-        if(total > recordPerPage * activePage) return (activePage-1) * recordPerPage +"-"+ (activePage * recordPerPage) +" - of " + total;
-        return (activePage-1) * recordPerPage +"-"+ total +" - of " + total;
+        if(total > recordPerPage * activePage) return (activePage-1) * recordPerPage + 1 +"-"+ (activePage * recordPerPage) +" - of " + total;
+        return (activePage-1) * recordPerPage + 1 +"-"+ total +" - of " + total;
     }
 
     const renderCurrentPage = () => {
@@ -25,7 +25,8 @@ const Pagination = (props) => {
     }
 
     const renderRecordPerPage = () => {
-        return pageDropDown.map((data, index) => <option value={data} key={index}>{data}</option>)
+        
+        return props.defaultConfiguration.map((data, index) => <option value={data.num} key={index}>{data.num}</option>)
     }
 
     return(

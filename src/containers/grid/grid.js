@@ -28,7 +28,7 @@ class GridContent extends Component {
             in_stock: "yes",
             showAddUserUI: false,
             current: 1,
-            recPerPage:11,
+            recPerPage:this.props.pagingInfo[0].num,
             filterd:'',
             totalRecord:0,
             sortingtype : "",
@@ -36,7 +36,8 @@ class GridContent extends Component {
             displaysortarrow : "",
             canusersort : this.props.UserSort,
             enablepaging : this.props.UserPagging,
-            enablesearch : this.props.UserSearch
+            enablesearch : this.props.UserSearch,
+            pagerInfo : this.props.pagingInfo
         }
     }
 
@@ -252,10 +253,12 @@ class GridContent extends Component {
                         total={this.totalRecord}
                         activePage={this.state.current}
                         recordPerPage={this.state.recPerPage}                        
-                        defaultConfiguration={{pageDropDown:['10', '20', '30']}}
+                        defaultConfiguration={this.state.pagerInfo}
                         /> : ''
                 }
-                </div>                
+                </div>
+                
+                                
             </React.Fragment>
         )
     }
