@@ -61,25 +61,16 @@ class GridContent extends Component {
     renderGridColumn = () =>{
         let columnList = [];
         columnList = this.props.colInfo;
-        return columnList.map((item) =>
+        const column_list = columnList.map((item,index) =>
+            
             <div onClick={(evt) => this.sortColumn(item.Name,this,evt)} className="grid-headers--container--child--def">{item.Name}
-                <div id="childdiv"></div>
+                <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? 'fa fa-fw fa-sort-down' : ''}></div>
             </div>   
         );    
+        return column_list;
     }
 
     SortData = (columnName,sortingtype,evt) =>{
-        debugger;
-        if(sortingtype == "ASC"){
-           var element = document.getElementById("childdiv")
-           element.className = 'fa fa-fw fa-sort-down';
-        }
-        else{
-            var element = document.getElementById("childdiv")
-           element.className = 'fa fa-fw fa-sort-up';
-        }
-        
-
         if(sortingtype == "ASC"){
             if(columnName == "Name"){
             this.props.gridInfo.sort(function(a, b){
