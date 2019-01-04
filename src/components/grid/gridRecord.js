@@ -38,8 +38,9 @@ const GridRecord = (props) => {
     props.addInfo(data);
   }
 
-  const editData=()=>{    
-    props.editInfo(data);
+  const editData=()=>{
+    document.getElementById("row"+props.id).className = 'flex--cont--def grid--row--container'    
+    //props.editInfo(data);
   }
   const deleteData=()=>{    
     props.deleteInfo(data);
@@ -53,7 +54,7 @@ const GridRecord = (props) => {
 
   }
   return (
-      <div className={props.isEditable ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>      
+      <div id={"row"+props.id} className={props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>      
         <div className="grid--row--child--container">
           {/*<Input type="select" onChange={(evt) => getData(evt)} name="name_a">
             <option>1</option>

@@ -17,11 +17,12 @@ code {
   pointer-events : none;
   color: #c1c1c1;
 }
-.noneEditableGrid > .form-control{
+.noneEditableGrid .form-control{
   background-color: transparent; 
   border:none;
+  pointer-events: none;
 }
-.editableGrid > .form-control{
+.editableGrid .form-control{
   background-color:"transparent"; 
   border:"none";
 }
