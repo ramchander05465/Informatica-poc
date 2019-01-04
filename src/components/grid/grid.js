@@ -29,10 +29,7 @@ class GridContent extends Component {
             current: 1,
             recPerPage:10,
             filterd:'',
-            totalRecord:0,
-            sortingtype : "",
-            currentsortingcolumn : "",
-            displaysortarrow : ""
+            totalRecord:0
         }
     }
 
@@ -53,113 +50,6 @@ class GridContent extends Component {
     filterHandler = (evt) => {
         this.setState({filterd:evt.target.value, current:1})
     }
-
-
-    renderGridColumn = () =>{
-        let columnList = [];
-        columnList = this.props.colInfo;
-        return columnList.map((item) =>
-            <div onClick={(evt) => this.sortColumn(item.Name,this,evt)} className="grid-headers--container--child--def">{item.Name}
-                    
-            </div>   
-        );    
-    }
-
-    replaceAll = function(search, replacement,evt) {
-        debugger;
-        var target = evt.target.outerHTML;
-        return target.replace(new RegExp(search, 'g'), replacement);
-    };
-    
-
-   strip_html_tags = function(str)
-    {
-        var search = '<i class="fa fa-fw fa-sort-down"></i>';
-        if ((str===null) || (str===''))
-            return false;
-        else
-        str = str.toString();
-        return str.replace(search, '');
-    }
-
-
-    SortData = (columnName,sortingtype,evt) =>{
-    
-    //var x = this.strip_html_tags(evt.target.outerHTML);
-    //evt.target.outerHTML = x;
-    //    var replacement = '';
-    //    debugger;
-    //    var x = this.replaceAll(search,replacement,evt);
-    //    evt.target.outerHTML = x;
-    //    debugger;
-        debugger;
-        if(evt.target.innerHTML.indexOf('fa-sort-down') >= -1)
-            evt.target.insertAdjacentHTML('beforeend','<i class="fa fa-fw fa-sort-down"></i>');
-        else
-            evt.target.insertAdjacentHTML('beforeend','<i class="fa fa-fw fa-sort-down"></i>');
-        console.log(evt.target.innerHTML);
-        
-        if(sortingtype == "ASC"){
-            if(columnName == "Name"){
-            this.props.gridInfo.sort(function(a, b){
-                return a.name_val-b.name_val
-                })
-            }
-            if(columnName == "Order Date"){
-            this.props.gridInfo.sort(function(a, b){
-                return a.order_date-b.order_date
-                })
-            }
-            if(columnName == "Unit"){
-            this.props.gridInfo.sort(function(a, b){
-                return a.unit-b.unit
-                })
-            }
-            if(columnName == "In Stock"){
-            this.props.gridInfo.sort(function(a, b){
-                return a.in_stock-b.in_stock
-                })
-            }
-        }
-        else{
-            this.props.gridInfo.reverse();
-        }
-        console.log("Sorted Data",this.props.gridInfo);
-        this.renderGridRecord();
-    }
-
-    sortColumn = (columnName,evt,event) =>{
-        debugger;
-        if(this.currentsortingcolumn == columnName){
-            this.currentsortingcolumn = columnName;
-        }
-        else
-        {
-            this.setState({
-                sortingtype : ""
-            })
-        }
-        if(this.state.sortingtype == ""){
-            this.SortData(columnName,"ASC",event);
-            this.setState({
-                sortingtype : "DESC"
-            })
-          }
-        else if(this.state.sortingtype == "ASC")
-        {
-            this.SortData(columnName,this.state.sortingtype,event);
-            this.setState({
-                sortingtype : "DESC"
-            })
-        }
-        else{
-            this.SortData(columnName,this.state.sortingtype,event);
-            this.setState({
-                sortingtype : "ASC"
-            })
-        }
-    }
-    
 
     renderGridRecord = () => {
         let userList = [];
@@ -236,7 +126,24 @@ class GridContent extends Component {
                     </div>
                 </div>
                 <div className="flex--cont--def grid-headers--container">
-                   {this.renderGridColumn()}
+                    <div className="grid-headers--container--child--def">
+                        Name <IoMdArrowDropdown />
+                    </div>
+                    <div className="grid-headers--container--child--def">
+                        Order Date <IoMdArrowDropup />
+                    </div>
+                    <div className="grid-headers--container--child--def">
+                        Unit
+                    </div>
+                    <div className="grid-headers--container--child--def">
+                        discount
+                    </div>
+                    <div className="grid-headers--container--child--def">
+                        in stock
+                    </div>
+                    <div className="grid-headers--container--child--def">
+                        edit-delete
+                    </div>
                 </div>
                 <div style={{ display: this.state.showAddUserUI ? 'block' : 'none' }} className="grid-add-row-container">
                     <GridRecord
@@ -273,16 +180,10 @@ class GridContent extends Component {
 }
 
 const mapStateToProps = state => {
-    
     return {
-        gridInfo: state.grid.gridInfo,
-        colInfo : state.grid.gridColumncolumnMap
+        gridInfo: state.grid.gridInfo
     }
 }
-
-
-
-
 
 const mapDispatchToProps = dispatch => {
     return {
