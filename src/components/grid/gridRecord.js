@@ -52,7 +52,6 @@ const GridRecord = (props) => {
   const onMouseOutHandler = () => {
 
   }
-
   return (
       <div className={props.isEditable ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>      
         <div className="grid--row--child--container">
