@@ -52,7 +52,7 @@ class GridContent extends Component {
     }
 
     pageSelectionHandler = (count) => {
-        this.setState({recPerPage:count})
+        this.setState({current:1, recPerPage:count})
     }
 
 
