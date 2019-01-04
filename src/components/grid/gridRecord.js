@@ -2,10 +2,11 @@ import React from 'react'
 import {connect} from 'react-redux'
 import * as actionType from '../../actions'
 import DatePicker from "react-datepicker"
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
+//import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
+import { Input} from 'reactstrap'
 
 const GridRecord = (props) => {
-  console.log("GridRecord",props)
+  
   var data = {
     id:props.id,
     name_val: props.name_val,
@@ -44,8 +45,16 @@ const GridRecord = (props) => {
     props.deleteInfo(data);
   }
 
+  const onMouseOverHandler = (evt) => {
+
+  }
+
+  const onMouseOutHandler = () => {
+
+  }
+
   return (
-      <div className="flex--cont--def grid--row--container">      
+      <div className={props.isEditable ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>      
         <div className="grid--row--child--container">
           {/*<Input type="select" onChange={(evt) => getData(evt)} name="name_a">
             <option>1</option>
@@ -54,7 +63,7 @@ const GridRecord = (props) => {
             <option>4</option>
             <option>5</option>
           </Input>*/}
-          <Input type="text"  defaultValue={props.name_val} placeholder="Name" />
+          <Input type="text" defaultValue={props.name_val} placeholder="Name" />
         </div>
         <div className="grid--row--child--container">
           {/*<DatePicker className="grid--calender--field" />*/}
