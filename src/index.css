@@ -12,3 +12,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.disableClick{
+  pointer-events : none;
+  color: #c1c1c1;
+}
+.noneEditableGrid > .form-control{
+  background-color: transparent; 
+  border:none;
+}
+.editableGrid > .form-control{
+  background-color:"transparent"; 
+  border:"none";
+}

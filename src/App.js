@@ -22,7 +22,7 @@ class App extends Component {
       <div className="flex--cont--def app--container">
        <h2>{t("Welcome to React")}</h2>
        <p>
-        <span onClick={() => changeLanguage("de")}>de</span>..../.....
+        <span onClick={() => changeLanguage("de")}>de</span>
         <span onClick={() => changeLanguage("en")}>en</span>  
         </p> 
         <Header />
