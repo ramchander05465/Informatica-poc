@@ -61,10 +61,11 @@ class GridContent extends Component {
     renderGridColumn = () =>{
         let columnList = [];
         columnList = this.props.colInfo;
+        alert(this.state.currentsortingcolumn);
         const column_list = columnList.map((item,index) =>
             
             <div onClick={(evt) => this.sortColumn(item.Name,this,evt)} className="grid-headers--container--child--def">{item.Name}
-                <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? 'fa fa-fw fa-sort-down' : ''}></div>
+                <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? this.state.sortingtype == 'ASC' ? 'fa fa-fw fa-sort-down' : 'fa fa-fw fa-sort-up'   : ''}></div>
             </div>   
         );    
         return column_list;
@@ -103,13 +104,16 @@ class GridContent extends Component {
 
     sortColumn = (columnName,evt,event) =>{
         debugger;
-        if(this.currentsortingcolumn == columnName){
-            this.currentsortingcolumn = columnName;
+        if(this.state.currentsortingcolumn == columnName){
+            this.setState({
+                currentsortingcolumn : columnName
+            })
         }
         else
         {
             this.setState({
-                sortingtype : ""
+                sortingtype : "",
+                currentsortingcolumn : columnName
             })
         }
         if(this.state.sortingtype == ""){
