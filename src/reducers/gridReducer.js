@@ -2,15 +2,15 @@ import { ADDUSER, GRIDINFO, EDITUSER, DELETEUSER } from '../actions'
 
 const INIT_STATE = {
     gridColumncolumnMap: [
-        { order: 1, Name: 'Name', type: 'textBox' },
-        { order: 2, Name: 'Order Date', type: 'date' },
-        { order: 3, Name: 'Unit', type: 'textBox' },
-        { order: 4, Name: 'Discount', type: 'checkbox' },
-        { order: 5, Name: 'In Stock', type: 'textBox' },
-        { order: 6, Name: '', type: '' },
+        { order: 1, Name: 'Name', type: 'textBox', cansort: true },
+        { order: 2, Name: 'Order Date', type: 'date', cansort: false },
+        { order: 3, Name: 'Unit', type: 'textBox', cansort: true },
+        { order: 4, Name: 'Discount', type: 'checkbox', cansort: false },
+        { order: 5, Name: 'In Stock', type: 'textBox', cansort: false },
+        { order: 6, Name: '', type: '', cansort: false },
 
     ],
-    pagingSize: [{ num: 10 }, { num: 20 }, { num: 50 }],
+    pagingSize: [{ num: 10 }, { num: 25 }, { num: 50 }],
     canUserSort: true,
     canPaggingApply: true,
     canUserSearchData: true,

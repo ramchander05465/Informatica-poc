@@ -68,8 +68,8 @@ class GridContent extends Component {
         
         const column_list = columnList.map((item,index) =>
             
-            <div onClick={(evt) => this.sortColumn(item.Name,this,evt)} className="grid-headers--container--child--def">{item.Name}
-                <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? this.state.sortingtype == 'ASC' ? 'fa fa-fw fa-sort-down' : 'fa fa-fw fa-sort-up'   : ''}></div>
+            <div onClick={item.cansort === true ? (evt) => this.sortColumn(item.Name,this,evt) : ''} className="grid-headers--container--child--def">{item.Name}
+                {item.cansort === true ?  <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? this.state.sortingtype == 'ASC' ? 'fa fa-fw fa-sort-down' : 'fa fa-fw fa-sort-up'   : ''}></div> : ''}
             </div>   
         );    
         return column_list;
@@ -139,9 +139,6 @@ class GridContent extends Component {
                     sortingtype : "ASC"
                 })
             }
-        }
-        else{
-            alert("No Permission for Sorting");
         }
     }
 
