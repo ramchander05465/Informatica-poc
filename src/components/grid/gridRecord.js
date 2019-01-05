@@ -136,7 +136,6 @@ import "react-datepicker/dist/react-datepicker.css";
             selected={new Date(this.state.startDate)}
             onChange={this.handleChange}
           />
-          {/*<Input type="date" name="dateTxt" defaultValue={this.props.order_date} />*/}
         </div>
         <div className="grid--row--child--container">
           <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" defaultValue={this.state.unit} placeholder="with a placeholder" />
