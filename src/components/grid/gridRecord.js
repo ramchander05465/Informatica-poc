@@ -86,7 +86,6 @@ import { Input} from 'reactstrap'
   }
 
   setCheckbox = () =>{
-    debugger;
     var x = document.getElementsByClassName("chkdiv");
     
     var cnt = 0;

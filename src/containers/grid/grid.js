@@ -66,7 +66,7 @@ class GridContent extends Component {
     }
 
     setcheckall = () => {
-        debugger;
+        
         var chk = document.getElementById("chk_all");
         var collection = document.getElementsByClassName('chkdiv');
         if (chk.checked == true) {
