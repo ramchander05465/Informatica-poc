@@ -3,7 +3,6 @@ import { GoChevronLeft, GoChevronRight } from "react-icons/go"
 
 const Pagination = (props) => {
     
-    debugger;
     const {activePage, recordPerPage, total} = props
 
     const renderCurrentPageRecord = () => {
