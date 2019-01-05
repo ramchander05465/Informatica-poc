@@ -348,3 +348,176 @@ select.form-control.slate {
   margin-left: 10px;
   padding: 0px 5px;
 }
+
+.settings-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/*-- CSS Styles --*/
+body {
+  background: #eeeeee;
+}
+
+.app-header--cont{
+  border-bottom: solid 1px #C7C7C7;
+}
+
+.app--footer--container{
+  border-bottom: solid 1px #C7C7C7;
+}
+
+.app-grid--container{
+  background: #fff;
+}
+
+.grid-headers--container{
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+}
+
+.grid--row--container{
+  border-bottom: 1px solid #C7C7C7;
+}
+.grid--row--container:hover {
+  background-color: #f5fafe;
+}
+
+.grid--calender--field{
+  border: 1px solid #C7C7C7;
+}
+
+#search--filter {
+  border: 1px solid #C7C7C7;
+}
+
+.navbar .search.form-control {
+  background-color: #535353;
+  color: #000;
+}
+
+.navbar .form-control::placeholder {
+  color: #000000;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.navbar-nav {
+  border-left: 1px solid #777777;
+  margin-left: 20px;
+}
+
+.sidebar-sticky {
+  background: rgba(0, 0, 0, .6)
+}
+
+.sidebar .nav-link {
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  color: #999;
+}
+.sidebar .nav-link:hover {
+  color: #007bff;
+  background-color: #000000;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+  background-color: #000000;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.pagination{
+  border-top: 1px solid #000000;
+}
+
+#prev, #next {
+  color:#43a1ff;
+}
+
+#prev.disableClick, #next.disableClick {
+  color: #e7e7e7;
+}
+
+
+/* Radio Switch */
+.radio-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.radio-switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.radio-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .radio-slider {
+  background-color: #2196F3;
+}
+
+input:focus + .radio-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .radio-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.radio-slider.round {
+  border-radius: 34px;
+}
+
+.radio-slider.round:before {
+  border-radius: 50%;
+}

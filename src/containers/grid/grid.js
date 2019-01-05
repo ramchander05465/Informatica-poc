@@ -238,10 +238,32 @@ class GridContent extends Component {
                                     </div>
 
                                     <div class="modal-body">
-                                        
+                                        <div class="settings-wrapper">
+                                            <div class="settings-label">
+                                                First Label
+                                            </div>
+                                            <div class="settings-radio">
+                                                <label class="radio-switch">
+                                                    <input type="checkbox" />
+                                                    <span class="radio-slider round"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="settings-wrapper">
+                                            <div class="settings-label">
+                                                Second Label
+                                            </div>
+                                            <div class="settings-radio">
+                                                <label class="radio-switch">
+                                                    <input type="checkbox" />
+                                                    <span class="radio-slider round"></span>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                     </div>
 
