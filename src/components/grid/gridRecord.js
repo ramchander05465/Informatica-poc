@@ -75,7 +75,10 @@ const GridRecord = (props) => {
 
   }
   return (
-      <div id={"row"+props.id} className={props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>      
+      <div id={"row"+props.id} className={props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
+        <div  className="grid--row--child--container">
+            <input id={"chk_"+props.id} className="chkdiv" type="checkbox" />
+        </div>    
         <div className="grid--row--child--container">
           {/*<Input type="select" onChange={(evt) => getData(evt)} name="name_a">
             <option>1</option>

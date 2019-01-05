@@ -63,15 +63,32 @@ class GridContent extends Component {
         this.setState({current:1, recPerPage:count})
     }
 
+    setcheckall = () => {
+        debugger;
+        var chk = document.getElementById("chk_all");
+        var collection = document.getElementsByClassName('chkdiv');
+        if (chk.checked == true) {
+            for (var x = 0; x < collection.length; x++) {
+                if (collection[x].type == 'checkbox')
+                    collection[x].checked = true;
+            }
+        } else {
+            for (var x = 0; x < collection.length; x++) {
+                if (collection[x].type.toUpperCase() == 'CHECKBOX')
+                    collection[x].checked = false;
+            }
+        }
+    }
+
     renderGridColumn = () =>{
         let columnList = [];
         columnList = this.props.colInfo;
         
         const column_list = columnList.map((item,index) =>
-            
+            item.order !== 1 ?
             <div onClick={item.cansort === true ? (evt) => this.sortColumn(item.Name,this,evt) : ''} className="grid-headers--container--child--def">{item.Name}
                 {item.cansort === true ?  <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? this.state.sortingtype == 'ASC' ? 'fa fa-fw fa-sort-down' : 'fa fa-fw fa-sort-up'   : ''}></div> : ''}
-            </div>   
+            </div>   : <div className="grid-headers--container--child--def"><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /></div>
         );    
         return column_list;
     }
