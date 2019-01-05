@@ -9,7 +9,16 @@ import { Input} from 'reactstrap'
 
 //const GridRecord = (props) => {
   class GridRecord extends Component {
-
+    constructor(props) {
+      super(props);
+      this.state = {
+        startDate: new Date(this.props.order_date)
+      };
+    }
+    
+  /*state = {
+    startDate: new Date(this.props.order_date)
+  }*/
   data = {
     id:this.props.id,
     name_val: this.props.name_val,
@@ -20,7 +29,6 @@ import { Input} from 'reactstrap'
   }
 
   getData = (evt) => {
-    console.log(evt)
     switch(evt.target.name){
       case 'name_a':
         this.data.name_val=evt.target.value;
@@ -98,6 +106,7 @@ import { Input} from 'reactstrap'
 
 
   render(){
+    console.log('---------', this.state.order_date)
   return (
       <div id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container">
@@ -161,7 +170,7 @@ import { Input} from 'reactstrap'
                     <button class="dropdown-item" onClick={()=> this.deleteData()}><FaTrashAlt size={22} /></button>
                   </div>
                 </div>
-                <button className="displayNone" id={"save"+this.props.id} onClick={()=> this.saveEditData()}><FaRegSave size={22} /></button>
+                <button className="displayNone" id={"save"+this.props.id} onClick={()=> this.saveEditedData()}><FaRegSave size={22} /></button>
                 <button className="displayNone" id={"delete"+this.props.id} onClick={()=> this.deleteData()}><FaTrashAlt size={22} /></button>
                 </span>)}
             
