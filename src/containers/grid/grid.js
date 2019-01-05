@@ -191,6 +191,26 @@ class GridContent extends Component {
         return userList
     }
 
+    settingConfiguration = () =>{
+        var is_sort = document.getElementById("chk_sort");
+        var is_search = document.getElementById("chk_search");
+        var is_ispaging = document.getElementById("chk_paging");
+        is_sort.checked = this.state.canusersort;
+        is_search.checked = this.state.enablesearch;
+        is_ispaging.checked = this.state.enablepaging;
+    }
+
+    setConfiguration = () =>{
+        var is_sort = document.getElementById("chk_sort");
+        var is_search = document.getElementById("chk_search");
+        var is_ispaging = document.getElementById("chk_paging");
+        this.setState({
+            canusersort : is_sort.checked,
+            enablepaging : is_ispaging.checked,
+            enablesearch : is_search.checked,
+        })
+    }
+
     addUserUI = (info) => this.setState({ showAddUserUI: info })
 
     /*addUserInfo = () => {
@@ -228,7 +248,7 @@ class GridContent extends Component {
                         { this.state.enablesearch === true ?  <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Find' /> : ''}
                     </div>
                     <div className="grid-header--child grid-header--child--e">
-                        <FiSettings size={25} data-toggle="modal" data-target="#myModal"/>
+                        <FiSettings onClick={() => this.settingConfiguration()} size={25} data-toggle="modal" data-target="#myModal"/>
                             <div class="modal" id="myModal">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -240,22 +260,33 @@ class GridContent extends Component {
                                     <div class="modal-body">
                                         <div class="settings-wrapper">
                                             <div class="settings-label">
-                                                First Label
+                                                Sorting
                                             </div>
                                             <div class="settings-radio">
                                                 <label class="radio-switch">
-                                                    <input type="checkbox" />
+                                                    <input id="chk_sort" type="checkbox" />
                                                     <span class="radio-slider round"></span>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="settings-wrapper">
                                             <div class="settings-label">
-                                                Second Label
+                                                Search
                                             </div>
                                             <div class="settings-radio">
                                                 <label class="radio-switch">
-                                                    <input type="checkbox" />
+                                                    <input id="chk_search" type="checkbox" />
+                                                    <span class="radio-slider round"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="settings-wrapper">
+                                            <div class="settings-label">
+                                                Paging
+                                            </div>
+                                            <div class="settings-radio">
+                                                <label class="radio-switch">
+                                                    <input id="chk_paging" type="checkbox" />
                                                     <span class="radio-slider round"></span>
                                                 </label>
                                             </div>
@@ -263,7 +294,7 @@ class GridContent extends Component {
                                     </div>
 
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                                        <button type="button" onClick={() => this.setConfiguration()}  class="btn btn-primary" data-dismiss="modal">Ok</button>
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                     </div>
 
