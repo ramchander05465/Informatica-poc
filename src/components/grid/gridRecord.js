@@ -30,10 +30,21 @@ import "react-datepicker/dist/react-datepicker.css";
         this.setState({name_val:evt.target.value});
       break;
       case 'text1':
-        this.setState({unit:evt.target.value});
+        const re = /^[0-9\b]+$/;
+
+        // if value is not blank, then test the regex
+    
+        if (evt.target.value === '' || re.test(evt.target.value)) {
+          this.setState({unit:evt.target.value});
+        }
       break;
       case 'text2':
+      const stock = /^(?:Yes|No)$/;
+      if (evt.target.value === '' || stock.test(evt.target.value)) {
+        
         this.setState({in_stock:evt.target.value});
+      }
+        
       break;
     }
     
@@ -138,7 +149,7 @@ import "react-datepicker/dist/react-datepicker.css";
           />
         </div>
         <div className="grid--row--child--container">
-          <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" defaultValue={this.state.unit} placeholder="with a placeholder" />
+          <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" value={this.state.unit} placeholder="with a placeholder" />
         </div>
         <div className="grid--row--child--container">
           <label className="checkbox-container">
