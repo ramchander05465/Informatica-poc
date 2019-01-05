@@ -91,7 +91,7 @@ class GridContent extends Component {
             <div onClick={item.cansort === true ? (evt) => this.sortColumn(item.Name,this,evt) : ''} className="grid-headers--container--child--def">{item.Name}
                 {item.cansort === true ?  <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? this.state.sortingtype == 'ASC' ? 'fa fa-fw fa-sort-down' : 'fa fa-fw fa-sort-up'   : ''}></div> : ''}
             </div>   : <div className="grid-headers--container--child--def">
-                <label class="container"><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /><span class="checkmark"></span></label>
+                <label className="container"><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /><span className="checkmark"></span></label>
                 
             </div>
         );    
@@ -256,68 +256,68 @@ class GridContent extends Component {
                         <TiPlusOutline
                             size={28}
                             style={{ display: this.state.showAddUserUI ? 'none' : 'block' }}
-                            onClick={() => this.addUserUI(true)} />
+                            onClick={() => this.addUserUI(true)} title="Add Row" />
                         <FaMinus
                             size={25}
                             style={{ display: this.state.showAddUserUI ? 'block' : 'none' }}
-                            onClick={() => this.addUserUI(false)} />
+                            onClick={() => this.addUserUI(false)} title="Remove Row" />
 
                     </div>
                     <div className="user-actions--child user-actions--child--c">
-                        <FiFilter size={25} />
+                        <FiFilter size={25} title="Advance Filter"/>
                     </div>
                     <div className="user-actions--child user-actions--child--d">
                         { this.state.enablesearch === true ?  <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Find' /> : ''}
                     </div>
                     <div className="grid-header--child grid-header--child--e">
-                        <FiSettings onClick={() => this.settingConfiguration()} size={25} data-toggle="modal" data-target="#myModal"/>
-                            <div class="modal" id="myModal">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Settings</h4>
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <FiSettings onClick={() => this.settingConfiguration()} size={25} data-toggle="modal" data-target="#myModal" title="Configure Table"/>
+                            <div className="modal" id="myModal">
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                    <div className="modal-header">
+                                        <h4 className="modal-title">Settings</h4>
+                                        <button type="button" className="close" data-dismiss="modal">&times;</button>
                                     </div>
 
-                                    <div class="modal-body">
-                                        <div class="settings-wrapper">
-                                            <div class="settings-label">
+                                    <div className="modal-body">
+                                        <div className="settings-wrapper">
+                                            <div className="settings-label">
                                                 Sorting
                                             </div>
-                                            <div class="settings-radio">
-                                                <label class="radio-switch">
+                                            <div className="settings-radio">
+                                                <label className="radio-switch">
                                                     <input id="chk_sort" type="checkbox" />
-                                                    <span class="radio-slider round"></span>
+                                                    <span className="radio-slider round"></span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="settings-wrapper">
-                                            <div class="settings-label">
+                                        <div className="settings-wrapper">
+                                            <div className="settings-label">
                                                 Search
                                             </div>
-                                            <div class="settings-radio">
-                                                <label class="radio-switch">
+                                            <div className="settings-radio">
+                                                <label className="radio-switch">
                                                     <input id="chk_search" type="checkbox" />
-                                                    <span class="radio-slider round"></span>
+                                                    <span className="radio-slider round"></span>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div class="settings-wrapper">
-                                            <div class="settings-label">
+                                        <div className="settings-wrapper">
+                                            <div className="settings-label">
                                                 Paging
                                             </div>
-                                            <div class="settings-radio">
-                                                <label class="radio-switch">
+                                            <div className="settings-radio">
+                                                <label className="radio-switch">
                                                     <input id="chk_paging" type="checkbox" />
-                                                    <span class="radio-slider round"></span>
+                                                    <span className="radio-slider round"></span>
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="modal-footer">
-                                        <button type="button" onClick={() => this.setConfiguration()}  class="btn btn-primary" data-dismiss="modal">Ok</button>
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    <div className="modal-footer">
+                                        <button type="button" onClick={() => this.setConfiguration()}  className="btn btn-primary" data-dismiss="modal">Ok</button>
+                                        <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
                                     </div>
 
                                     </div>

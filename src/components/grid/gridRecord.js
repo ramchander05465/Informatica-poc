@@ -109,10 +109,10 @@ import { Input} from 'reactstrap'
   return (
       <div id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container">
-            <label class="container">
-            <input onChange={() => this.setCheckbox()} id={"chk_"+this.props.id} className="chkdiv" type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
+            <label className="container">
+              <input onChange={() => this.setCheckbox()} id={"chk_"+this.props.id} className="chkdiv" type="checkbox" />
+              <span className="checkmark"></span>
+            </label>
         </div>    
         <div className="grid--row--child--container">
           {/*<Input type="select" onChange={(evt) => getData(evt)} name="name_a">
@@ -138,9 +138,9 @@ import { Input} from 'reactstrap'
           <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" defaultValue={this.props.unit} placeholder="with a placeholder" />
         </div>
         <div className="grid--row--child--container">
-          <label class="container">
+          <label className="container">
             <input type="checkbox" />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
         </div>
         <div className="grid--row--child--container">
@@ -160,17 +160,17 @@ import { Input} from 'reactstrap'
               <button onClick={()=> this.saveData()}>Save</button> 
               : 
               (<span>
-                <div class="dropdown actionbutton" id={"actionBtn"+this.props.id}>
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <GoKebabVertical size={22} />
+                <div className="dropdown actionbutton" id={"actionBtn"+this.props.id}>
+                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <GoKebabVertical size={18} />
                   </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <button class="dropdown-item" id={"edit"+this.props.id} onClick={()=> this.editData()}><FaEdit size={22} /></button>
-                    <button class="dropdown-item" onClick={()=> this.deleteData()}><FaTrashAlt size={22} /></button>
+                  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <button className="dropdown-item" id={"edit"+this.props.id} onClick={()=> this.editData()}><FaEdit size={18} /></button>
+                    <button className="dropdown-item" onClick={()=> this.deleteData()}><FaTrashAlt size={18} /></button>
                   </div>
                 </div>
-                <button className="displayNone" id={"save"+this.props.id} onClick={()=> this.saveEditedData()}><FaRegSave size={22} /></button>
-                <button className="displayNone" id={"delete"+this.props.id} onClick={()=> this.deleteData()}><FaTrashAlt size={22} /></button>
+                <button className="displayNone" id={"save"+this.props.id} onClick={()=> this.saveEditedData()}><FaRegSave size={18} /></button>
+                <button className="displayNone" id={"delete"+this.props.id} onClick={()=> this.deleteData()}><FaTrashAlt size={18} /></button>
                 </span>)}
             
           </div>

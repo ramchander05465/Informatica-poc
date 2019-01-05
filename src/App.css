@@ -68,6 +68,10 @@ body {
   margin-bottom: 7px;
 }
 
+.user-actions--child svg{
+  cursor: pointer;
+}
+
 .user-actions--child--a{
   flex: 10 10 0;
 }
@@ -86,15 +90,17 @@ body {
   flex: 1 1 0;
 }
 
-.grid-header--child--e{
+.user-actions--child--e{
   flex: 0.3 1 0;
   margin-left: 10px;
 }
 
 .grid-headers--container{
-  padding: 5px 10px;
+  padding: 0px 10px;
   border-bottom: 1px solid #000000;
   border-top: 1px solid #000000;
+  font-size: .9rem;
+  font-weight: 700;
 }
 
 .grid-headers--container--child--def{
@@ -102,8 +108,8 @@ body {
 }
 
 .grid--rows--container.overflowContainer{
-  min-height: 352px;
-  max-height: 352px;
+  min-height: 327px;
+  max-height: 327px;
   overflow-y: scroll;
 }
 
@@ -527,18 +533,25 @@ input:checked + .radio-slider:before {
   background-color: transparent;
   border-color: transparent;
   opacity: 0;
+  padding: .1rem .3rem;
 }
 .grid--row--container:hover .actionbutton .btn-secondary{
   opacity: 1;
 }
+
+.actionbutton .dropdown-menu {
+  padding: 0;
+  top: -10px;
+}
+
 .actionbutton .btn-secondary:after {
   content: "";
   display: none;
 }
 
 .actionbutton .dropdown-item {
-  display: inline;
   width: auto;
+  display: inline-block;
   padding: 5px 10px;
   cursor: pointer;
 }

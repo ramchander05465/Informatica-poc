@@ -18,7 +18,7 @@ const Pagination = (props) => {
         return (
             <div>
                 <span id="prev" onClick={() => props.onPageChange(activePage-1)} className={activePage===1 ? 'disableClick':''}>{'<'} </span>
-                <span class="paging">{activePage} of {totalPage}</span>
+                <span className="paging">{activePage} of {totalPage}</span>
                 <span id="next" onClick={() => props.onPageChange(activePage+1)} className={activePage===totalPage ? 'disableClick':''}>{' >'}</span>
             </div>
         )
@@ -31,9 +31,9 @@ const Pagination = (props) => {
 
     return(
         <ul>
-            <li class="pageCount">{renderCurrentPageRecord()}</li>
+            <li className="pageCount">{renderCurrentPageRecord()}</li>
             <li>{renderCurrentPage()}</li>
-            <li class="selectPage"><select onChange={(e) => props.onSelectionPageChange(e.target.value)}>{renderRecordPerPage()}</select>
+            <li className="selectPage"><select onChange={(e) => props.onSelectionPageChange(e.target.value)}>{renderRecordPerPage()}</select>
             </li>
         </ul>
     )

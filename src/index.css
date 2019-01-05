@@ -21,6 +21,7 @@ code {
   background-color: transparent; 
   border:none;
   pointer-events: none;
+  padding: 0rem .2rem;
 }
 .editableGrid .form-control, .editableGrid .grid--calender--field{
   background-color:"transparent"; 
