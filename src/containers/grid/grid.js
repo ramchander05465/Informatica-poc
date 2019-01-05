@@ -88,9 +88,9 @@ class GridContent extends Component {
         
         const column_list = columnList.map((item,index) =>
             item.order !== 1 ?
-            <div onClick={item.cansort === true ? (evt) => this.sortColumn(item.Name,this,evt) : ''} className="grid-headers--container--child--def">{item.Name}
+            <div key={index} onClick={(evt) => item.cansort === true ?  this.sortColumn(item.Name,this,evt) : ''} className="grid-headers--container--child--def">{item.Name}
                 {item.cansort === true ?  <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? this.state.sortingtype == 'ASC' ? 'fa fa-fw fa-sort-down' : 'fa fa-fw fa-sort-up'   : ''}></div> : ''}
-            </div>   : <div className="grid-headers--container--child--def">
+            </div>   : <div key={index} className="grid-headers--container--child--def">
                 <label className="container"><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /><span className="checkmark"></span></label>
                 
             </div>
@@ -124,7 +124,6 @@ class GridContent extends Component {
         else{
             this.props.gridInfo.reverse();
         }
-        console.log("Sorted Data",this.props.gridInfo);
         this.renderGridRecord();
     }
 
@@ -336,7 +335,7 @@ class GridContent extends Component {
                         unit={1}
                         discount={0}
                         in_stock=''
-                        newRecord={true} />
+                        editMode={true} />
                 </div>
                 <div className="grid--rows--container overflowContainer">
                     {this.renderGridRecord()}

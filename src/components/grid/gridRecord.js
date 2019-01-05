@@ -12,13 +12,16 @@ import { Input} from 'reactstrap'
     constructor(props) {
       super(props);
       this.state = {
-        startDate: new Date(this.props.order_date)
+        startDate: this.props.order_date,
+        id:this.props.id,
+        name_val: this.props.name_val,
+        order_date: this.props.order_date,
+        unit: this.props.unit,
+        discount: this.props.discount,
+        in_stock: this.props.in_stock,
       };
     }
     
-  /*state = {
-    startDate: new Date(this.props.order_date)
-  }*/
   data = {
     id:this.props.id,
     name_val: this.props.name_val,
@@ -77,6 +80,13 @@ import { Input} from 'reactstrap'
   onDateSelect = () => {
 
   }
+
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    });
+  }
+
   onMouseOverHandler = (evt) => {
 
   }
@@ -105,7 +115,6 @@ import { Input} from 'reactstrap'
 
 
   render(){
-    console.log('---------', this.state.order_date)
   return (
       <div id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container">
@@ -115,22 +124,12 @@ import { Input} from 'reactstrap'
             </label>
         </div>    
         <div className="grid--row--child--container">
-          {/*<Input type="select" onChange={(evt) => getData(evt)} name="name_a">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </Input>*/}
           <Input type="text" defaultValue={this.props.name_val} placeholder="Name" />
         </div>
         <div className="grid--row--child--container">
-          <DatePicker 
-            id={'date'+this.props.id}
-            name="txtDate"
-            className="grid--calender--field form-control" 
-            selected={new Date(this.props.order_date)}
-            onChange={(e)=>this.dataSelection(e)}
+          <DatePicker
+            selected={new Date(this.state.startDate)}
+            onChange={this.handleChange}
           />
           {/*<Input type="date" name="dateTxt" defaultValue={this.props.order_date} />*/}
         </div>
