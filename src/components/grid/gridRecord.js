@@ -24,25 +24,16 @@ import "react-datepicker/dist/react-datepicker.css";
       this.handleChange = this.handleChange.bind(this);
     }
     
-  data = {
-    id:this.props.id,
-    name_val: this.props.name_val,
-    order_date: this.props.order_date,
-    unit: this.props.unit,
-    discount: this.props.discount,
-    in_stock: this.props.in_stock,
-  }
-
   getData = (evt) => {
     switch(evt.target.name){
       case 'name_a':
-        this.data.name_val=evt.target.value;
+        this.setState({name_val:evt.target.value});
       break;
       case 'text1':
-        this.data.unit=evt.target.value
+        this.setState({unit:evt.target.value});
       break;
       case 'text2':
-        this.data.in_stock=evt.target.value
+        this.setState({in_stock:evt.target.value});
       break;
     }
     
@@ -53,8 +44,16 @@ import "react-datepicker/dist/react-datepicker.css";
     document.getElementById("date"+this.props.id).value=data
   }
 
-  saveData=()=>{    
-    this.props.addInfo(this.data);
+  saveData=()=>{   
+    let data = {
+      id:this.state.id,
+      name_val: this.state.name_val,
+      order_date: this.state.order_date,
+      unit: this.state.unit,
+      discount: this.state.discount,
+      in_stock: this.state.in_stock,
+    }
+    this.props.addInfo(data);
   }
 
   editData=()=>{
@@ -140,7 +139,7 @@ import "react-datepicker/dist/react-datepicker.css";
           {/*<Input type="date" name="dateTxt" defaultValue={this.props.order_date} />*/}
         </div>
         <div className="grid--row--child--container">
-          <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" defaultValue={this.props.unit} placeholder="with a placeholder" />
+          <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" defaultValue={this.state.unit} placeholder="with a placeholder" />
         </div>
         <div className="grid--row--child--container">
           <label className="container">
