@@ -36,9 +36,9 @@ import "react-datepicker/dist/react-datepicker.css";
         const re = /^[0-9\b]+$/;
 
         // if value is not blank, then test the regex
-        alert('dfs')
+        
         if (evt.target.value === '' || re.test(evt.target.value)) {
-          alert('if')
+          
           this.setState({unit:evt.target.value});
         }
       break;
