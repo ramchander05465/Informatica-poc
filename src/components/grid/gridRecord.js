@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import * as actionType from '../../actions'
 import DatePicker from "react-datepicker"
 import { GoKebabVertical } from "react-icons/go";
+import { FaRegSave, FaEdit, FaTrashAlt } from "react-icons/fa"
 //import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 import { Input} from 'reactstrap'
 
@@ -48,15 +49,17 @@ const GridRecord = (props) => {
     document.getElementById("row"+props.id).className = 'flex--cont--def grid--row--container'    
     document.getElementById("edit"+props.id).className ="displayNone";
     document.getElementById("save"+props.id).className = "displayBlock";
-    document.getElementById("cancel"+props.id).className = "displayBlock";
+    document.getElementById("delete"+props.id).className = "displayBlock";
+    document.getElementById("actionBtn"+props.id).className = "displayNone";
     //props.editInfo(data);
   }
 
   const saveEditedData=()=>{
     props.editInfo(data);
-    document.getElementById("edit"+props.id).className ="displayBlock";
+    document.getElementById("actionBtn"+props.id).className = "dropdown actionbutton";
+    document.getElementById("edit"+props.id).className ="dropdown-item";
     document.getElementById("save"+props.id).className = "displayNone";
-    document.getElementById("cancel"+props.id).className = "displayNone";
+    document.getElementById("delete"+props.id).className = "displayNone";
     document.getElementById("row"+props.id).className = 'flex--cont--def grid--row--container noneEditableGrid'    
     
   }
@@ -90,7 +93,7 @@ const GridRecord = (props) => {
           <DatePicker 
             id={'date'+props.id}
             name="txtDate"
-            className="grid--calender--field" 
+            className="grid--calender--field form-control" 
             selected={new Date(props.order_date)}
             onChange={(e)=>dataSelection(e)}
           />
@@ -100,7 +103,10 @@ const GridRecord = (props) => {
           <Input type="text" onChange={(evt) => getData(evt)} name="text1" defaultValue={props.unit} placeholder="with a placeholder" />
         </div>
         <div className="grid--row--child--container">
-          <input type="checkbox" />
+          <label class="container">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
         </div>
         <div className="grid--row--child--container">
           <Input 
@@ -113,24 +119,25 @@ const GridRecord = (props) => {
         </div>
         <div className="grid--row--child--container action--container">
           <div>
-          <div class="dropdown selectLanguage">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <GoKebabVertical size={22} />
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Edit</a>
-                <a class="dropdown-item" href="#">Delete</a>
-              </div>
-            </div>
+          
+              
             {props.newRecord ? 
               <button onClick={()=> saveData()}>Save</button> 
               : 
               (<span>
-                <button id={"edit"+props.id} onClick={()=> editData()}>Edit</button>
-                <button className="displayNone" id={"save"+props.id} onClick={()=> saveEditedData()}>Save</button>
-                <button  className="displayNone" id={"cancel"+props.id} onClick={()=> editData()}>Cancel</button>
-                <button onClick={()=> deleteData()}>Delete</button>
+                <div class="dropdown actionbutton" id={"actionBtn"+props.id}>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <GoKebabVertical size={22} />
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <button class="dropdown-item" id={"edit"+props.id} onClick={()=> editData()}><FaEdit size={22} /></button>
+                    <button class="dropdown-item" onClick={()=> deleteData()}><FaTrashAlt size={22} /></button>
+                  </div>
+                </div>
+                <button className="displayNone" id={"save"+props.id} onClick={()=> saveEditedData()}><FaRegSave size={22} /></button>
+                <button className="displayNone" id={"delete"+props.id} onClick={()=> deleteData()}><FaTrashAlt size={22} /></button>
                 </span>)}
+            
           </div>
         </div>
 
