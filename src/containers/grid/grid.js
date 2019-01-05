@@ -160,11 +160,15 @@ class GridContent extends Component {
             filterdData = this.props.gridInfo;
         }
         this.totalRecord = filterdData.length;
-
-        if((current * recPerPage) < filterdData.length){
-            endCount = current * recPerPage;
-        }else{
-            endCount = filterdData.length;
+        if(this.state.enablepaging == true){
+            if((current * recPerPage) < filterdData.length){
+                endCount = current * recPerPage;
+            }else{
+                endCount = filterdData.length;
+            }
+        }
+        else{
+            endCount = this.totalRecord;
         }
 
         var startCount = current === 1 ? 0 : ((this.state.current-1) * this.state.recPerPage);

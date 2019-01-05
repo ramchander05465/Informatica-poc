@@ -12,12 +12,12 @@ const INIT_STATE = {
     ],
     pagingSize: [{ num: 10 }, { num: 25 }, { num: 50 }],
     canUserSort: true,
-    canPaggingApply: true,
+    canPaggingApply: false,
     canUserSearchData: true,
     gridInfo: [{
             "id": 1,
             "name_val": 3,
-            "order_date": "1517489967",
+            "order_date": "01/01/2019",
             "unit": 20,
             "discount": "1",
             "in_stock": "yes"
@@ -25,7 +25,7 @@ const INIT_STATE = {
         {
             "id": 2,
             "name_val": 2,
-            "order_date": "1557759408",
+            "order_date": "01/01/2019",
             "unit": 14,
             "discount": "1",
             "in_stock": "yes"
@@ -33,7 +33,7 @@ const INIT_STATE = {
         {
             "id": 3,
             "name_val": 5,
-            "order_date": "1566011847",
+            "order_date": "01/01/2019",
             "unit": 6,
             "discount": "0",
             "in_stock": "no"
@@ -41,7 +41,7 @@ const INIT_STATE = {
         {
             "id": 4,
             "name_val": 3,
-            "order_date": "1545955356",
+            "order_date": "02/01/2019",
             "unit": 8,
             "discount": "0",
             "in_stock": "no"
@@ -49,7 +49,7 @@ const INIT_STATE = {
         {
             "id": 5,
             "name_val": 3,
-            "order_date": "1561724162",
+            "order_date": "03/01/2019",
             "unit": 17,
             "discount": "1",
             "in_stock": "yes"
@@ -57,7 +57,7 @@ const INIT_STATE = {
         {
             "id": 6,
             "name_val": 2,
-            "order_date": "1515635427",
+            "order_date": "04/01/2019",
             "unit": 10,
             "discount": "1",
             "in_stock": "yes"
@@ -65,7 +65,7 @@ const INIT_STATE = {
         {
             "id": 7,
             "name_val": 4,
-            "order_date": "1522167682",
+            "order_date": "05/01/2019",
             "unit": 19,
             "discount": "0",
             "in_stock": "no"
@@ -73,7 +73,7 @@ const INIT_STATE = {
         {
             "id": 8,
             "name_val": 4,
-            "order_date": "1539746877",
+            "order_date": "01/01/2019",
             "unit": 13,
             "discount": "0",
             "in_stock": "no"
@@ -81,7 +81,7 @@ const INIT_STATE = {
         {
             "id": 9,
             "name_val": 1,
-            "order_date": "1576108311",
+            "order_date": "01/01/2019",
             "unit": 9,
             "discount": "1",
             "in_stock": "yes"
@@ -89,7 +89,7 @@ const INIT_STATE = {
         {
             "id": 10,
             "name_val": 3,
-            "order_date": "1570692920",
+            "order_date": "01/01/2019",
             "unit": 8,
             "discount": "1",
             "in_stock": "yes"
@@ -97,7 +97,7 @@ const INIT_STATE = {
         {
             "id": 11,
             "name_val": 4,
-            "order_date": "1544136522",
+            "order_date": "01/01/2019",
             "unit": 17,
             "discount": "0",
             "in_stock": "no"
@@ -105,7 +105,7 @@ const INIT_STATE = {
         {
             "id": 12,
             "name_val": 4,
-            "order_date": "1573636667",
+            "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
             "in_stock": "n2o"
@@ -113,7 +113,7 @@ const INIT_STATE = {
         {
             "id": 13,
             "name_val": 5,
-            "order_date": "1569351222",
+            "order_date": "01/01/2019",
             "unit": 6,
             "discount": "1",
             "in_stock": "yes"
@@ -121,7 +121,7 @@ const INIT_STATE = {
         {
             "id": 14,
             "name_val": 1,
-            "order_date": "1542531013",
+            "order_date": "01/01/2019",
             "unit": 18,
             "discount": "1",
             "in_stock": "yes"
@@ -129,7 +129,7 @@ const INIT_STATE = {
         {
             "id": 15,
             "name_val": 1,
-            "order_date": "1555946018",
+            "order_date": "01/01/2019",
             "unit": 12,
             "discount": "0",
             "in_stock": "no"
@@ -137,7 +137,7 @@ const INIT_STATE = {
         {
             "id": 16,
             "name_val": 4,
-            "order_date": "1552762971",
+            "order_date": "01/01/2019",
             "unit": 10,
             "discount": "0",
             "in_stock": "no"
@@ -145,7 +145,7 @@ const INIT_STATE = {
         {
             "id": 17,
             "name_val": 3,
-            "order_date": "1553792605",
+            "order_date": "01/01/2019",
             "unit": 19,
             "discount": "1",
             "in_stock": "yes"
@@ -153,7 +153,7 @@ const INIT_STATE = {
         {
             "id": 18,
             "name_val": 4,
-            "order_date": "1573934565",
+            "order_date": "01/01/2019",
             "unit": 17,
             "discount": "1",
             "in_stock": "yes"
@@ -161,7 +161,7 @@ const INIT_STATE = {
         {
             "id": 19,
             "name_val": 1,
-            "order_date": "1572962944",
+            "order_date": "01/01/2019",
             "unit": 13,
             "discount": "0",
             "in_stock": "no"
@@ -169,7 +169,7 @@ const INIT_STATE = {
         {
             "id": 20,
             "name_val": 1,
-            "order_date": "1528826274",
+            "order_date": "01/01/2019",
             "unit": 20,
             "discount": "0",
             "in_stock": "no"
@@ -177,7 +177,7 @@ const INIT_STATE = {
         {
             "id": 21,
             "name_val": 4,
-            "order_date": "1573478102",
+            "order_date": "01/01/2019",
             "unit": 18,
             "discount": "1",
             "in_stock": "yes"
@@ -185,7 +185,7 @@ const INIT_STATE = {
         {
             "id": 22,
             "name_val": 1,
-            "order_date": "1563129096",
+            "order_date": "01/01/2019",
             "unit": 5,
             "discount": "1",
             "in_stock": "yes"
@@ -193,7 +193,7 @@ const INIT_STATE = {
         {
             "id": 23,
             "name_val": 2,
-            "order_date": "1541655127",
+            "order_date": "01/01/2019",
             "unit": 8,
             "discount": "0",
             "in_stock": "no"
@@ -201,7 +201,7 @@ const INIT_STATE = {
         {
             "id": 24,
             "name_val": 1,
-            "order_date": "1553389738",
+            "order_date": "01/01/2019",
             "unit": 20,
             "discount": "0",
             "in_stock": "no"
@@ -209,7 +209,7 @@ const INIT_STATE = {
         {
             "id": 25,
             "name_val": 1,
-            "order_date": "1544331483",
+            "order_date": "01/01/2019",
             "unit": 7,
             "discount": "1",
             "in_stock": "yes"
@@ -217,7 +217,7 @@ const INIT_STATE = {
         {
             "id": 26,
             "name_val": 4,
-            "order_date": "1523683966",
+            "order_date": "01/01/2019",
             "unit": 13,
             "discount": "1",
             "in_stock": "yes"
@@ -225,7 +225,7 @@ const INIT_STATE = {
         {
             "id": 27,
             "name_val": 4,
-            "order_date": "1551086155",
+            "order_date": "01/01/2019",
             "unit": 8,
             "discount": "0",
             "in_stock": "no"
@@ -233,7 +233,7 @@ const INIT_STATE = {
         {
             "id": 28,
             "name_val": 3,
-            "order_date": "1565881093",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "0",
             "in_stock": "no"
@@ -241,7 +241,7 @@ const INIT_STATE = {
         {
             "id": 29,
             "name_val": 1,
-            "order_date": "1569746127",
+            "order_date": "01/01/2019",
             "unit": 16,
             "discount": "1",
             "in_stock": "yes"
@@ -249,7 +249,7 @@ const INIT_STATE = {
         {
             "id": 30,
             "name_val": 3,
-            "order_date": "1526715308",
+            "order_date": "01/01/2019",
             "unit": 16,
             "discount": "1",
             "in_stock": "yes"
@@ -257,7 +257,7 @@ const INIT_STATE = {
         {
             "id": 31,
             "name_val": 3,
-            "order_date": "1556917633",
+            "order_date": "01/01/2019",
             "unit": 18,
             "discount": "0",
             "in_stock": "no"
@@ -265,7 +265,7 @@ const INIT_STATE = {
         {
             "id": 32,
             "name_val": 4,
-            "order_date": "1519934542",
+            "order_date": "01/01/2019",
             "unit": 13,
             "discount": "0",
             "in_stock": "no"
@@ -273,7 +273,7 @@ const INIT_STATE = {
         {
             "id": 33,
             "name_val": 2,
-            "order_date": "1573758080",
+            "order_date": "01/01/2019",
             "unit": 13,
             "discount": "1",
             "in_stock": "yes"
@@ -281,7 +281,7 @@ const INIT_STATE = {
         {
             "id": 34,
             "name_val": 3,
-            "order_date": "1547086720",
+            "order_date": "01/01/2019",
             "unit": 14,
             "discount": "1",
             "in_stock": "yes"
@@ -289,7 +289,7 @@ const INIT_STATE = {
         {
             "id": 35,
             "name_val": 3,
-            "order_date": "1514052364",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "0",
             "in_stock": "no"
@@ -297,7 +297,7 @@ const INIT_STATE = {
         {
             "id": 36,
             "name_val": 5,
-            "order_date": "1538348085",
+            "order_date": "01/01/2019",
             "unit": 6,
             "discount": "0",
             "in_stock": "no"
@@ -305,7 +305,7 @@ const INIT_STATE = {
         {
             "id": 37,
             "name_val": 3,
-            "order_date": "1573157324",
+            "order_date": "01/01/2019",
             "unit": 9,
             "discount": "1",
             "in_stock": "yes"
@@ -313,7 +313,7 @@ const INIT_STATE = {
         {
             "id": 38,
             "name_val": 3,
-            "order_date": "1560055435",
+            "order_date": "01/01/2019",
             "unit": 11,
             "discount": "1",
             "in_stock": "yes"
@@ -321,7 +321,7 @@ const INIT_STATE = {
         {
             "id": 39,
             "name_val": 2,
-            "order_date": "1560719982",
+            "order_date": "01/01/2019",
             "unit": 19,
             "discount": "0",
             "in_stock": "no"
@@ -329,7 +329,7 @@ const INIT_STATE = {
         {
             "id": 40,
             "name_val": 3,
-            "order_date": "1566800732",
+            "order_date": "01/01/2019",
             "unit": 9,
             "discount": "0",
             "in_stock": "no"
@@ -337,7 +337,7 @@ const INIT_STATE = {
         {
             "id": 41,
             "name_val": 2,
-            "order_date": "1565955529",
+            "order_date": "01/01/2019",
             "unit": 12,
             "discount": "1",
             "in_stock": "yes"
@@ -345,7 +345,7 @@ const INIT_STATE = {
         {
             "id": 42,
             "name_val": 1,
-            "order_date": "1531917049",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
             "in_stock": "yes"
@@ -353,7 +353,7 @@ const INIT_STATE = {
         {
             "id": 43,
             "name_val": 3,
-            "order_date": "1518483101",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "0",
             "in_stock": "no"
@@ -361,7 +361,7 @@ const INIT_STATE = {
         {
             "id": 44,
             "name_val": 2,
-            "order_date": "1530815080",
+            "order_date": "01/01/2019",
             "unit": 5,
             "discount": "0",
             "in_stock": "no"
@@ -369,7 +369,7 @@ const INIT_STATE = {
         {
             "id": 45,
             "name_val": 1,
-            "order_date": "1543044261",
+            "order_date": "01/01/2019",
             "unit": 5,
             "discount": "1",
             "in_stock": "yes"
@@ -377,7 +377,7 @@ const INIT_STATE = {
         {
             "id": 46,
             "name_val": 5,
-            "order_date": "1540887526",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
             "in_stock": "yes"
@@ -385,7 +385,7 @@ const INIT_STATE = {
         {
             "id": 47,
             "name_val": 3,
-            "order_date": "1538819414",
+            "order_date": "01/01/2019",
             "unit": 17,
             "discount": "0",
             "in_stock": "no"
@@ -393,7 +393,7 @@ const INIT_STATE = {
         {
             "id": 48,
             "name_val": 3,
-            "order_date": "1570892339",
+            "order_date": "01/01/2019",
             "unit": 5,
             "discount": "0",
             "in_stock": "no"
@@ -401,7 +401,7 @@ const INIT_STATE = {
         {
             "id": 49,
             "name_val": 2,
-            "order_date": "1527070258",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
             "in_stock": "yes"
@@ -409,7 +409,7 @@ const INIT_STATE = {
         {
             "id": 50,
             "name_val": 5,
-            "order_date": "1536421456",
+            "order_date": "01/01/2019",
             "unit": 8,
             "discount": "1",
             "in_stock": "yes"
@@ -417,7 +417,7 @@ const INIT_STATE = {
         {
             "id": 51,
             "name_val": 2,
-            "order_date": "1520674275",
+            "order_date": "01/01/2019",
             "unit": 12,
             "discount": "0",
             "in_stock": "no"
@@ -425,7 +425,7 @@ const INIT_STATE = {
         {
             "id": 52,
             "name_val": 4,
-            "order_date": "1555904753",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "0",
             "in_stock": "no"
@@ -433,7 +433,7 @@ const INIT_STATE = {
         {
             "id": 53,
             "name_val": 1,
-            "order_date": "1539237375",
+            "order_date": "01/01/2019",
             "unit": 12,
             "discount": "1",
             "in_stock": "yes"
@@ -441,7 +441,7 @@ const INIT_STATE = {
         {
             "id": 54,
             "name_val": 1,
-            "order_date": "1559012497",
+            "order_date": "01/01/2019",
             "unit": 17,
             "discount": "1",
             "in_stock": "yes"
@@ -449,7 +449,7 @@ const INIT_STATE = {
         {
             "id": 55,
             "name_val": 5,
-            "order_date": "1562884349",
+            "order_date": "01/01/2019",
             "unit": 5,
             "discount": "0",
             "in_stock": "no"
@@ -457,7 +457,7 @@ const INIT_STATE = {
         {
             "id": 56,
             "name_val": 3,
-            "order_date": "1515053104",
+            "order_date": "01/01/2019",
             "unit": 20,
             "discount": "0",
             "in_stock": "no"
@@ -465,7 +465,7 @@ const INIT_STATE = {
         {
             "id": 57,
             "name_val": 5,
-            "order_date": "1556994834",
+            "order_date": "01/01/2019",
             "unit": 17,
             "discount": "1",
             "in_stock": "yes"
@@ -473,7 +473,7 @@ const INIT_STATE = {
         {
             "id": 58,
             "name_val": 1,
-            "order_date": "1546570079",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
             "in_stock": "yes"
@@ -481,7 +481,7 @@ const INIT_STATE = {
         {
             "id": 59,
             "name_val": 2,
-            "order_date": "1545615780",
+            "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
             "in_stock": "no"
@@ -489,7 +489,7 @@ const INIT_STATE = {
         {
             "id": 60,
             "name_val": 3,
-            "order_date": "1571565089",
+            "order_date": "01/01/2019",
             "unit": 12,
             "discount": "0",
             "in_stock": "no"
@@ -497,7 +497,7 @@ const INIT_STATE = {
         {
             "id": 61,
             "name_val": 2,
-            "order_date": "1575910050",
+            "order_date": "01/01/2019",
             "unit": 14,
             "discount": "1",
             "in_stock": "yes"
@@ -505,7 +505,7 @@ const INIT_STATE = {
         {
             "id": 62,
             "name_val": 2,
-            "order_date": "1521169001",
+            "order_date": "01/01/2019",
             "unit": 16,
             "discount": "1",
             "in_stock": "yes"
@@ -513,7 +513,7 @@ const INIT_STATE = {
         {
             "id": 63,
             "name_val": 3,
-            "order_date": "1530986730",
+            "order_date": "01/01/2019",
             "unit": 19,
             "discount": "0",
             "in_stock": "no"
@@ -521,7 +521,7 @@ const INIT_STATE = {
         {
             "id": 64,
             "name_val": 4,
-            "order_date": "1523430375",
+            "order_date": "01/01/2019",
             "unit": 10,
             "discount": "0",
             "in_stock": "no"
@@ -529,7 +529,7 @@ const INIT_STATE = {
         {
             "id": 65,
             "name_val": 2,
-            "order_date": "1573904217",
+            "order_date": "01/01/2019",
             "unit": 9,
             "discount": "1",
             "in_stock": "yes"
@@ -537,7 +537,7 @@ const INIT_STATE = {
         {
             "id": 66,
             "name_val": 1,
-            "order_date": "1543569531",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
             "in_stock": "yes"
@@ -545,7 +545,7 @@ const INIT_STATE = {
         {
             "id": 67,
             "name_val": 3,
-            "order_date": "1518323444",
+            "order_date": "01/01/2019",
             "unit": 5,
             "discount": "0",
             "in_stock": "no"
@@ -553,7 +553,7 @@ const INIT_STATE = {
         {
             "id": 68,
             "name_val": 1,
-            "order_date": "1555605212",
+            "order_date": "01/01/2019",
             "unit": 18,
             "discount": "0",
             "in_stock": "no"
@@ -561,7 +561,7 @@ const INIT_STATE = {
         {
             "id": 69,
             "name_val": 1,
-            "order_date": "1567758894",
+            "order_date": "01/01/2019",
             "unit": 19,
             "discount": "1",
             "in_stock": "yes"
@@ -569,7 +569,7 @@ const INIT_STATE = {
         {
             "id": 70,
             "name_val": 5,
-            "order_date": "1557901449",
+            "order_date": "01/01/2019",
             "unit": 12,
             "discount": "1",
             "in_stock": "yes"
@@ -577,7 +577,7 @@ const INIT_STATE = {
         {
             "id": 71,
             "name_val": 5,
-            "order_date": "1548360924",
+            "order_date": "01/01/2019",
             "unit": 14,
             "discount": "0",
             "in_stock": "no"
@@ -585,7 +585,7 @@ const INIT_STATE = {
         {
             "id": 72,
             "name_val": 5,
-            "order_date": "1533300414",
+            "order_date": "01/01/2019",
             "unit": 19,
             "discount": "0",
             "in_stock": "no"
@@ -593,7 +593,7 @@ const INIT_STATE = {
         {
             "id": 73,
             "name_val": 5,
-            "order_date": "1567539307",
+            "order_date": "01/01/2019",
             "unit": 5,
             "discount": "1",
             "in_stock": "yes"
@@ -601,7 +601,7 @@ const INIT_STATE = {
         {
             "id": 74,
             "name_val": 4,
-            "order_date": "1571795113",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
             "in_stock": "yes"
@@ -609,7 +609,7 @@ const INIT_STATE = {
         {
             "id": 75,
             "name_val": 4,
-            "order_date": "1522306828",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "0",
             "in_stock": "no"
@@ -617,7 +617,7 @@ const INIT_STATE = {
         {
             "id": 76,
             "name_val": 4,
-            "order_date": "1551698426",
+            "order_date": "01/01/2019",
             "unit": 9,
             "discount": "0",
             "in_stock": "no"
@@ -625,7 +625,7 @@ const INIT_STATE = {
         {
             "id": 77,
             "name_val": 4,
-            "order_date": "1545050009",
+            "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
             "in_stock": "yes"
@@ -633,7 +633,7 @@ const INIT_STATE = {
         {
             "id": 78,
             "name_val": 4,
-            "order_date": "1522655754",
+            "order_date": "01/01/2019",
             "unit": 11,
             "discount": "1",
             "in_stock": "yes"
@@ -641,7 +641,7 @@ const INIT_STATE = {
         {
             "id": 79,
             "name_val": 1,
-            "order_date": "1515916014",
+            "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
             "in_stock": "no"
@@ -649,7 +649,7 @@ const INIT_STATE = {
         {
             "id": 80,
             "name_val": 4,
-            "order_date": "1564128526",
+            "order_date": "01/01/2019",
             "unit": 19,
             "discount": "0",
             "in_stock": "no"
@@ -657,7 +657,7 @@ const INIT_STATE = {
         {
             "id": 81,
             "name_val": 5,
-            "order_date": "1536053942",
+            "order_date": "01/01/2019",
             "unit": 5,
             "discount": "1",
             "in_stock": "yes"
@@ -665,7 +665,7 @@ const INIT_STATE = {
         {
             "id": 82,
             "name_val": 4,
-            "order_date": "1521441091",
+            "order_date": "01/01/2019",
             "unit": 14,
             "discount": "1",
             "in_stock": "yes"
@@ -673,7 +673,7 @@ const INIT_STATE = {
         {
             "id": 83,
             "name_val": 2,
-            "order_date": "1518240185",
+            "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
             "in_stock": "no"
@@ -681,7 +681,7 @@ const INIT_STATE = {
         {
             "id": 84,
             "name_val": 4,
-            "order_date": "1524184491",
+            "order_date": "01/01/2019",
             "unit": 18,
             "discount": "0",
             "in_stock": "no"
@@ -689,7 +689,7 @@ const INIT_STATE = {
         {
             "id": 85,
             "name_val": 3,
-            "order_date": "1515449655",
+            "order_date": "01/01/2019",
             "unit": 13,
             "discount": "1",
             "in_stock": "yes"
@@ -697,7 +697,7 @@ const INIT_STATE = {
         {
             "id": 86,
             "name_val": 5,
-            "order_date": "1571816664",
+            "order_date": "01/01/2019",
             "unit": 19,
             "discount": "1",
             "in_stock": "yes"
@@ -705,7 +705,7 @@ const INIT_STATE = {
         {
             "id": 87,
             "name_val": 3,
-            "order_date": "1535890520",
+            "order_date": "01/01/2019",
             "unit": 7,
             "discount": "0",
             "in_stock": "no"
@@ -713,7 +713,7 @@ const INIT_STATE = {
         {
             "id": 88,
             "name_val": 1,
-            "order_date": "1563085910",
+            "order_date": "01/01/2019",
             "unit": 18,
             "discount": "0",
             "in_stock": "no"
@@ -721,7 +721,7 @@ const INIT_STATE = {
         {
             "id": 89,
             "name_val": 2,
-            "order_date": "1543607227",
+            "order_date": "01/01/2019",
             "unit": 18,
             "discount": "1",
             "in_stock": "yes"
@@ -729,7 +729,7 @@ const INIT_STATE = {
         {
             "id": 90,
             "name_val": 3,
-            "order_date": "1516442762",
+            "order_date": "01/01/2019",
             "unit": 9,
             "discount": "1",
             "in_stock": "yes"
@@ -737,7 +737,7 @@ const INIT_STATE = {
         {
             "id": 91,
             "name_val": 1,
-            "order_date": "1537149083",
+            "order_date": "01/01/2019",
             "unit": 12,
             "discount": "0",
             "in_stock": "no"
@@ -745,7 +745,7 @@ const INIT_STATE = {
         {
             "id": 92,
             "name_val": 2,
-            "order_date": "1569960278",
+            "order_date": "01/01/2019",
             "unit": 17,
             "discount": "0",
             "in_stock": "no"
@@ -753,7 +753,7 @@ const INIT_STATE = {
         {
             "id": 93,
             "name_val": 2,
-            "order_date": "1519394519",
+            "order_date": "01/01/2019",
             "unit": 13,
             "discount": "1",
             "in_stock": "yes"
@@ -761,7 +761,7 @@ const INIT_STATE = {
         {
             "id": 94,
             "name_val": 5,
-            "order_date": "1539980216",
+            "order_date": "01/01/2019",
             "unit": 14,
             "discount": "1",
             "in_stock": "yes"
@@ -769,7 +769,7 @@ const INIT_STATE = {
         {
             "id": 95,
             "name_val": 1,
-            "order_date": "1576696552",
+            "order_date": "01/01/2019",
             "unit": 13,
             "discount": "0",
             "in_stock": "no"
@@ -777,7 +777,7 @@ const INIT_STATE = {
         {
             "id": 96,
             "name_val": 1,
-            "order_date": "1530823423",
+            "order_date": "01/01/2019",
             "unit": 9,
             "discount": "0",
             "in_stock": "no"
@@ -785,7 +785,7 @@ const INIT_STATE = {
         {
             "id": 97,
             "name_val": 4,
-            "order_date": "1573942687",
+            "order_date": "01/01/2019",
             "unit": 9,
             "discount": "1",
             "in_stock": "yes"
@@ -793,7 +793,7 @@ const INIT_STATE = {
         {
             "id": 98,
             "name_val": 2,
-            "order_date": "1520038298",
+            "order_date": "01/01/2019",
             "unit": 13,
             "discount": "1",
             "in_stock": "yes"
@@ -801,7 +801,7 @@ const INIT_STATE = {
         {
             "id": 99,
             "name_val": 4,
-            "order_date": "1535717676",
+            "order_date": "01/01/2019",
             "unit": 8,
             "discount": "0",
             "in_stock": "no"
@@ -809,7 +809,7 @@ const INIT_STATE = {
         {
             "id": 100,
             "name_val": 2,
-            "order_date": "1545001098",
+            "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
             "in_stock": "no"
