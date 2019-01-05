@@ -76,11 +76,35 @@ import { Input} from 'reactstrap'
   onMouseOutHandler = () => {
 
   }
+
+  setCheckbox = () =>{
+    debugger;
+    var x = document.getElementsByClassName("chkdiv");
+    
+    var cnt = 0;
+    for (var index = 0; index < x.length; index++) {
+        if(x[index].checked == true)
+          cnt = cnt  + 1;
+    }
+    
+    var chk_all = document.getElementById("chk_all");
+    if(cnt == x.length - 1){
+      
+      chk_all.checked = true;
+    }
+    else
+      chk_all.checked = false;
+  }
+
+
   render(){
   return (
       <div id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container">
-            <input id={"chk_"+this.props.id} className="chkdiv" type="checkbox" />
+            <label class="container">
+            <input onChange={() => this.setCheckbox()} id={"chk_"+this.props.id} className="chkdiv" type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
         </div>    
         <div className="grid--row--child--container">
           {/*<Input type="select" onChange={(evt) => getData(evt)} name="name_a">

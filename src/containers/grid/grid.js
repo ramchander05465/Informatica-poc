@@ -55,6 +55,8 @@ class GridContent extends Component {
     }
 
     pageChangeHandler = (current) => {
+        var x = document.getElementById('chk_all');
+        x.checked = false;
         let page = current === 0 ? (current + 1) : current
         this.setState({current:page});
     }
@@ -88,7 +90,10 @@ class GridContent extends Component {
             item.order !== 1 ?
             <div onClick={item.cansort === true ? (evt) => this.sortColumn(item.Name,this,evt) : ''} className="grid-headers--container--child--def">{item.Name}
                 {item.cansort === true ?  <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? this.state.sortingtype == 'ASC' ? 'fa fa-fw fa-sort-down' : 'fa fa-fw fa-sort-up'   : ''}></div> : ''}
-            </div>   : <div className="grid-headers--container--child--def"><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /></div>
+            </div>   : <div className="grid-headers--container--child--def">
+                <label class="container"><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /><span class="checkmark"></span></label>
+                
+            </div>
         );    
         return column_list;
     }
