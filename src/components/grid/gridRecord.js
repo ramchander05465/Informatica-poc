@@ -26,15 +26,19 @@ import "react-datepicker/dist/react-datepicker.css";
     
   getData = (evt) => {
     switch(evt.target.name){
-      case 'name_a':
-        this.setState({name_val:evt.target.value});
+      case 'name-val':
+        var regex = /^[A-Za-z0-9 ]{3,20}$/;
+        if (evt.target.value !== '' || regex.test(evt.target.value)) {
+          this.setState({name_val:evt.target.value});
+        }        
       break;
       case 'text1':
         const re = /^[0-9\b]+$/;
 
         // if value is not blank, then test the regex
-    
+        alert('dfs')
         if (evt.target.value === '' || re.test(evt.target.value)) {
+          alert('if')
           this.setState({unit:evt.target.value});
         }
       break;
@@ -138,7 +142,7 @@ import "react-datepicker/dist/react-datepicker.css";
             </label>
         </div>    
         <div className="grid--row--child--container">
-          <Input type="text" defaultValue={this.props.name_val} placeholder="Name" />
+          <Input type="text" onChange={(evt) => this.getData(evt)} name = "name-val" value={this.state.name_val} placeholder="Name" />
         </div>
         <div className="grid--row--child--container">
           <DatePicker
