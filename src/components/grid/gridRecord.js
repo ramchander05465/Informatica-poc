@@ -19,12 +19,10 @@ const GridRecord = (props) => {
   }
 
   const getData = (evt) => {
+    console.log(evt)
     switch(evt.target.name){
       case 'name_a':
         data.name_val=evt.target.value;
-      break;
-      case 'txtDate':
-        data.order_date=evt.target.value
       break;
       case 'text1':
         data.unit=evt.target.value
@@ -34,6 +32,11 @@ const GridRecord = (props) => {
       break;
     }
     
+  }
+
+  const dataSelection = (data) => {  
+    data.order_date=data;
+    document.getElementById("date"+props.id).value=data
   }
 
   const saveData=()=>{    
@@ -60,6 +63,9 @@ const GridRecord = (props) => {
     props.deleteInfo(data);
   }
 
+  const onDateSelect = () => {
+
+  }
   const onMouseOverHandler = (evt) => {
 
   }
@@ -80,8 +86,14 @@ const GridRecord = (props) => {
           <Input type="text" defaultValue={props.name_val} placeholder="Name" />
         </div>
         <div className="grid--row--child--container">
-          {/*<DatePicker className="grid--calender--field" />*/}
-          <Input type="date" name="dateTxt" defaultValue={Date('12-12-2018')} />
+          <DatePicker 
+            id={'date'+props.id}
+            name="txtDate"
+            className="grid--calender--field" 
+            selected={new Date(props.order_date)}
+            onChange={(e)=>dataSelection(e)}
+          />
+          {/*<Input type="date" name="dateTxt" defaultValue={props.order_date} />*/}
         </div>
         <div className="grid--row--child--container">
           <Input type="text" onChange={(evt) => getData(evt)} name="text1" defaultValue={props.unit} placeholder="with a placeholder" />
