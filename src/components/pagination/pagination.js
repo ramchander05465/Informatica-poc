@@ -1,4 +1,5 @@
 import React from 'react';
+import { GoChevronLeft, GoChevronRight } from "react-icons/go"
 
 const Pagination = (props) => {
     
@@ -17,9 +18,9 @@ const Pagination = (props) => {
         totalPage = Number(total%recordPerPage) === 0 ? totalPage : Number(totalPage)+1;
         return (
             <div>
-                <span onClick={() => props.onPageChange(activePage-1)} className={activePage===1 ? 'disableClick':''}>{'<'} </span>
-                <span>{activePage} of {totalPage}</span>
-                <span onClick={() => props.onPageChange(activePage+1)} className={activePage===totalPage ? 'disableClick':''}>{' >'}</span>
+                <span id="prev" onClick={() => props.onPageChange(activePage-1)} className={activePage===1 ? 'disableClick':''}>{'<'} </span>
+                <span class="paging">{activePage} of {totalPage}</span>
+                <span id="next" onClick={() => props.onPageChange(activePage+1)} className={activePage===totalPage ? 'disableClick':''}>{' >'}</span>
             </div>
         )
     }
@@ -31,9 +32,9 @@ const Pagination = (props) => {
 
     return(
         <ul>
-            <li>{renderCurrentPageRecord()}</li>
+            <li class="pageCount">{renderCurrentPageRecord()}</li>
             <li>{renderCurrentPage()}</li>
-            <li><select onChange={(e) => props.onSelectionPageChange(e.target.value)}>{renderRecordPerPage()}</select>
+            <li class="selectPage"><select onChange={(e) => props.onSelectionPageChange(e.target.value)}>{renderRecordPerPage()}</select>
             </li>
         </ul>
     )

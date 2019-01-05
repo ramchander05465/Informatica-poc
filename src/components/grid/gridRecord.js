@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import * as actionType from '../../actions'
 import DatePicker from "react-datepicker"
+import { GoKebabVertical } from "react-icons/go";
 //import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 import { Input} from 'reactstrap'
 
@@ -112,6 +113,15 @@ const GridRecord = (props) => {
         </div>
         <div className="grid--row--child--container action--container">
           <div>
+          <div class="dropdown selectLanguage">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <GoKebabVertical size={22} />
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Edit</a>
+                <a class="dropdown-item" href="#">Delete</a>
+              </div>
+            </div>
             {props.newRecord ? 
               <button onClick={()=> saveData()}>Save</button> 
               : 

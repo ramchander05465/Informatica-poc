@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io"
 import { FaPlus, FaMinus } from "react-icons/fa"
-import { FiFilter } from "react-icons/fi"
+import {TiPlusOutline} from "react-icons/ti"
+import { FiFilter, FiSettings } from "react-icons/fi"
 
 /*import Select from 'rc-select';
 import Pagination from 'rc-pagination';
@@ -203,24 +204,46 @@ class GridContent extends Component {
             <React.Fragment>
                 <div className="flex--cont--def user-actions--container">
                     <div className="user-actions--child user-actions--child--a">
-                        User({this.totalRecord})
+                        Items ({this.totalRecord})
                     </div>
                     <div className="user-actions--child user-actions--child--b">
-                        <FaPlus
-                            size={22}
+                        <TiPlusOutline
+                            size={28}
                             style={{ display: this.state.showAddUserUI ? 'none' : 'block' }}
                             onClick={() => this.addUserUI(true)} />
                         <FaMinus
-                            size={22}
+                            size={25}
                             style={{ display: this.state.showAddUserUI ? 'block' : 'none' }}
                             onClick={() => this.addUserUI(false)} />
 
                     </div>
                     <div className="user-actions--child user-actions--child--c">
-                        <FiFilter size={22} />
+                        <FiFilter size={25} />
                     </div>
                     <div className="user-actions--child user-actions--child--d">
-                        { this.state.enablesearch === true ?  <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Search here' /> : ''}
+                        { this.state.enablesearch === true ?  <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Find' /> : ''}
+                    </div>
+                    <div className="grid-header--child grid-header--child--e">
+                        <FiSettings size={25} data-toggle="modal" data-target="#myModal"/>
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Settings</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
                 <div className="flex--cont--def grid-headers--container">
@@ -236,11 +259,11 @@ class GridContent extends Component {
                         in_stock=''
                         newRecord={true} />
                 </div>
-                <div className="grid--rows--container">
+                <div className="grid--rows--container overflowContainer">
                     {this.renderGridRecord()}
                 </div>
                 
-                <div className="grid--rows--container">
+                <div className="grid--rows--container pagination">
                 {
                     this.state.enablepaging === true ?
                     <Pagination
