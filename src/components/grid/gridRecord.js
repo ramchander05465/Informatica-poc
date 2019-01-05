@@ -6,6 +6,7 @@ import { GoKebabVertical } from "react-icons/go";
 import { FaRegSave, FaEdit, FaTrashAlt } from "react-icons/fa"
 //import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 import { Input} from 'reactstrap'
+import "react-datepicker/dist/react-datepicker.css";
 
 //const GridRecord = (props) => {
   class GridRecord extends Component {
@@ -20,6 +21,7 @@ import { Input} from 'reactstrap'
         discount: this.props.discount,
         in_stock: this.props.in_stock,
       };
+      this.handleChange = this.handleChange.bind(this);
     }
     
   data = {
@@ -82,9 +84,11 @@ import { Input} from 'reactstrap'
   }
 
   handleChange(date) {
-    this.setState({
-      startDate: date
-    });
+    this.setState({startDate: date});
+  }
+
+  handleSelect(data){
+    console.log(data)
   }
 
   onMouseOverHandler = (evt) => {
@@ -128,6 +132,8 @@ import { Input} from 'reactstrap'
         </div>
         <div className="grid--row--child--container">
           <DatePicker
+            className="grid--calender--field"
+            onSelect={this.handleSelect}
             selected={new Date(this.state.startDate)}
             onChange={this.handleChange}
           />

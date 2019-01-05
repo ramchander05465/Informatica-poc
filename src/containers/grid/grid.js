@@ -330,11 +330,12 @@ class GridContent extends Component {
                 <div style={{ display: this.state.showAddUserUI ? 'block' : 'none' }} className="grid-add-row-container">
                     <GridRecord
                         id={0}
-                        name_val=''
-                        order_date=''
+                        name_val='new'
+                        order_date={new Date()}
                         unit={1}
                         discount={0}
-                        in_stock=''
+                        in_stock='false'
+                        newRecord={true}
                         editMode={true} />
                 </div>
                 <div className="grid--rows--container overflowContainer">
