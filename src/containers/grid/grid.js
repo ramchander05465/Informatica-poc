@@ -91,7 +91,7 @@ class GridContent extends Component {
             <div key={index} onClick={(evt) => item.cansort === true ?  this.sortColumn(item.Name,this,evt) : ''} className="grid-headers--container--child--def">{item.Name}
                 {item.cansort === true ?  <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? this.state.sortingtype == 'ASC' ? 'fa fa-fw fa-sort-down' : 'fa fa-fw fa-sort-up'   : ''}></div> : ''}
             </div>   : <div key={index} className="grid-headers--container--child--def">
-                <label className="container"><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /><span className="checkmark"></span></label>
+                <label className="checkbox-container"><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /><span className="checkmark"></span></label>
                 
             </div>
         );    
@@ -268,7 +268,7 @@ class GridContent extends Component {
                     <div className="user-actions--child user-actions--child--d">
                         { this.state.enablesearch === true ?  <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Find' /> : ''}
                     </div>
-                    <div className="grid-header--child grid-header--child--e">
+                    <div className="user-actions--child user-actions--child--e">
                         <FiSettings onClick={() => this.settingConfiguration()} size={25} data-toggle="modal" data-target="#myModal" title="Configure Table"/>
                             <div className="modal" id="myModal">
                                 <div className="modal-dialog">

@@ -33,7 +33,7 @@ const Pagination = (props) => {
         <ul>
             <li className="pageCount">{renderCurrentPageRecord()}</li>
             <li>{renderCurrentPage()}</li>
-            <li className="selectPage"><select onChange={(e) => props.onSelectionPageChange(e.target.value)}>{renderRecordPerPage()}</select>
+            <li className="selectPage">Items per page:  <select onChange={(e) => props.onSelectionPageChange(e.target.value)}>{renderRecordPerPage()}</select>
             </li>
         </ul>
     )

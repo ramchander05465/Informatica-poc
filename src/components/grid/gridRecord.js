@@ -59,8 +59,8 @@ import "react-datepicker/dist/react-datepicker.css";
   editData=()=>{
     document.getElementById("row"+this.props.id).className = 'flex--cont--def grid--row--container'    
     document.getElementById("edit"+this.props.id).className ="displayNone";
-    document.getElementById("save"+this.props.id).className = "displayBlock";
-    document.getElementById("delete"+this.props.id).className = "displayBlock";
+    document.getElementById("save"+this.props.id).className = "displayBlock btn-save";
+    document.getElementById("delete"+this.props.id).className = "displayBlock btn-delete";
     document.getElementById("actionBtn"+this.props.id).className = "displayNone";
     //this.props.editInfo(this.data);
   }
@@ -121,7 +121,7 @@ import "react-datepicker/dist/react-datepicker.css";
   return (
       <div id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container">
-            <label className="container">
+            <label className="checkbox-container">
               <input onChange={() => this.setCheckbox()} id={"chk_"+this.props.id} className="chkdiv" type="checkbox" />
               <span className="checkmark"></span>
             </label>
@@ -131,7 +131,7 @@ import "react-datepicker/dist/react-datepicker.css";
         </div>
         <div className="grid--row--child--container">
           <DatePicker
-            className="grid--calender--field"
+            className="grid--calender--field form-control"
             onSelect={this.handleSelect}
             selected={new Date(this.state.startDate)}
             onChange={this.handleChange}
@@ -141,12 +141,12 @@ import "react-datepicker/dist/react-datepicker.css";
           <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" defaultValue={this.state.unit} placeholder="with a placeholder" />
         </div>
         <div className="grid--row--child--container">
-          <label className="container">
+          <label className="checkbox-container">
             <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
         </div>
-        <div className="grid--row--child--container">
+        <div className="grid--row--child--container instockinput">
           <Input 
             type="text" 
             name="text2"

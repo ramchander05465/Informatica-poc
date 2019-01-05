@@ -88,6 +88,8 @@ body {
 
 .user-actions--child--d{
   flex: 1 1 0;
+  border-right: 1px solid #c7c7c7;
+  padding-right: 15px;
 }
 
 .user-actions--child--e{
@@ -96,7 +98,7 @@ body {
 }
 
 .grid-headers--container{
-  padding: 0px 10px;
+  padding: 4px 10px;
   border-bottom: 1px solid #000000;
   border-top: 1px solid #000000;
   font-size: .9rem;
@@ -178,7 +180,7 @@ body {
 }
 
 .navbar .search.form-control {
-  padding: .75rem 1rem;
+  padding: 1.2rem 1rem;
   border-width: 0;
   border-radius: 6px;
   margin-left: auto;
@@ -321,13 +323,16 @@ select.form-control.slate {
   padding: 0;
   margin: 0;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
 #prev, #next {
   cursor: pointer;
   letter-spacing: .5em;
-  color:#43a1ff;
+  font-size: 1.3rem;
+  position: relative;
+  top: 4px;
 }
 
 #prev.disableClick, #next.disableClick {
@@ -560,6 +565,16 @@ input:checked + .radio-slider:before {
   min-width: auto;
 }
 
+.actionbutton .btn-secondary:not(:disabled):not(.disabled):active, .actionbutton .btn-secondary:not(:disabled):not(.disabled).active, .actionbutton.show > .btn-secondary.dropdown-toggle {
+  color: #4e555b;
+  background-color: transparent;
+  border-color: #4e555b;
+}
+
+.actionbutton .btn-secondary:focus, .btn-secondary.focus,.actionbutton .btn-secondary:not(:disabled):not(.disabled):active:focus,.actionbutton .btn-secondary:not(:disabled):not(.disabled).active:focus, .actionbutton.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0rem rgba(130, 138, 145, 0);
+}
+
 .grid--row--container:first-child .actionbutton .btn-secondary, .grid--row--container.selected .actionbutton .btn-secondary, .grid--row--container.error .actionbutton .btn-secondary{
   opacity: 1;
 }
@@ -587,9 +602,18 @@ input:checked + .radio-slider:before {
   height: 100%;
 }
 
+.grid--calender--field {max-width: 256px;max-height: 256px;background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDMzIDMzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMyAzMzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yOC41LDBoLTI0QzIuMDE5LDAsMCwyLjAxOSwwLDQuNXYyNEMwLDMwLjk4LDIuMDE5LDMzLDQuNSwzM2gyNGMyLjQ4LDAsNC41LTIuMDIsNC41LTQuNXYtMjRDMzMsMi4wMTksMzAuOTgsMCwyOC41LDB6ICAgICBNMzEuNSwyOC41YzAsMS42NDgtMS4zNSwzLTMsM2gtMjRjLTEuNjUsMC0zLTEuMzUyLTMtM3YtMjRjMC0xLjY0OSwxLjM1LTMsMy0zaDI0YzEuNjUsMCwzLDEuMzUxLDMsM1YyOC41eiIgZmlsbD0iIzAwMDAwMCIvPgoJCTxjaXJjbGUgY3g9IjkuMjUiIGN5PSI0Ljc3MyIgcj0iMS4yNzMiIGZpbGw9IiMwMDAwMDAiLz4KCQk8Y2lyY2xlIGN4PSIxNi41IiBjeT0iNC43NzMiIHI9IjEuMjczIiBmaWxsPSIjMDAwMDAwIi8+CgkJPGNpcmNsZSBjeD0iMjMuNzUiIGN5PSI0Ljc3MyIgcj0iMS4yNzMiIGZpbGw9IiMwMDAwMDAiLz4KCQk8cmVjdCB4PSIxMS4xMzQiIHk9IjEyLjkwMiIgd2lkdGg9IjQuNTk2IiBoZWlnaHQ9IjQuMDg4IiBmaWxsPSIjMDAwMDAwIi8+CgkJPHJlY3QgeD0iMTcuMjcxIiB5PSIxMi45MDIiIHdpZHRoPSI0LjU5NSIgaGVpZ2h0PSI0LjA4OCIgZmlsbD0iIzAwMDAwMCIvPgoJCTxyZWN0IHg9IjIzLjQwNCIgeT0iMTIuOTAyIiB3aWR0aD0iNC41OTYiIGhlaWdodD0iNC4wODgiIGZpbGw9IiMwMDAwMDAiLz4KCQk8cmVjdCB4PSI1IiB5PSIxOC4zNTkiIHdpZHRoPSI0LjU5NSIgaGVpZ2h0PSI0LjA4NiIgZmlsbD0iIzAwMDAwMCIvPgoJCTxyZWN0IHg9IjExLjEzNCIgeT0iMTguMzU5IiB3aWR0aD0iNC41OTYiIGhlaWdodD0iNC4wODYiIGZpbGw9IiMwMDAwMDAiLz4KCQk8cmVjdCB4PSIxNy4yNzEiIHk9IjE4LjM1OSIgd2lkdGg9IjQuNTk1IiBoZWlnaHQ9IjQuMDg2IiBmaWxsPSIjMDAwMDAwIi8+CgkJPHJlY3QgeD0iMjMuNDA0IiB5PSIxOC4zNTkiIHdpZHRoPSI0LjU5NiIgaGVpZ2h0PSI0LjA4NiIgZmlsbD0iIzAwMDAwMCIvPgoJCTxyZWN0IHg9IjUiIHk9IjIzLjgxNiIgd2lkdGg9IjQuNTk1IiBoZWlnaHQ9IjQuMDg2IiBmaWxsPSIjMDAwMDAwIi8+CgkJPHJlY3QgeD0iMTEuMTM0IiB5PSIyMy44MTYiIHdpZHRoPSI0LjU5NiIgaGVpZ2h0PSI0LjA4NiIgZmlsbD0iIzAwMDAwMCIvPgoJCTxyZWN0IHg9IjE3LjI3MSIgeT0iMjMuODE2IiB3aWR0aD0iNC41OTUiIGhlaWdodD0iNC4wODYiIGZpbGw9IiMwMDAwMDAiLz4KCQk8cmVjdCB4PSIyMy40MDQiIHk9IjIzLjgxNiIgd2lkdGg9IjQuNTk2IiBoZWlnaHQ9IjQuMDg2IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+  background-repeat: no-repeat;
+  background-position: 96% center;
+}
+
+.noneEditableGrid .grid--calender--field {
+  background-image: initial;
+}
+
 /* Custom Checkbox */
 /* The container */
-.container {
+.checkbox-container {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -603,7 +627,7 @@ input:checked + .radio-slider:before {
 }
 
 /* Hide the browser's default checkbox */
-.container input {
+.checkbox-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -612,23 +636,33 @@ input:checked + .radio-slider:before {
 }
 
 /* Create a custom checkbox */
+
+.grid-headers--container--child--def .checkmark{
+  left: 11px;
+  top: 3px;
+}
+.grid--row--child--container:first-child .checkmark {
+  left: 15px;
+}
+
 .checkmark {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+  top: 8px;
+  left: 25px;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border: 1px solid #000;
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.checkbox-container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #2196F3;
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #000000;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -639,14 +673,14 @@ input:checked + .radio-slider:before {
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.checkbox-container input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
+.checkbox-container .checkmark:after {
+  left: 4px;
+  top: 1px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -654,4 +688,14 @@ input:checked + .radio-slider:before {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.instockinput input{
+  text-transform: capitalize;
+}
+
+.btn-save, .btn-delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
