@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap';
 import "react-datepicker/dist/react-datepicker.css"
 
 import './App.css';
@@ -20,11 +21,11 @@ class App extends Component {
     console.log('props',this.props);
     return (
       <div className="flex--cont--def app--container">
-       <h2>{t("Welcome to React")}</h2>
+       {/* <h2>{t("Welcome to React")}</h2>
        <p>
         <span onClick={() => changeLanguage("de")}>de</span>
         <span onClick={() => changeLanguage("en")}>en</span>  
-        </p> 
+        </p>  */}
         <Header />
         
         <div className="flex--cont--def app-middle--container">
