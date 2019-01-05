@@ -12,7 +12,7 @@ const INIT_STATE = {
     ],
     pagingSize: [{ num: 10 }, { num: 25 }, { num: 50 }],
     canUserSort: true,
-    canPaggingApply: false,
+    canPaggingApply: true,
     canUserSearchData: true,
     gridInfo: [{
             "id": 1,
