@@ -189,6 +189,7 @@ import "react-datepicker/dist/react-datepicker.css";
             onChange={this.handleChange}
             tabIndex="0" /> : <label className="form-control" tabIndex="0">{this.state.startDate.toString()}</label>
         }
+        <span class="errormsg"><i>x</i> Order Date must be a valid date.</span>
         </div>
         <div className="grid--row--child--container">
         {this.state.edit_click ?
@@ -225,16 +226,16 @@ import "react-datepicker/dist/react-datepicker.css";
               : 
               (<span>
                 <div className="dropdown actionbutton" id={"actionBtn"+this.props.id}>
-                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabIndex="0">
+                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabIndex="0" aria-label="Press spacebar than tab to view option">
                     <GoKebabVertical size={18} />
                   </button>
                   <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <button className="dropdown-item" id={"edit"+this.props.id} onClick={()=> this.editData()}tabIndex="0"><FaEdit size={18} /></button>
-                    <button className="dropdown-item" onClick={()=> this.deleteData()} tabIndex="0"><FaTrashAlt size={18} /></button>
+                    <button className="dropdown-item" id={"edit"+this.props.id} onClick={()=> this.editData()}tabIndex="0" aria-label="Edit"><FaEdit size={18} /></button>
+                    <button className="dropdown-item" onClick={()=> this.deleteData()} tabIndex="0" aria-label="delete"><FaTrashAlt size={18} /></button>
                   </div>
                 </div>
-                <button className="displayNone" id={"save"+this.props.id} onClick={()=> this.saveEditedData()}tabIndex="0"><FaRegSave size={18} /></button>
-                <button className="displayNone" id={"delete"+this.props.id} onClick={()=> this.deleteData()}tabIndex="0"><FaTrashAlt size={18} /></button>
+                <button className="displayNone" id={"save"+this.props.id} onClick={()=> this.saveEditedData()}tabIndex="0" aria-label="save"><FaRegSave size={18} /></button>
+                <button className="displayNone" id={"delete"+this.props.id} onClick={()=> this.deleteData()}tabIndex="0" aria-label="delete"><FaTrashAlt size={18} /></button>
                 </span>)}
             
           </div>
