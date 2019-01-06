@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body {
-    background: #eeeeee;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -27,7 +26,6 @@ body {
     padding-left: 5px;
     padding-right: 5px;
     height: 80px;
-    border-bottom: solid 1px #C7C7C7;
 }
 
 .app--footer--container {
@@ -36,7 +34,6 @@ body {
     padding-left: 5px;
     padding-right: 5px;
     height: 60px;
-    border-bottom: solid 1px #C7C7C7;
     display: none;
 }
 
@@ -77,9 +74,7 @@ body {
 
 .user-actions--child--f {
     flex: 16 10;
-    border-left: 1px solid #c7c7c7;
     padding-left: 20px;
-    color: #178bff;
     position: relative;
 }
 
@@ -88,7 +83,6 @@ body {
     position: relative;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid #178bff;
     left: 8px;
     top: 13px;
 }
@@ -110,14 +104,11 @@ body {
 .user-actions--child--e {
     flex: 0.3 1 0;
     margin-left: 10px;
-    border-left: 1px solid #c7c7c7;
     padding-left: 10px;
 }
 
 .grid-headers--container {
-    padding: 4px 10px;
-    border-bottom: 1px solid #000000;
-    border-top: 1px solid #000000;
+    padding: 0px 10px;
     font-size: .9rem;
     font-weight: 700;
 }
@@ -125,11 +116,13 @@ body {
 .grid-headers--container--child--def.checkbox-selector {
     flex: 0 1;
     margin-left: auto;
+    padding-left: 0;
 }
 
 .grid-headers--container--child--def {
     flex: 1 1 0;
-    margin-left: 2px;
+    padding: 4px 10px;
+    padding-right: 0;
 }
 
 .grid--rows--container.overflowContainer {
@@ -140,16 +133,11 @@ body {
 
 .grid--row--container {
     padding: 5px 1px;
-    border-bottom: 1px solid #C7C7C7;
     position: relative;
 }
 
 .grid--row--container:last-child {
     border-bottom: 1px solid transparent;
-}
-
-.grid--row--container:hover {
-    background-color: #f5fafe;
 }
 
 .grid--row--child--container.checkbox-selector {
@@ -161,7 +149,7 @@ body {
 .grid--row--child--container {
     flex: 1 1 0;
     padding-right: 5px;
-    padding-left: 5px;
+    padding-left: 14px;
     position: relative;
 }
 
@@ -179,7 +167,6 @@ body {
 
 #search--filter {
     border-radius: 5px;
-    border: 1px solid #C7C7C7;
     padding: 3px;
     padding-left: 5px;
     font-style: italic;
@@ -223,8 +210,6 @@ body {
     border-width: 0;
     border-radius: 6px;
     margin-left: auto;
-    background-color: #535353;
-    color: #000;
     background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik00OTUsNDY2LjJMMzc3LjIsMzQ4LjRjMjkuMi0zNS42LDQ2LjgtODEuMiw0Ni44LTEzMC45QzQyNCwxMDMuNSwzMzEuNSwxMSwyMTcuNSwxMUMxMDMuNCwxMSwxMSwxMDMuNSwxMSwyMTcuNSAgIFMxMDMuNCw0MjQsMjE3LjUsNDI0YzQ5LjcsMCw5NS4yLTE3LjUsMTMwLjgtNDYuN0w0NjYuMSw0OTVjOCw4LDIwLjksOCwyOC45LDBDNTAzLDQ4Ny4xLDUwMyw0NzQuMSw0OTUsNDY2LjJ6IE0yMTcuNSwzODIuOSAgIEMxMjYuMiwzODIuOSw1MiwzMDguNyw1MiwyMTcuNVMxMjYuMiw1MiwyMTcuNSw1MkMzMDguNyw1MiwzODMsMTI2LjMsMzgzLDIxNy41UzMwOC43LDM4Mi45LDIxNy41LDM4Mi45eiIgZmlsbD0iIzAwMDAwMCIvPgogIDwvZz4KPC9zdmc+Cg==);
     max-width: 256px;
     max-height: 256px;
@@ -232,32 +217,12 @@ body {
     background-position: 96% center;
 }
 
-.navbar .form-control::placeholder {
-    color: #000000;
-}
-
-.form-control-dark {
-    color: #fff;
-    background-color: rgba(255, 255, 255, .1);
-    border-color: rgba(255, 255, 255, .1);
-}
-
-.form-control-dark:focus {
-    border-color: transparent;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
-}
-
 .navbar {
     height: 80px;
 }
 
-.bg-black {
-    background-color: #000000;
-}
-
 .navbar-nav {
     flex-direction: row-reverse;
-    border-left: 1px solid #777777;
     margin-left: 20px;
 }
 
@@ -306,7 +271,6 @@ select.form-control.slate {
     /* Behind the navbar */
     padding: 80px 0 0;
     /* Height of navbar */
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 
 .sidebar-sticky {
@@ -317,7 +281,6 @@ select.form-control.slate {
     overflow-x: hidden;
     overflow-y: auto;
     /* Scrollable contents if viewport is shorter than content. */
-    background: rgba(0, 0, 0, .6)
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -329,27 +292,10 @@ select.form-control.slate {
 
 .sidebar .nav-link {
     font-weight: 500;
-    color: #333;
 }
 
 .sidebar .nav-link .feather {
     margin-right: 4px;
-    color: #999;
-}
-
-.sidebar .nav-link:hover {
-    color: #007bff;
-    background-color: #000000;
-}
-
-.sidebar .nav-link.active {
-    color: #007bff;
-    background-color: #000000;
-}
-
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-    color: inherit;
 }
 
 .sidebar-heading {
@@ -360,7 +306,6 @@ select.form-control.slate {
 .pagination {
     border-radius: 0rem;
     padding-top: 10px;
-    border-top: 1px solid #000000;
 }
 
 .pagination ul {
@@ -384,7 +329,6 @@ select.form-control.slate {
 
 #prev.disableClick,
 #next.disableClick {
-    color: #e7e7e7;
     cursor: initial;
 }
 
@@ -417,113 +361,6 @@ select.form-control.slate {
     justify-content: space-between;
 }
 
-
-/*-- CSS Styles --*/
-
-body {
-    background: #eeeeee;
-}
-
-.app-header--cont {
-    border-bottom: solid 1px #C7C7C7;
-}
-
-.app--footer--container {
-    border-bottom: solid 1px #C7C7C7;
-}
-
-.app-grid--container {
-    background: #fff;
-}
-
-.grid-headers--container {
-    border-bottom: 1px solid #000000;
-    border-top: 1px solid #000000;
-}
-
-.grid--row--container {
-    border-bottom: 1px solid #C7C7C7;
-}
-
-.grid--row--container:hover {
-    background-color: #f5fafe;
-}
-
-#search--filter {
-    border: 1px solid #C7C7C7;
-}
-
-.navbar .search.form-control {
-    background-color: #535353;
-    color: #000;
-}
-
-.navbar .form-control::placeholder {
-    color: #000000;
-}
-
-.form-control-dark {
-    color: #fff;
-    background-color: rgba(255, 255, 255, .1);
-    border-color: rgba(255, 255, 255, .1);
-}
-
-.form-control-dark:focus {
-    border-color: transparent;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
-}
-
-.bg-black {
-    background-color: #000000;
-}
-
-.navbar-nav {
-    border-left: 1px solid #777777;
-    margin-left: 20px;
-}
-
-.sidebar-sticky {
-    background: rgba(0, 0, 0, .6)
-}
-
-.sidebar .nav-link {
-    color: #333;
-}
-
-.sidebar .nav-link .feather {
-    color: #999;
-}
-
-.sidebar .nav-link:hover {
-    color: #007bff;
-    background-color: #000000;
-}
-
-.sidebar .nav-link.active {
-    color: #007bff;
-    background-color: #000000;
-}
-
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-    color: inherit;
-}
-
-.pagination {
-    border-top: 1px solid #000000;
-}
-
-#prev,
-#next {
-    color: #43a1ff;
-}
-
-#prev.disableClick,
-#next.disableClick {
-    color: #e7e7e7;
-}
-
-
 /* Radio Switch */
 
 .radio-switch {
@@ -537,10 +374,6 @@ body {
     opacity: 0;
     width: 0;
     height: 0;
-}
-
-.radio-switch input:focus + .radio-slider.round{
-    outline: #ff0000 auto 5px;
 }
 
 .radio-slider {
@@ -562,17 +395,8 @@ body {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-}
-
-input:checked+.radio-slider {
-    background-color: #2196F3;
-}
-
-input:focus+.radio-slider {
-    box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked+.radio-slider:before {
@@ -593,7 +417,6 @@ input:checked+.radio-slider:before {
 }
 
 .actionbutton .btn-secondary {
-    color: #212121;
     background-color: transparent;
     border-color: transparent;
     opacity: 0;
@@ -625,22 +448,6 @@ input:checked+.radio-slider:before {
     min-width: auto;
 }
 
-.actionbutton .btn-secondary:not(:disabled):not(.disabled):active,
-.actionbutton .btn-secondary:not(:disabled):not(.disabled).active,
-.actionbutton.show>.btn-secondary.dropdown-toggle {
-    color: #4e555b;
-    background-color: transparent;
-    border-color: #4e555b;
-}
-
-.actionbutton .btn-secondary:focus,
-.btn-secondary.focus,
-.actionbutton .btn-secondary:not(:disabled):not(.disabled):active:focus,
-.actionbutton .btn-secondary:not(:disabled):not(.disabled).active:focus,
-.actionbutton.show>.btn-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0rem rgba(130, 138, 145, 0);
-}
-
 .grid--row--container.rowselected .actionbutton .btn-secondary,
 .grid--row--container.error .actionbutton .btn-secondary {
     opacity: 1;
@@ -649,7 +456,6 @@ input:checked+.radio-slider:before {
 .grid--row--container.rowselected,
 .grid--row--container.error {
     opacity: 1;
-    background: #d6ebfc;
 }
 
 .rowselected:after {
@@ -665,7 +471,6 @@ input:checked+.radio-slider:before {
 .grid--row--container.error:before {
     position: absolute;
     content: "";
-    border-left: 5px solid #eb0c15;
     left: 0;
     top: 0;
     height: 100%;
@@ -683,10 +488,6 @@ input:checked+.radio-slider:before {
     background-image: initial;
 }
 
-.error .grid--calender--field {
-    border: 1px solid #ff0000;
-}
-
 /* Custom Checkbox */
 
 
@@ -695,7 +496,7 @@ input:checked+.radio-slider:before {
 .checkbox-container {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 25px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
@@ -717,7 +518,7 @@ input:checked+.radio-slider:before {
 }
 
 
-/* Create a custom checkbox */
+/* custom checkbox */
 
 .grid-headers--container--child--def .checkmark {
     left: 2px;
@@ -734,22 +535,6 @@ input:checked+.radio-slider:before {
     left: 25px;
     height: 15px;
     width: 15px;
-    background-color: #fff;
-    border: 1px solid #000;
-}
-
-
-/* On mouse-over, add a grey background color */
-
-.checkbox-container:hover input~.checkmark {
-    background-color: #ccc;
-}
-
-
-/* When the checkbox is checked, add a blue background */
-
-.checkbox-container input:checked~.checkmark {
-    background-color: #000000;
 }
 
 
@@ -776,8 +561,6 @@ input:checked+.radio-slider:before {
     top: 1px;
     width: 5px;
     height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -789,7 +572,5 @@ input:checked+.radio-slider:before {
 
 .btn-save,
 .btn-delete {
-    background: transparent;
-    border: none;
     cursor: pointer;
 }

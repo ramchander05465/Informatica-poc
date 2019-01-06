@@ -15,7 +15,6 @@ code {
 
 .disableClick{
   pointer-events : none;
-  color: #c1c1c1;
 }
 .noneEditableGrid .form-control, .noneEditableGrid .grid--calender--field{
   background-color: transparent; 
