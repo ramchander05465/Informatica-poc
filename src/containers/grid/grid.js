@@ -71,13 +71,23 @@ class GridContent extends Component {
         var collection = document.getElementsByClassName('chkdiv');
         if (chk.checked == true) {
             for (var x = 0; x < collection.length; x++) {
-                if (collection[x].type == 'checkbox')
+                if (collection[x].type == 'checkbox'){
+                    var currentclickid = collection[x].id;
+                    var parentid = currentclickid.replace('chk_','row');
+                    var currentrow = document.getElementById(parentid);
+                    currentrow.classList.add('test');
                     collection[x].checked = true;
+                }
             }
         } else {
             for (var x = 0; x < collection.length; x++) {
-                if (collection[x].type.toUpperCase() == 'CHECKBOX')
+                if (collection[x].type.toUpperCase() == 'CHECKBOX'){
+                    var currentclickid = collection[x].id;
+                    var parentid = currentclickid.replace('chk_','row');
+                    var currentrow = document.getElementById(parentid);
+                    currentrow.classList.remove('test');
                     collection[x].checked = false;
+                }
             }
         }
     }

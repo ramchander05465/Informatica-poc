@@ -109,9 +109,20 @@ import "react-datepicker/dist/react-datepicker.css";
 
   }
 
-  setCheckbox = () =>{
+  setCheckbox = (evt) =>{
     var x = document.getElementsByClassName("chkdiv");
-    
+    debugger;
+    var currentclickid = evt.currentTarget.id;
+    var parentid = currentclickid.replace('chk_','row');
+    if(evt.currentTarget.checked)
+    {
+        var currentrow = document.getElementById(parentid);
+        currentrow.classList.add('test');
+    }
+    else{
+        var currentrow = document.getElementById(parentid);
+        currentrow.classList.remove('test');
+    }
     var cnt = 0;
     for (var index = 0; index < x.length; index++) {
         if(x[index].checked == true)
@@ -119,21 +130,27 @@ import "react-datepicker/dist/react-datepicker.css";
     }
     
     var chk_all = document.getElementById("chk_all");
-    if(cnt == x.length - 1){
-      
+    if(cnt == x.length - 2){ 
       chk_all.checked = true;
     }
-    else
+    else{
       chk_all.checked = false;
+    }
   }
+
+  setrowselection = (evt) =>{
+    //alert(evt.currentTarget.id);
+    var x = document.getElementById(evt.currentTarget.id);
+    x.classList.add('test');
+  } 
 
 
   render(){
   return (
-      <div id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
+      <div  id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container">
             <label className="checkbox-container">
-              <input onChange={() => this.setCheckbox()} id={"chk_"+this.props.id} className="chkdiv" type="checkbox" />
+              <input onChange={(evt) => this.setCheckbox(evt)} id={"chk_"+this.props.id} className="chkdiv" type="checkbox" />
               <span className="checkmark"></span>
             </label>
         </div>    
