@@ -79,7 +79,7 @@ class GridContent extends Component {
                     currentrow.classList.add('rowselected');
                     collection[x].checked = true;
                     this.setState({
-                        selectedrecord : collection.length - 1
+                        selectedrecord : collection.length
                     })
                 }
             }

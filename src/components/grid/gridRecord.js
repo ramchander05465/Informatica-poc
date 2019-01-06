@@ -128,10 +128,12 @@ import "react-datepicker/dist/react-datepicker.css";
         currentrow.classList.remove('rowselected');
     }
     var selectedrowcount = document.getElementsByClassName('rowselected');
-    this.props.selectedcheckbox(selectedrowcount.length - 1);
+    
+    debugger;
+    this.props.selectedcheckbox(selectedrowcount.length);
     var chk_all = document.getElementById("chk_all");
     
-    if(selectedrowcount.length > this.props.pagecount){ 
+    if(selectedrowcount.length == this.props.pagecount){ 
       chk_all.checked = true;
     }
     else{
@@ -151,7 +153,7 @@ import "react-datepicker/dist/react-datepicker.css";
       <div  id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container checkbox-selector">
             <label className="checkbox-container">
-              <input onChange={(evt) => this.setCheckbox(evt)} id={"chk_"+this.props.id} className="chkdiv" type="checkbox" />
+              <input onChange={(evt) => this.setCheckbox(evt)} id={"chk_"+this.props.id} className={this.props.editMode ? "":"chkdiv" } type="checkbox" />
               <span className="checkmark"></span>
             </label>
         </div>    
