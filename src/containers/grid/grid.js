@@ -282,33 +282,33 @@ class GridContent extends Component {
         return (
             <React.Fragment>
                 <div className="flex--cont--def user-actions--container">
-                    <div className="user-actions--child user-actions--child--a">
+                    <div className="user-actions--child user-actions--child--a" tabIndex="0">
                         Items ({this.totalRecord})
                     </div>
-                    <div className="user-actions--child user-actions--child--f">
+                    <div className="user-actions--child user-actions--child--f" tabIndex="0">
                         ({this.state.selectedrecord}) Selected
                     </div>
                     <div className="user-actions--child user-actions--child--b">
                         <TiPlusOutline
                             size={28}
                             style={{ display: this.state.showAddUserUI ? 'none' : 'block' }}
-                            onClick={() => this.addUserUI(true)} title="Add Row" />
+                            onClick={() => this.addUserUI(true)} title="Add Row" tabIndex="0"/>
                         <FaMinus
                             size={25}
                             style={{ display: this.state.showAddUserUI ? 'block' : 'none' }}
-                            onClick={() => this.addUserUI(false)} title="Remove Row" />
+                            onClick={() => this.addUserUI(false)} title="Remove Row" tabIndex="0"/>
 
                     </div>
                     <div className="user-actions--child user-actions--child--c">
-                        <FiFilter size={25} title="Advance Filter"/>
+                        <FiFilter size={25} title="Advance Filter" tabIndex="0"/>
                     </div>
                     { this.state.enablesearch === true ?  
                     <div className="user-actions--child user-actions--child--d">
-                        <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Find' /> 
+                        <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Find' aria-label="Type here to search" tabIndex="0" /> 
                     </div>
                     : ''}
                     <div className="user-actions--child user-actions--child--e">
-                        <FiSettings onClick={() => this.settingConfiguration()} size={25} data-toggle="modal" data-target="#myModal" title="Configure Table"/>
+                        <FiSettings onClick={() => this.settingConfiguration()} size={25} data-toggle="modal" data-target="#myModal" title="Configure Table" aria-label="click here to change table configuration" tabIndex="0"/>
                             <div className="modal" id="myModal">
                                 <div className="modal-dialog">
                                     <div className="modal-content">
