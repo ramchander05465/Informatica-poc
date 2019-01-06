@@ -105,13 +105,13 @@ body {
 
 .user-actions--child--d {
     flex: 1 1 0;
-    border-right: 1px solid #c7c7c7;
-    padding-right: 15px;
 }
 
 .user-actions--child--e {
     flex: 0.3 1 0;
     margin-left: 10px;
+    border-left: 1px solid #c7c7c7;
+    padding-left: 10px;
 }
 
 .grid-headers--container {
