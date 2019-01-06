@@ -72,7 +72,25 @@ body {
 }
 
 .user-actions--child--a {
-    flex: 10 10 0;
+    flex: 2 10 0;
+}
+
+.user-actions--child--f {
+    flex: 16 10;
+    border-left: 1px solid #c7c7c7;
+    padding-left: 20px;
+    color: #178bff;
+    position: relative;
+}
+
+.user-actions--child--f:after {
+    content: "";
+    position: relative;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #178bff;
+    left: 8px;
+    top: 13px;
 }
 
 .user-actions--child--b {
@@ -104,8 +122,14 @@ body {
     font-weight: 700;
 }
 
+.grid-headers--container--child--def.checkbox-selector {
+    flex: 0 1;
+    margin-left: auto;
+}
+
 .grid-headers--container--child--def {
     flex: 1 1 0;
+    margin-left: 2px;
 }
 
 .grid--rows--container.overflowContainer {
@@ -117,6 +141,7 @@ body {
 .grid--row--container {
     padding: 5px 1px;
     border-bottom: 1px solid #C7C7C7;
+    position: relative;
 }
 
 .grid--row--container:last-child {
@@ -127,10 +152,17 @@ body {
     background-color: #f5fafe;
 }
 
+.grid--row--child--container.checkbox-selector {
+    flex: 0 1;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
 .grid--row--child--container {
     flex: 1 1 0;
-    padding-left: 5px;
     padding-right: 5px;
+    padding-left: 5px;
+    position: relative;
 }
 
 .react-datepicker-wrapper,
@@ -507,6 +539,10 @@ body {
     height: 0;
 }
 
+.radio-switch input:focus + .radio-slider.round{
+    outline: #ff0000 auto 5px;
+}
+
 .radio-slider {
     position: absolute;
     cursor: pointer;
@@ -605,17 +641,25 @@ input:checked+.radio-slider:before {
     box-shadow: 0 0 0 0rem rgba(130, 138, 145, 0);
 }
 
-.grid--row--container:first-child .actionbutton .btn-secondary,
-.grid--row--container.selected .actionbutton .btn-secondary,
+.grid--row--container.rowselected .actionbutton .btn-secondary,
 .grid--row--container.error .actionbutton .btn-secondary {
     opacity: 1;
 }
 
-.rowselected {
-    position: relative;
+.grid--row--container.rowselected,
+.grid--row--container.error {
+    opacity: 1;
+    background: #d6ebfc;
+}
+
+.rowselected:after {
+    position: absolute;
     background: #d6ebfc;
     content: "";
     border-left: 5px solid #2692ff;
+    height: 100%;
+    top: 0px;
+    left: 0px;
 }
 
 .grid--row--container.error:before {
@@ -639,6 +683,9 @@ input:checked+.radio-slider:before {
     background-image: initial;
 }
 
+.error .grid--calender--field {
+    border: 1px solid #ff0000;
+}
 
 /* Custom Checkbox */
 
@@ -673,12 +720,12 @@ input:checked+.radio-slider:before {
 /* Create a custom checkbox */
 
 .grid-headers--container--child--def .checkmark {
-    left: 11px;
+    left: 2px;
     top: 3px;
 }
 
 .grid--row--child--container:first-child .checkmark {
-    left: 15px;
+    left: 6px;
 }
 
 .checkmark {

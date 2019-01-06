@@ -151,7 +151,7 @@ import "react-datepicker/dist/react-datepicker.css";
   render(){
   return (
       <div  id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
-        <div  className="grid--row--child--container">
+        <div  className="grid--row--child--container checkbox-selector">
             <label className="checkbox-container">
               <input onChange={(evt) => this.setCheckbox(evt)} id={"chk_"+this.props.id} className="chkdiv" type="checkbox" />
               <span className="checkmark"></span>

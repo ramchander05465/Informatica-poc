@@ -107,7 +107,7 @@ class GridContent extends Component {
             item.order !== 1 ?
             <div key={index} onClick={(evt) => item.cansort === true ?  this.sortColumn(item.Name,this,evt) : ''} className="grid-headers--container--child--def">{item.Name}
                 {item.cansort === true ?  <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? this.state.sortingtype == 'ASC' ? 'fa fa-fw fa-sort-down' : 'fa fa-fw fa-sort-up'   : ''}></div> : ''}
-            </div>   : <div key={index} className="grid-headers--container--child--def">
+            </div>   : <div key={index} className="grid-headers--container--child--def checkbox-selector">
                 <label className="checkbox-container"><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /><span className="checkmark"></span></label>
                 
             </div>
@@ -278,7 +278,7 @@ class GridContent extends Component {
                     <div className="user-actions--child user-actions--child--a">
                         Items ({this.totalRecord})
                     </div>
-                    <div className="user-actions--child user-actions--child--a">
+                    <div className="user-actions--child user-actions--child--f">
                         ({this.state.selectedrecord}) Selected
                     </div>
                     <div className="user-actions--child user-actions--child--b">
