@@ -175,30 +175,43 @@ import "react-datepicker/dist/react-datepicker.css";
             </label>
         </div>    
         <div className="grid--row--child--container">
-          <Input type="text" onChange={(evt) => this.getData(evt)} name = "name-val" value={this.state.name_val} placeholder="Name" />
+        {this.state.edit_click ?
+          <Input type="text" onChange={(evt) => this.getData(evt)} name = "name-val" value={this.state.name_val} placeholder="Name" /> :
+          <label className="form-control">{this.state.name_val}</label>
+        }
         </div>
         <div className="grid--row--child--container">
+        {this.state.edit_click ?
           <DatePicker
             className="grid--calender--field form-control"
             onSelect={this.handleSelect}
             selected={new Date(this.state.startDate)}
             onChange={this.handleChange}
-          />
+          /> : <label className="form-control">{this.state.startDate.toString()}</label>
+        }
         </div>
         <div className="grid--row--child--container">
-          <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" value={this.state.unit} placeholder="with a placeholder" />
+        {this.state.edit_click ?
+          <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" value={this.state.unit} placeholder="with a placeholder" /> :
+          <label className="form-control">{this.state.unit}</label>
+        }
         </div>
         <div className="grid--row--child--container">
+        {this.state.edit_click ?
           <label className="checkbox-container">
             <input type="checkbox" />
              <span className="checkmark"></span>
-          </label>
+          </label> : <label className="checkbox-container">
+            <input type="checkbox" disabled />
+             <span className="checkmark"></span>
+          </label> 
+        }
         </div>
         <div className="grid--row--child--container instockinput">
         { this.state.edit_click ?
           <select value={this.state.in_stock} onChange={(evt) => this.setState({in_stock: evt.target.value})}>>
             {this.StockJSON.map((team) => <option key={team.key} value={team.value}>{team.value}</option>)}
-          </select> : <label>{this.state.in_stock}</label>
+          </select> : <label className="form-control">{this.state.in_stock}</label>
         
       }
 
