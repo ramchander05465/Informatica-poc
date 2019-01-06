@@ -114,6 +114,7 @@ import "react-datepicker/dist/react-datepicker.css";
   }
 
   setCheckbox = (evt) =>{
+    
     var x = document.getElementsByClassName("chkdiv");
     var currentclickid = evt.currentTarget.id;
     var parentid = currentclickid.replace('chk_','row');
@@ -126,14 +127,11 @@ import "react-datepicker/dist/react-datepicker.css";
         var currentrow = document.getElementById(parentid);
         currentrow.classList.remove('rowselected');
     }
-    var cnt = 0;
-    for (var index = 0; index < x.length; index++) {
-        if(x[index].checked == true)
-          cnt = cnt  + 1;
-    }
-    this.props.selectedcheckbox(cnt);
+    var selectedrowcount = document.getElementsByClassName('rowselected');
+    this.props.selectedcheckbox(selectedrowcount.length - 1);
     var chk_all = document.getElementById("chk_all");
-    if(cnt == x.length - 2){ 
+    
+    if(selectedrowcount.length > this.props.pagecount){ 
       chk_all.checked = true;
     }
     else{

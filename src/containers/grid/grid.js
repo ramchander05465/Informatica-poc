@@ -230,6 +230,7 @@ class GridContent extends Component {
                 in_stock={filterdData[count].in_stock}
                 newRecord={false}
                 selectedcheckbox={(evt) => this.checkboxhandler(evt)}
+                pagecount={endCount}
                 editMode={false}
             />)
         }
