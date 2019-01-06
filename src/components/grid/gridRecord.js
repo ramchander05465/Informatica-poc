@@ -20,6 +20,7 @@ import "react-datepicker/dist/react-datepicker.css";
         unit: this.props.unit,
         discount: this.props.discount,
         in_stock: this.props.in_stock,
+        edit_click : false
       };
       this.handleChange = this.handleChange.bind(this);
     }
@@ -77,6 +78,9 @@ import "react-datepicker/dist/react-datepicker.css";
     document.getElementById("save"+this.props.id).className = "displayBlock btn-save";
     document.getElementById("delete"+this.props.id).className = "displayBlock btn-delete";
     document.getElementById("actionBtn"+this.props.id).className = "displayNone";
+    this.setState({
+      edit_click : true
+    })
     //this.props.editInfo(this.data);
   }
 
@@ -87,7 +91,9 @@ import "react-datepicker/dist/react-datepicker.css";
     document.getElementById("save"+this.props.id).className = "displayNone";
     document.getElementById("delete"+this.props.id).className = "displayNone";
     document.getElementById("row"+this.props.id).className = 'flex--cont--def grid--row--container noneEditableGrid'    
-    
+    this.setState({
+      edit_click : false
+    })
   }
   deleteData=()=>{    
     this.props.deleteInfo(this.props);
@@ -145,7 +151,18 @@ import "react-datepicker/dist/react-datepicker.css";
     //alert(evt.currentTarget.id);
     var x = document.getElementById(evt.currentTarget.id);
     x.classList.add('rowselected');
-  } 
+  }
+
+
+  StockJSON = [{
+     key : 1,
+     value : "yes"
+    },
+    {
+     key : 2,
+     value : "no"
+    }
+  ]; 
 
 
   render(){
@@ -174,17 +191,17 @@ import "react-datepicker/dist/react-datepicker.css";
         <div className="grid--row--child--container">
           <label className="checkbox-container">
             <input type="checkbox" />
-            <span className="checkmark"></span>
+             <span className="checkmark"></span>
           </label>
         </div>
         <div className="grid--row--child--container instockinput">
-          <Input 
-            type="text" 
-            name="text2"
-           // value={this.props.in_stock}
-           defaultValue={this.props.in_stock}
-            onChange={(evt) => this.getData(evt)}
-            placeholder="with a placeholder" />
+        { this.state.edit_click ?
+          <select value={this.state.in_stock} onChange={(evt) => this.setState({in_stock: evt.target.value})}>>
+            {this.StockJSON.map((team) => <option key={team.key} value={team.value}>{team.value}</option>)}
+          </select> : <label>{this.state.in_stock}</label>
+        
+      }
+
         </div>
         <div className="grid--row--child--container action--container">
           <div>
