@@ -6,7 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import '../App.css';
 import '../index.css';
-
+import 'bootstrap/dist/css/bootstrap.css'
 import { Button, Welcome } from '@storybook/react/demo';
 import Pagination from '../components/pagination/pagination'
 
@@ -23,10 +23,10 @@ storiesOf('Button', module)
   ));
 
 storiesOf('Informatica', module)
-.add('Default', ()=> <Pagination selectedPageClass={'wekcine'}
+.add('Default', ()=> <div className="grid--rows--container pagination"><Pagination selectedPageClass={'wekcine'}
 onPageChange={action('changed')}
 onSelectionPageChange={action('page changed')}
 total={100}
 activePage={2}
-recordPerPage={100}                        
-defaultConfiguration={['10', '20', '30']} />);
+recordPerPage={10}                        
+defaultConfiguration={[{ num: 10 }, { num: 25 }, { num: 50 }]} /></div>);
