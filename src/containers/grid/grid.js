@@ -38,7 +38,8 @@ class GridContent extends Component {
             canusersort : this.props.UserSort,
             enablepaging : this.props.UserPagging,
             enablesearch : this.props.UserSearch,
-            pagerInfo : this.props.pagingInfo
+            pagerInfo : this.props.pagingInfo,
+            selectedrecord : 0
         }
     }
 
@@ -77,6 +78,9 @@ class GridContent extends Component {
                     var currentrow = document.getElementById(parentid);
                     currentrow.classList.add('test');
                     collection[x].checked = true;
+                    this.setState({
+                        selectedrecord : collection.length - 1
+                    })
                 }
             }
         } else {
@@ -87,6 +91,9 @@ class GridContent extends Component {
                     var currentrow = document.getElementById(parentid);
                     currentrow.classList.remove('test');
                     collection[x].checked = false;
+                    this.setState({
+                        selectedrecord : 0
+                    })
                 }
             }
         }
@@ -180,7 +187,14 @@ class GridContent extends Component {
         this.setState({filterd:evt.target.value, current:1})
     }
 
+    checkboxhandler = (evt) =>{
+        this.setState({
+            selectedrecord : evt
+        })
+    }
+
     renderGridRecord = () => {
+        
         let userList = [];
         let endCount=0;
         let filterdData;
@@ -215,6 +229,7 @@ class GridContent extends Component {
                 discount={filterdData[count].discount}
                 in_stock={filterdData[count].in_stock}
                 newRecord={false}
+                selectedcheckbox={(evt) => this.checkboxhandler(evt)}
                 editMode={false}
             />)
         }
@@ -254,12 +269,17 @@ class GridContent extends Component {
         this.props.addInfo(data);
     }*/
 
+    
+
     render() {
         return (
             <React.Fragment>
                 <div className="flex--cont--def user-actions--container">
                     <div className="user-actions--child user-actions--child--a">
                         Items ({this.totalRecord})
+                    </div>
+                    <div className="user-actions--child user-actions--child--a">
+                        ({this.state.selectedrecord}) Selected
                     </div>
                     <div className="user-actions--child user-actions--child--b">
                         <TiPlusOutline
@@ -275,9 +295,11 @@ class GridContent extends Component {
                     <div className="user-actions--child user-actions--child--c">
                         <FiFilter size={25} title="Advance Filter"/>
                     </div>
+                    { this.state.enablesearch === true ?  
                     <div className="user-actions--child user-actions--child--d">
-                        { this.state.enablesearch === true ?  <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Find' /> : ''}
+                        <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Find' /> 
                     </div>
+                    : ''}
                     <div className="user-actions--child user-actions--child--e">
                         <FiSettings onClick={() => this.settingConfiguration()} size={25} data-toggle="modal" data-target="#myModal" title="Configure Table"/>
                             <div className="modal" id="myModal">

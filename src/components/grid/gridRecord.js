@@ -115,7 +115,6 @@ import "react-datepicker/dist/react-datepicker.css";
 
   setCheckbox = (evt) =>{
     var x = document.getElementsByClassName("chkdiv");
-    debugger;
     var currentclickid = evt.currentTarget.id;
     var parentid = currentclickid.replace('chk_','row');
     if(evt.currentTarget.checked)
@@ -132,7 +131,7 @@ import "react-datepicker/dist/react-datepicker.css";
         if(x[index].checked == true)
           cnt = cnt  + 1;
     }
-    
+    this.props.selectedcheckbox(cnt);
     var chk_all = document.getElementById("chk_all");
     if(cnt == x.length - 2){ 
       chk_all.checked = true;
