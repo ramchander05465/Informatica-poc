@@ -53,7 +53,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     flex: 13 10;
-    padding: 20px;
+    padding: 20px 40px 0px 20px;
     background: #fff;
     margin-top: 30px;
 }
@@ -151,6 +151,13 @@ body {
     padding-right: 5px;
     padding-left: 14px;
     position: relative;
+}
+
+.grid--row--child--container label.form-control {
+    height: 25px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    text-transform: capitalize;
 }
 
 .react-datepicker-wrapper,

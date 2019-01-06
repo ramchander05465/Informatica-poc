@@ -170,14 +170,14 @@ import "react-datepicker/dist/react-datepicker.css";
       <div  id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container checkbox-selector">
             <label className="checkbox-container">
-              <input onChange={(evt) => this.setCheckbox(evt)} id={"chk_"+this.props.id} className={this.props.editMode ? "":"chkdiv" } type="checkbox" />
+              <input onChange={(evt) => this.setCheckbox(evt)} id={"chk_"+this.props.id} className={this.props.editMode ? "":"chkdiv" } type="checkbox" tabIndex="0" />
               <span className="checkmark"></span>
             </label>
         </div>    
         <div className="grid--row--child--container">
         {this.state.edit_click ?
-          <Input type="text" onChange={(evt) => this.getData(evt)} name = "name-val" value={this.state.name_val} placeholder="Name" /> :
-          <label className="form-control">{this.state.name_val}</label>
+          <Input type="text" onChange={(evt) => this.getData(evt)} name = "name-val" value={this.state.name_val} placeholder="Name" tabIndex="0"/> :
+          <label className="form-control" tabIndex="0">{this.state.name_val}</label>
         }
         </div>
         <div className="grid--row--child--container">
@@ -187,19 +187,19 @@ import "react-datepicker/dist/react-datepicker.css";
             onSelect={this.handleSelect}
             selected={new Date(this.state.startDate)}
             onChange={this.handleChange}
-          /> : <label className="form-control">{this.state.startDate.toString()}</label>
+            tabIndex="0" /> : <label className="form-control" tabIndex="0">{this.state.startDate.toString()}</label>
         }
         </div>
         <div className="grid--row--child--container">
         {this.state.edit_click ?
-          <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" value={this.state.unit} placeholder="with a placeholder" /> :
-          <label className="form-control">{this.state.unit}</label>
+          <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" value={this.state.unit} placeholder="with a placeholder" tabIndex="0" /> :
+          <label className="form-control" tabIndex="0">{this.state.unit}</label>
         }
         </div>
         <div className="grid--row--child--container">
         {this.state.edit_click ?
           <label className="checkbox-container">
-            <input type="checkbox" />
+            <input type="checkbox" tabIndex="0"/>
              <span className="checkmark"></span>
           </label> : <label className="checkbox-container">
             <input type="checkbox" disabled />
@@ -210,8 +210,8 @@ import "react-datepicker/dist/react-datepicker.css";
         <div className="grid--row--child--container instockinput">
         { this.state.edit_click ?
           <select value={this.state.in_stock} onChange={(evt) => this.setState({in_stock: evt.target.value})}>>
-            {this.StockJSON.map((team) => <option key={team.key} value={team.value}>{team.value}</option>)}
-          </select> : <label className="form-control">{this.state.in_stock}</label>
+            {this.StockJSON.map((team) => <option key={team.key} value={team.value} tabIndex="0">{team.value}</option>)}
+          </select> : <label className="form-control" tabIndex="0">{this.state.in_stock}</label>
         
       }
 
@@ -225,16 +225,16 @@ import "react-datepicker/dist/react-datepicker.css";
               : 
               (<span>
                 <div className="dropdown actionbutton" id={"actionBtn"+this.props.id}>
-                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabIndex="0">
                     <GoKebabVertical size={18} />
                   </button>
                   <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <button className="dropdown-item" id={"edit"+this.props.id} onClick={()=> this.editData()}><FaEdit size={18} /></button>
-                    <button className="dropdown-item" onClick={()=> this.deleteData()}><FaTrashAlt size={18} /></button>
+                    <button className="dropdown-item" id={"edit"+this.props.id} onClick={()=> this.editData()}tabIndex="0"><FaEdit size={18} /></button>
+                    <button className="dropdown-item" onClick={()=> this.deleteData()} tabIndex="0"><FaTrashAlt size={18} /></button>
                   </div>
                 </div>
-                <button className="displayNone" id={"save"+this.props.id} onClick={()=> this.saveEditedData()}><FaRegSave size={18} /></button>
-                <button className="displayNone" id={"delete"+this.props.id} onClick={()=> this.deleteData()}><FaTrashAlt size={18} /></button>
+                <button className="displayNone" id={"save"+this.props.id} onClick={()=> this.saveEditedData()}tabIndex="0"><FaRegSave size={18} /></button>
+                <button className="displayNone" id={"delete"+this.props.id} onClick={()=> this.deleteData()}tabIndex="0"><FaTrashAlt size={18} /></button>
                 </span>)}
             
           </div>

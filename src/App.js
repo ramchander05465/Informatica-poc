@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap';
+import 'inform-css-theme/index.css';
 import "react-datepicker/dist/react-datepicker.css"
 
 import './App.css';
@@ -30,7 +31,7 @@ class App extends Component {
         
         <div className="flex--cont--def app-middle--container">
           <Sidebar />
-          <div className="flex--cont--def app-grid--container">
+          <div id="maincontent" className="flex--cont--def app-grid--container">
             <AppRouter />
           </div>
         </div>
