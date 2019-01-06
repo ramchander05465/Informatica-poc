@@ -76,7 +76,7 @@ class GridContent extends Component {
                     var currentclickid = collection[x].id;
                     var parentid = currentclickid.replace('chk_','row');
                     var currentrow = document.getElementById(parentid);
-                    currentrow.classList.add('test');
+                    currentrow.classList.add('rowselected');
                     collection[x].checked = true;
                     this.setState({
                         selectedrecord : collection.length - 1
@@ -89,7 +89,7 @@ class GridContent extends Component {
                     var currentclickid = collection[x].id;
                     var parentid = currentclickid.replace('chk_','row');
                     var currentrow = document.getElementById(parentid);
-                    currentrow.classList.remove('test');
+                    currentrow.classList.remove('rowselected');
                     collection[x].checked = false;
                     this.setState({
                         selectedrecord : 0

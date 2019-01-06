@@ -120,11 +120,11 @@ import "react-datepicker/dist/react-datepicker.css";
     if(evt.currentTarget.checked)
     {
         var currentrow = document.getElementById(parentid);
-        currentrow.classList.add('test');
+        currentrow.classList.add('rowselected');
     }
     else{
         var currentrow = document.getElementById(parentid);
-        currentrow.classList.remove('test');
+        currentrow.classList.remove('rowselected');
     }
     var cnt = 0;
     for (var index = 0; index < x.length; index++) {
@@ -144,7 +144,7 @@ import "react-datepicker/dist/react-datepicker.css";
   setrowselection = (evt) =>{
     //alert(evt.currentTarget.id);
     var x = document.getElementById(evt.currentTarget.id);
-    x.classList.add('test');
+    x.classList.add('rowselected');
   } 
 
 

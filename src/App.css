@@ -611,7 +611,7 @@ input:checked+.radio-slider:before {
     opacity: 1;
 }
 
-.test {
+.rowselected {
     position: relative;
     background: #d6ebfc;
     content: "";
