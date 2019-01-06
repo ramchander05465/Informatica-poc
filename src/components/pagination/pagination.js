@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoChevronLeft, GoChevronRight } from "react-icons/go"
+import { Input} from 'reactstrap'
 
 const Pagination = (props) => {
     
@@ -17,15 +18,14 @@ const Pagination = (props) => {
         totalPage = Number(total%recordPerPage) === 0 ? totalPage : Number(totalPage)+1;
         return (
             <div>
-                <span id="prev" onClick={() => props.onPageChange(activePage-1)} className={activePage===1 ? 'disableClick':''}>{'<'} </span>
-                <span className="paging">{activePage} of {totalPage}</span>
-                <span id="next" onClick={() => props.onPageChange(activePage+1)} className={activePage===totalPage ? 'disableClick':''}>{' >'}</span>
+                <span id="prev" onClick={() => props.onPageChange(Number(activePage)-1)} className={activePage===1 ? 'disableClick':''}>{'<'} </span>
+                <span className="paging"><Input value={activePage} onChange={(evt) => totalPage >= evt.target.value ? props.onDispalyPage(evt.target.value, true) : props.onDispalyPage(evt.target.value, false)} style={{"width":"45px", "display":"inline-block"}} /> of {totalPage}</span>
+                <span id="next" onClick={() => props.onPageChange(Number(activePage)+1)} className={activePage===totalPage ? 'disableClick':''}>{' >'}</span>
             </div>
         )
     }
 
-    const renderRecordPerPage = () => {
-        
+    const renderRecordPerPage = () => {        
         return props.defaultConfiguration.map((data, index) => <option value={data.num} key={index}>{data.num}</option>)
     }
 

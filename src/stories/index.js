@@ -4,6 +4,9 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
+import '../App.css';
+import '../index.css';
+
 import { Button, Welcome } from '@storybook/react/demo';
 import Pagination from '../components/pagination/pagination'
 
@@ -19,6 +22,11 @@ storiesOf('Button', module)
     </Button>
   ));
 
-storiesOf('Pagination', module).add('page', ()=> <Pagination selectedPageClass={'wekcine'}  onPageChange={()=>console.log('ddd')}
-  onSelectionPageChange={()=> console.log('ddd')}  total={100}  activePage={2}  recordPerPage={10}                        
-  defaultConfiguration={['10','20', '30']}></Pagination>)
+storiesOf('Informatica', module)
+.add('Default', ()=> <Pagination selectedPageClass={'wekcine'}
+onPageChange={action('changed')}
+onSelectionPageChange={action('page changed')}
+total={100}
+activePage={2}
+recordPerPage={100}                        
+defaultConfiguration={['10', '20', '30']} />);

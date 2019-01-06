@@ -66,6 +66,12 @@ class GridContent extends Component {
         this.setState({current:1, recPerPage:count})
     }
 
+    onDispalyPage = (count, isValid) =>{
+        if(count > 0 && isValid===true){
+            this.setState({current:count});
+        }
+    }
+
     setcheckall = () => {
         
         var chk = document.getElementById("chk_all");
@@ -382,6 +388,7 @@ class GridContent extends Component {
                         selectedPageClass={'wekcine'}
                         onPageChange={this.pageChangeHandler}
                         onSelectionPageChange={this.pageSelectionHandler}
+                        onDispalyPage={(page, isValid)=>this.onDispalyPage(page, isValid)}
                         total={this.totalRecord}
                         activePage={this.state.current}
                         recordPerPage={this.state.recPerPage}                        
