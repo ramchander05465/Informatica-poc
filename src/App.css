@@ -699,3 +699,7 @@ input:checked+.radio-slider:before {
   #firstrecord {
       outline: none;
   }
+
+.namecolumn {
+    color: #004e9d;
+}
