@@ -9,7 +9,7 @@ const Sidebar = () => {
             <ul className="nav flex-column">
               <li className="nav-item">
                 <a className="nav-link" href="#" title="add" aria-label="add">
-                <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 0 448 448" width="38px" className=""><g><path d="m448 48c0-26.507812-21.492188-48-48-48h-352c-26.507812 0-48 21.492188-48 48v352c0 26.507812 21.492188 48 48 48h352c26.507812 0 48-21.492188 48-48zm-64 192h-144v144h-32v-144h-144v-32h144v-144h32v144h144zm0 0" data-original="#000000" className="active-path" data-old_color="#21FF00" fill="#19FF00"/></g> </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 0 448 448" width="38px" className="" style={{"width":"24px"}}><g><path d="m448 48c0-26.507812-21.492188-48-48-48h-352c-26.507812 0-48 21.492188-48 48v352c0 26.507812 21.492188 48 48 48h352c26.507812 0 48-21.492188 48-48zm-64 192h-144v144h-32v-144h-144v-32h144v-144h32v144h144zm0 0" data-original="#000000" className="active-path" data-old_color="#21FF00" fill="#72c443"/></g> </svg>
                 </a>
               </li>
               <li className="nav-item">
