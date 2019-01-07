@@ -145,15 +145,19 @@ class GridContent extends Component {
         if(sortingtype == "ASC"){
             if(columnName == "Name"){
             this.props.gridInfo.sort(function(a, b){
-                return a.name_val-b.name_val
+                if(a.name_val < b.name_val) { return -1; }
+                if(a.name_val > b.name_val) { return 1; }
+                return 0;
                 })
             }
             if(columnName == "Order Date"){
             this.props.gridInfo.sort((a, b) => new Date(...a.order_date.split('/').reverse()) - new Date(...b.order_date.split('/').reverse()));
             }
             if(columnName == "Unit"){
-            this.props.gridInfo.sort(function(a, b){
-                return a.unit-b.unit
+                this.props.gridInfo.sort(function(a, b){
+                if(a.unit < b.unit) { return -1; }
+                if(a.unit > b.unit) { return 1; }
+                return 0;
                 })
             }
             if(columnName == "In Stock"){
