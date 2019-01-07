@@ -1,5 +1,4 @@
 import React from 'react';
-import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { Input} from 'reactstrap'
 
@@ -20,7 +19,7 @@ const Pagination = (props) => {
         return (
             <div>
                 <span id="prev" tabIndex="0" aria-label="Click here to view previous page" onClick={() => props.onPageChange(Number(activePage)-1)} className={activePage===1 ? 'disableClick':''}><FaAngleLeft size={18}/> </span>
-                <span className="paging" tabIndex="0"><Input value={activePage} onChange={(evt) => totalPage >= evt.target.value ? props.onDispalyPage(evt.target.value, true) : props.onDispalyPage(evt.target.value, false)} style={{"width":"38px", "display":"inline-block","text-align":"center","margin-right":"5px"}} aria-label="current page number" /> of {totalPage}</span>
+                <span className="paging" tabIndex="0"><Input value={activePage} onChange={(evt) => totalPage >= evt.target.value ? props.onDispalyPage(evt.target.value, true) : props.onDispalyPage(evt.target.value, false)} style={{"width":"38px", "display":"inline-block","text-align":"center","margin-right":"5px","padding":"0px"}} aria-label="current page number" /> of {totalPage}</span>
                 <span id="next" tabIndex="0" aria-label="Click here to view next page" onClick={() => props.onPageChange(Number(activePage)+1)} className={activePage===totalPage ? 'disableClick':''}><FaAngleRight size={18}/></span>
             </div>
         )
