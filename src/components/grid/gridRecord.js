@@ -221,7 +221,7 @@ import "react-datepicker/dist/react-datepicker.css";
           
               
             {this.props.newRecord ? 
-              <button onClick={()=> this.saveData()}>Save</button> 
+              <button class="btn-save" onClick={()=> this.saveData()} tabIndex="0" aria-label="save"><FaRegSave size={18} /></button> 
               : 
               (<span>
                 <div className="dropdown actionbutton" id={"actionBtn"+this.props.id}>
