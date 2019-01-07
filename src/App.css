@@ -129,6 +129,20 @@ body {
     padding-right: 0;
 }
 
+.grid-headers--container--child--def:nth-of-type(2), .grid-headers--container--child--def:nth-of-type(4) {
+    cursor: pointer;
+}
+
+.fa-sort-down:before {
+    position: relative;
+    top: -3px;
+}
+
+.fa-sort-up:before {
+    position: relative;
+    top: 3px;
+}
+
 .grid--rows--container.overflowContainer {
     min-height: 327px;
     max-height: 327px;
