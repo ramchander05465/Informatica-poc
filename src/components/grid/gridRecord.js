@@ -20,7 +20,7 @@ import "react-datepicker/dist/react-datepicker.css";
         unit: this.props.unit,
         discount: this.props.discount,
         in_stock: this.props.in_stock,
-        edit_click : false
+        edit_click : this.props.editMode
       };
       this.handleChange = this.handleChange.bind(this);
     }
@@ -167,7 +167,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
   render(){
   return (
-      <div  id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
+      <div  id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":  "flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container checkbox-selector">
             <label className="checkbox-container"><span class="displayNone" aria-hidden="true">Checkbox</span>
               <input onChange={(evt) => this.setCheckbox(evt)} id={"chk_"+this.props.id} className={this.props.editMode ? "":"chkdiv" } type="checkbox" tabIndex="0" />
