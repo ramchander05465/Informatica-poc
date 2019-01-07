@@ -181,15 +181,14 @@ import "react-datepicker/dist/react-datepicker.css";
         }
         </div>
         <div className="grid--row--child--container">
-        {this.state.edit_click ?
+        
           <DatePicker
             className={this.state.startDate === "Invalid date" ? ".grid--row--container.error":"grid--calender--field form-control"}
             onSelect={this.handleSelect}
             selected={new Date(this.state.startDate)}
             onChange={this.handleChange}
-            tabIndex="0" /> : <label className="form-control" tabIndex="0">{this.state.startDate.toString()}</label>
-        }
-        <span class="errormsg"><i>x</i> Order Date must be a valid date.</span>
+            tabIndex="0" /> 
+        
         </div>
         <div className="grid--row--child--container">
         {this.state.edit_click ?
