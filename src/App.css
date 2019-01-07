@@ -328,10 +328,9 @@ select.form-control.slate {
 #prev,
 #next {
     cursor: pointer;
-    letter-spacing: .5em;
     font-size: 1.3rem;
     position: relative;
-    top: 4px;
+    top: 2px;
 }
 
 #prev.disableClick,
@@ -341,9 +340,9 @@ select.form-control.slate {
 
 .paging {
     font-weight: 700;
+    font-size: 13px;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 13px;
 }
 
 .pageCount {
