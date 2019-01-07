@@ -177,7 +177,7 @@ import "react-datepicker/dist/react-datepicker.css";
         <div className="grid--row--child--container">
         {this.state.edit_click ?
           <Input type="text" onChange={(evt) => this.getData(evt)} name = "name-val" value={this.state.name_val} placeholder="Name" tabIndex="0"/> :
-          <label className="form-control" tabIndex="0">{this.state.name_val}</label>
+          <label className="form-control namecolumn" tabIndex="0">{this.state.name_val}</label>
         }
         </div>
         <div className="grid--row--child--container">

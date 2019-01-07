@@ -17,7 +17,7 @@ const INIT_STATE = {
     canUserSearchData: true,
     gridInfo: [{
             "id": 1,
-            "name_val": 3,
+            "name_val": "Product1",
             "order_date": "01/01/2019",
             "unit": 20,
             "discount": "1",
@@ -25,7 +25,7 @@ const INIT_STATE = {
         },
         {
             "id": 2,
-            "name_val": 2,
+            "name_val": "Product2",
             "order_date": "01/01/2019",
             "unit": 14,
             "discount": "1",
@@ -33,7 +33,7 @@ const INIT_STATE = {
         },
         {
             "id": 3,
-            "name_val": 5,
+            "name_val": "Product3",
             "order_date": "01/01/2019",
             "unit": 6,
             "discount": "0",
@@ -41,7 +41,7 @@ const INIT_STATE = {
         },
         {
             "id": 4,
-            "name_val": 3,
+            "name_val": "Product4",
             "order_date": "02/01/2019",
             "unit": 8,
             "discount": "0",
@@ -49,7 +49,7 @@ const INIT_STATE = {
         },
         {
             "id": 5,
-            "name_val": 3,
+            "name_val": "Product5",
             "order_date": "03/01/2019",
             "unit": 17,
             "discount": "1",
@@ -57,7 +57,7 @@ const INIT_STATE = {
         },
         {
             "id": 6,
-            "name_val": 2,
+            "name_val": "Product6",
             "order_date": "04/01/2019",
             "unit": 10,
             "discount": "1",
@@ -65,7 +65,7 @@ const INIT_STATE = {
         },
         {
             "id": 7,
-            "name_val": 4,
+            "name_val": "Product7",
             "order_date": "05/01/2019",
             "unit": 19,
             "discount": "0",
@@ -73,7 +73,7 @@ const INIT_STATE = {
         },
         {
             "id": 8,
-            "name_val": 4,
+            "name_val": "Product8",
             "order_date": "01/01/2019",
             "unit": 13,
             "discount": "0",
@@ -81,7 +81,7 @@ const INIT_STATE = {
         },
         {
             "id": 9,
-            "name_val": 1,
+            "name_val": "Product9",
             "order_date": "01/01/2019",
             "unit": 9,
             "discount": "1",
@@ -89,7 +89,7 @@ const INIT_STATE = {
         },
         {
             "id": 10,
-            "name_val": 3,
+            "name_val": "Product10",
             "order_date": "01/01/2019",
             "unit": 8,
             "discount": "1",
@@ -97,7 +97,7 @@ const INIT_STATE = {
         },
         {
             "id": 11,
-            "name_val": 4,
+            "name_val": "Product11",
             "order_date": "01/01/2019",
             "unit": 17,
             "discount": "0",
@@ -105,7 +105,7 @@ const INIT_STATE = {
         },
         {
             "id": 12,
-            "name_val": 4,
+            "name_val": "Product12",
             "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
@@ -113,7 +113,7 @@ const INIT_STATE = {
         },
         {
             "id": 13,
-            "name_val": 5,
+            "name_val": "Product13",
             "order_date": "01/01/2019",
             "unit": 6,
             "discount": "1",
@@ -121,7 +121,7 @@ const INIT_STATE = {
         },
         {
             "id": 14,
-            "name_val": 1,
+            "name_val": "Product14",
             "order_date": "01/01/2019",
             "unit": 18,
             "discount": "1",
@@ -129,7 +129,7 @@ const INIT_STATE = {
         },
         {
             "id": 15,
-            "name_val": 1,
+            "name_val": "Product15",
             "order_date": "01/01/2019",
             "unit": 12,
             "discount": "0",
@@ -137,7 +137,7 @@ const INIT_STATE = {
         },
         {
             "id": 16,
-            "name_val": 4,
+            "name_val": "Product16",
             "order_date": "01/01/2019",
             "unit": 10,
             "discount": "0",
@@ -145,7 +145,7 @@ const INIT_STATE = {
         },
         {
             "id": 17,
-            "name_val": 3,
+            "name_val": "Product17",
             "order_date": "01/01/2019",
             "unit": 19,
             "discount": "1",
@@ -153,7 +153,7 @@ const INIT_STATE = {
         },
         {
             "id": 18,
-            "name_val": 4,
+            "name_val": "Product18",
             "order_date": "01/01/2019",
             "unit": 17,
             "discount": "1",
@@ -161,7 +161,7 @@ const INIT_STATE = {
         },
         {
             "id": 19,
-            "name_val": 1,
+            "name_val": "Product19",
             "order_date": "01/01/2019",
             "unit": 13,
             "discount": "0",
@@ -169,7 +169,7 @@ const INIT_STATE = {
         },
         {
             "id": 20,
-            "name_val": 1,
+            "name_val": "Product20",
             "order_date": "01/01/2019",
             "unit": 20,
             "discount": "0",
@@ -177,7 +177,7 @@ const INIT_STATE = {
         },
         {
             "id": 21,
-            "name_val": 4,
+            "name_val": "Product21",
             "order_date": "01/01/2019",
             "unit": 18,
             "discount": "1",
@@ -185,7 +185,7 @@ const INIT_STATE = {
         },
         {
             "id": 22,
-            "name_val": 1,
+            "name_val": "Product22",
             "order_date": "01/01/2019",
             "unit": 5,
             "discount": "1",
@@ -193,7 +193,7 @@ const INIT_STATE = {
         },
         {
             "id": 23,
-            "name_val": 2,
+            "name_val": "Product23",
             "order_date": "01/01/2019",
             "unit": 8,
             "discount": "0",
@@ -201,7 +201,7 @@ const INIT_STATE = {
         },
         {
             "id": 24,
-            "name_val": 1,
+            "name_val": "Product24",
             "order_date": "01/01/2019",
             "unit": 20,
             "discount": "0",
@@ -209,7 +209,7 @@ const INIT_STATE = {
         },
         {
             "id": 25,
-            "name_val": 1,
+            "name_val": "Product25",
             "order_date": "01/01/2019",
             "unit": 7,
             "discount": "1",
@@ -217,7 +217,7 @@ const INIT_STATE = {
         },
         {
             "id": 26,
-            "name_val": 4,
+            "name_val": "Product26",
             "order_date": "01/01/2019",
             "unit": 13,
             "discount": "1",
@@ -225,7 +225,7 @@ const INIT_STATE = {
         },
         {
             "id": 27,
-            "name_val": 4,
+            "name_val": "Product27",
             "order_date": "01/01/2019",
             "unit": 8,
             "discount": "0",
@@ -233,7 +233,7 @@ const INIT_STATE = {
         },
         {
             "id": 28,
-            "name_val": 3,
+            "name_val": "Product28",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "0",
@@ -241,7 +241,7 @@ const INIT_STATE = {
         },
         {
             "id": 29,
-            "name_val": 1,
+            "name_val": "Product29",
             "order_date": "01/01/2019",
             "unit": 16,
             "discount": "1",
@@ -249,7 +249,7 @@ const INIT_STATE = {
         },
         {
             "id": 30,
-            "name_val": 3,
+            "name_val": "Product30",
             "order_date": "01/01/2019",
             "unit": 16,
             "discount": "1",
@@ -257,7 +257,7 @@ const INIT_STATE = {
         },
         {
             "id": 31,
-            "name_val": 3,
+            "name_val": "Product31",
             "order_date": "01/01/2019",
             "unit": 18,
             "discount": "0",
@@ -265,7 +265,7 @@ const INIT_STATE = {
         },
         {
             "id": 32,
-            "name_val": 4,
+            "name_val": "Product32",
             "order_date": "01/01/2019",
             "unit": 13,
             "discount": "0",
@@ -273,7 +273,7 @@ const INIT_STATE = {
         },
         {
             "id": 33,
-            "name_val": 2,
+            "name_val": "Product33",
             "order_date": "01/01/2019",
             "unit": 13,
             "discount": "1",
@@ -281,7 +281,7 @@ const INIT_STATE = {
         },
         {
             "id": 34,
-            "name_val": 3,
+            "name_val": "Product34",
             "order_date": "01/01/2019",
             "unit": 14,
             "discount": "1",
@@ -289,7 +289,7 @@ const INIT_STATE = {
         },
         {
             "id": 35,
-            "name_val": 3,
+            "name_val": "Product35",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "0",
@@ -297,7 +297,7 @@ const INIT_STATE = {
         },
         {
             "id": 36,
-            "name_val": 5,
+            "name_val": "Product36",
             "order_date": "01/01/2019",
             "unit": 6,
             "discount": "0",
@@ -305,7 +305,7 @@ const INIT_STATE = {
         },
         {
             "id": 37,
-            "name_val": 3,
+            "name_val": "Product37",
             "order_date": "01/01/2019",
             "unit": 9,
             "discount": "1",
@@ -313,7 +313,7 @@ const INIT_STATE = {
         },
         {
             "id": 38,
-            "name_val": 3,
+            "name_val": "Product38",
             "order_date": "01/01/2019",
             "unit": 11,
             "discount": "1",
@@ -321,7 +321,7 @@ const INIT_STATE = {
         },
         {
             "id": 39,
-            "name_val": 2,
+            "name_val": "Product39",
             "order_date": "01/01/2019",
             "unit": 19,
             "discount": "0",
@@ -329,7 +329,7 @@ const INIT_STATE = {
         },
         {
             "id": 40,
-            "name_val": 3,
+            "name_val": "Product40",
             "order_date": "01/01/2019",
             "unit": 9,
             "discount": "0",
@@ -337,7 +337,7 @@ const INIT_STATE = {
         },
         {
             "id": 41,
-            "name_val": 2,
+            "name_val": "Product41",
             "order_date": "01/01/2019",
             "unit": 12,
             "discount": "1",
@@ -345,7 +345,7 @@ const INIT_STATE = {
         },
         {
             "id": 42,
-            "name_val": 1,
+            "name_val": "Product42",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
@@ -353,7 +353,7 @@ const INIT_STATE = {
         },
         {
             "id": 43,
-            "name_val": 3,
+            "name_val": "Product43",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "0",
@@ -361,7 +361,7 @@ const INIT_STATE = {
         },
         {
             "id": 44,
-            "name_val": 2,
+            "name_val": "Product44",
             "order_date": "01/01/2019",
             "unit": 5,
             "discount": "0",
@@ -369,7 +369,7 @@ const INIT_STATE = {
         },
         {
             "id": 45,
-            "name_val": 1,
+            "name_val": "Product45",
             "order_date": "01/01/2019",
             "unit": 5,
             "discount": "1",
@@ -377,7 +377,7 @@ const INIT_STATE = {
         },
         {
             "id": 46,
-            "name_val": 5,
+            "name_val": "Product46",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
@@ -385,7 +385,7 @@ const INIT_STATE = {
         },
         {
             "id": 47,
-            "name_val": 3,
+            "name_val": "Product47",
             "order_date": "01/01/2019",
             "unit": 17,
             "discount": "0",
@@ -393,7 +393,7 @@ const INIT_STATE = {
         },
         {
             "id": 48,
-            "name_val": 3,
+            "name_val": "Product48",
             "order_date": "01/01/2019",
             "unit": 5,
             "discount": "0",
@@ -401,7 +401,7 @@ const INIT_STATE = {
         },
         {
             "id": 49,
-            "name_val": 2,
+            "name_val": "Product49",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
@@ -409,7 +409,7 @@ const INIT_STATE = {
         },
         {
             "id": 50,
-            "name_val": 5,
+            "name_val": "Product50",
             "order_date": "01/01/2019",
             "unit": 8,
             "discount": "1",
@@ -417,7 +417,7 @@ const INIT_STATE = {
         },
         {
             "id": 51,
-            "name_val": 2,
+            "name_val": "Product51",
             "order_date": "01/01/2019",
             "unit": 12,
             "discount": "0",
@@ -425,7 +425,7 @@ const INIT_STATE = {
         },
         {
             "id": 52,
-            "name_val": 4,
+            "name_val": "Product52",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "0",
@@ -433,7 +433,7 @@ const INIT_STATE = {
         },
         {
             "id": 53,
-            "name_val": 1,
+            "name_val": "Product53",
             "order_date": "01/01/2019",
             "unit": 12,
             "discount": "1",
@@ -441,7 +441,7 @@ const INIT_STATE = {
         },
         {
             "id": 54,
-            "name_val": 1,
+            "name_val": "Product54",
             "order_date": "01/01/2019",
             "unit": 17,
             "discount": "1",
@@ -449,7 +449,7 @@ const INIT_STATE = {
         },
         {
             "id": 55,
-            "name_val": 5,
+            "name_val": "Product55",
             "order_date": "01/01/2019",
             "unit": 5,
             "discount": "0",
@@ -457,7 +457,7 @@ const INIT_STATE = {
         },
         {
             "id": 56,
-            "name_val": 3,
+            "name_val": "Product56",
             "order_date": "01/01/2019",
             "unit": 20,
             "discount": "0",
@@ -465,7 +465,7 @@ const INIT_STATE = {
         },
         {
             "id": 57,
-            "name_val": 5,
+            "name_val": "Product57",
             "order_date": "01/01/2019",
             "unit": 17,
             "discount": "1",
@@ -473,7 +473,7 @@ const INIT_STATE = {
         },
         {
             "id": 58,
-            "name_val": 1,
+            "name_val": "Product58",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
@@ -481,7 +481,7 @@ const INIT_STATE = {
         },
         {
             "id": 59,
-            "name_val": 2,
+            "name_val": "Product59",
             "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
@@ -489,7 +489,7 @@ const INIT_STATE = {
         },
         {
             "id": 60,
-            "name_val": 3,
+            "name_val": "Product60",
             "order_date": "01/01/2019",
             "unit": 12,
             "discount": "0",
@@ -497,7 +497,7 @@ const INIT_STATE = {
         },
         {
             "id": 61,
-            "name_val": 2,
+            "name_val": "Product61",
             "order_date": "01/01/2019",
             "unit": 14,
             "discount": "1",
@@ -505,7 +505,7 @@ const INIT_STATE = {
         },
         {
             "id": 62,
-            "name_val": 2,
+            "name_val": "Product62",
             "order_date": "01/01/2019",
             "unit": 16,
             "discount": "1",
@@ -513,7 +513,7 @@ const INIT_STATE = {
         },
         {
             "id": 63,
-            "name_val": 3,
+            "name_val": "Product63",
             "order_date": "01/01/2019",
             "unit": 19,
             "discount": "0",
@@ -521,7 +521,7 @@ const INIT_STATE = {
         },
         {
             "id": 64,
-            "name_val": 4,
+            "name_val": "Product64",
             "order_date": "01/01/2019",
             "unit": 10,
             "discount": "0",
@@ -529,7 +529,7 @@ const INIT_STATE = {
         },
         {
             "id": 65,
-            "name_val": 2,
+            "name_val": "Product65",
             "order_date": "01/01/2019",
             "unit": 9,
             "discount": "1",
@@ -537,7 +537,7 @@ const INIT_STATE = {
         },
         {
             "id": 66,
-            "name_val": 1,
+            "name_val": "Product66",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
@@ -545,7 +545,7 @@ const INIT_STATE = {
         },
         {
             "id": 67,
-            "name_val": 3,
+            "name_val": "Product67",
             "order_date": "01/01/2019",
             "unit": 5,
             "discount": "0",
@@ -553,7 +553,7 @@ const INIT_STATE = {
         },
         {
             "id": 68,
-            "name_val": 1,
+            "name_val": "Product68",
             "order_date": "01/01/2019",
             "unit": 18,
             "discount": "0",
@@ -561,7 +561,7 @@ const INIT_STATE = {
         },
         {
             "id": 69,
-            "name_val": 1,
+            "name_val": "Product69",
             "order_date": "01/01/2019",
             "unit": 19,
             "discount": "1",
@@ -569,7 +569,7 @@ const INIT_STATE = {
         },
         {
             "id": 70,
-            "name_val": 5,
+            "name_val": "Product70",
             "order_date": "01/01/2019",
             "unit": 12,
             "discount": "1",
@@ -577,7 +577,7 @@ const INIT_STATE = {
         },
         {
             "id": 71,
-            "name_val": 5,
+            "name_val": "Product71",
             "order_date": "01/01/2019",
             "unit": 14,
             "discount": "0",
@@ -585,7 +585,7 @@ const INIT_STATE = {
         },
         {
             "id": 72,
-            "name_val": 5,
+            "name_val": "Product72",
             "order_date": "01/01/2019",
             "unit": 19,
             "discount": "0",
@@ -593,7 +593,7 @@ const INIT_STATE = {
         },
         {
             "id": 73,
-            "name_val": 5,
+            "name_val": "Product73",
             "order_date": "01/01/2019",
             "unit": 5,
             "discount": "1",
@@ -601,7 +601,7 @@ const INIT_STATE = {
         },
         {
             "id": 74,
-            "name_val": 4,
+            "name_val": "Product74",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
@@ -609,7 +609,7 @@ const INIT_STATE = {
         },
         {
             "id": 75,
-            "name_val": 4,
+            "name_val": "Product75",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "0",
@@ -617,7 +617,7 @@ const INIT_STATE = {
         },
         {
             "id": 76,
-            "name_val": 4,
+            "name_val": "Product76",
             "order_date": "01/01/2019",
             "unit": 9,
             "discount": "0",
@@ -625,7 +625,7 @@ const INIT_STATE = {
         },
         {
             "id": 77,
-            "name_val": 4,
+            "name_val": "Product77",
             "order_date": "01/01/2019",
             "unit": 15,
             "discount": "1",
@@ -633,7 +633,7 @@ const INIT_STATE = {
         },
         {
             "id": 78,
-            "name_val": 4,
+            "name_val": "Product78",
             "order_date": "01/01/2019",
             "unit": 11,
             "discount": "1",
@@ -641,7 +641,7 @@ const INIT_STATE = {
         },
         {
             "id": 79,
-            "name_val": 1,
+            "name_val": "Product79",
             "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
@@ -649,7 +649,7 @@ const INIT_STATE = {
         },
         {
             "id": 80,
-            "name_val": 4,
+            "name_val": "Product80",
             "order_date": "01/01/2019",
             "unit": 19,
             "discount": "0",
@@ -657,7 +657,7 @@ const INIT_STATE = {
         },
         {
             "id": 81,
-            "name_val": 5,
+            "name_val": "Product81",
             "order_date": "01/01/2019",
             "unit": 5,
             "discount": "1",
@@ -665,7 +665,7 @@ const INIT_STATE = {
         },
         {
             "id": 82,
-            "name_val": 4,
+            "name_val": "Product82",
             "order_date": "01/01/2019",
             "unit": 14,
             "discount": "1",
@@ -673,7 +673,7 @@ const INIT_STATE = {
         },
         {
             "id": 83,
-            "name_val": 2,
+            "name_val": "Product83",
             "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
@@ -681,7 +681,7 @@ const INIT_STATE = {
         },
         {
             "id": 84,
-            "name_val": 4,
+            "name_val": "Product84",
             "order_date": "01/01/2019",
             "unit": 18,
             "discount": "0",
@@ -689,7 +689,7 @@ const INIT_STATE = {
         },
         {
             "id": 85,
-            "name_val": 3,
+            "name_val": "Product85",
             "order_date": "01/01/2019",
             "unit": 13,
             "discount": "1",
@@ -697,7 +697,7 @@ const INIT_STATE = {
         },
         {
             "id": 86,
-            "name_val": 5,
+            "name_val": "Product86",
             "order_date": "01/01/2019",
             "unit": 19,
             "discount": "1",
@@ -705,7 +705,7 @@ const INIT_STATE = {
         },
         {
             "id": 87,
-            "name_val": 3,
+            "name_val": "Product87",
             "order_date": "01/01/2019",
             "unit": 7,
             "discount": "0",
@@ -713,7 +713,7 @@ const INIT_STATE = {
         },
         {
             "id": 88,
-            "name_val": 1,
+            "name_val": "Product88",
             "order_date": "01/01/2019",
             "unit": 18,
             "discount": "0",
@@ -721,7 +721,7 @@ const INIT_STATE = {
         },
         {
             "id": 89,
-            "name_val": 2,
+            "name_val": "Product89",
             "order_date": "01/01/2019",
             "unit": 18,
             "discount": "1",
@@ -729,7 +729,7 @@ const INIT_STATE = {
         },
         {
             "id": 90,
-            "name_val": 3,
+            "name_val": "Product90",
             "order_date": "01/01/2019",
             "unit": 9,
             "discount": "1",
@@ -737,7 +737,7 @@ const INIT_STATE = {
         },
         {
             "id": 91,
-            "name_val": 1,
+            "name_val": "Product91",
             "order_date": "01/01/2019",
             "unit": 12,
             "discount": "0",
@@ -745,7 +745,7 @@ const INIT_STATE = {
         },
         {
             "id": 92,
-            "name_val": 2,
+            "name_val": "Product92",
             "order_date": "01/01/2019",
             "unit": 17,
             "discount": "0",
@@ -753,7 +753,7 @@ const INIT_STATE = {
         },
         {
             "id": 93,
-            "name_val": 2,
+            "name_val": "Product93",
             "order_date": "01/01/2019",
             "unit": 13,
             "discount": "1",
@@ -761,7 +761,7 @@ const INIT_STATE = {
         },
         {
             "id": 94,
-            "name_val": 5,
+            "name_val": "Product94",
             "order_date": "01/01/2019",
             "unit": 14,
             "discount": "1",
@@ -769,7 +769,7 @@ const INIT_STATE = {
         },
         {
             "id": 95,
-            "name_val": 1,
+            "name_val": "Product95",
             "order_date": "01/01/2019",
             "unit": 13,
             "discount": "0",
@@ -777,7 +777,7 @@ const INIT_STATE = {
         },
         {
             "id": 96,
-            "name_val": 1,
+            "name_val": "Product96",
             "order_date": "01/01/2019",
             "unit": 9,
             "discount": "0",
@@ -785,7 +785,7 @@ const INIT_STATE = {
         },
         {
             "id": 97,
-            "name_val": 4,
+            "name_val": "Product97",
             "order_date": "01/01/2019",
             "unit": 9,
             "discount": "1",
@@ -793,7 +793,7 @@ const INIT_STATE = {
         },
         {
             "id": 98,
-            "name_val": 2,
+            "name_val": "Product98",
             "order_date": "01/01/2019",
             "unit": 13,
             "discount": "1",
@@ -801,7 +801,7 @@ const INIT_STATE = {
         },
         {
             "id": 99,
-            "name_val": 4,
+            "name_val": "Product99",
             "order_date": "01/01/2019",
             "unit": 8,
             "discount": "0",
@@ -809,7 +809,7 @@ const INIT_STATE = {
         },
         {
             "id": 100,
-            "name_val": 2,
+            "name_val": "Product100",
             "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
