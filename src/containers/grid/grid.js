@@ -115,7 +115,7 @@ class GridContent extends Component {
             <div key={index} onClick={(evt) => item.cansort === true ?  this.sortColumn(item.Name,this,evt) : ''} className={this.state.currentsortingcolumn === item.Name ?"grid-headers--container--child--def sortingbg" : "grid-headers--container--child--def"}>{item.Name}
                 {item.cansort === true ?  <div id="childdiv" className={this.state.currentsortingcolumn === item.Name ? this.state.sortingtype == 'ASC' ? 'fa fa-fw fa-sort-down' : 'fa fa-fw fa-sort-up'   : ''}></div> : ''}
             </div>   : <div key={index} className="grid-headers--container--child--def checkbox-selector">
-                <label className="checkbox-container"><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /><span className="checkmark"></span></label>
+                <label className="checkbox-container"><span class="displayNone" aria-hidden="true">Checkbox</span><input id="chk_all"  type="checkbox" onChange={() => this.setcheckall()}  /><span className="checkmark"></span></label>
                 
             </div>
         );    
@@ -335,7 +335,7 @@ class GridContent extends Component {
                                                 Sorting
                                             </div>
                                             <div className="settings-radio">
-                                                <label className="radio-switch">
+                                                <label className="radio-switch" title="Sorting on/off radio"><span class="displayNone" aria-hidden="true">Radio</span>
                                                     <input id="chk_sort" type="checkbox" />
                                                     <span className="radio-slider round"></span>
                                                 </label>
@@ -346,7 +346,7 @@ class GridContent extends Component {
                                                 Search
                                             </div>
                                             <div className="settings-radio">
-                                                <label className="radio-switch">
+                                                <label className="radio-switch" title="Search on/off Radio"><span class="displayNone" aria-hidden="true">Radio</span>
                                                     <input id="chk_search" type="checkbox" />
                                                     <span className="radio-slider round"></span>
                                                 </label>
@@ -357,8 +357,8 @@ class GridContent extends Component {
                                                 Paging
                                             </div>
                                             <div className="settings-radio">
-                                                <label className="radio-switch">
-                                                    <input id="chk_paging" type="checkbox" />
+                                                <label className="radio-switch" title="paging on/off radio"><span class="displayNone" aria-hidden="true">Radio</span>
+                                                    <input id="chk_paging" type="checkbox" title="paging on/off radio" />
                                                     <span className="radio-slider round"></span>
                                                 </label>
                                             </div>

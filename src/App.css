@@ -626,8 +626,241 @@ input:checked+.radio-slider:before {
 
 .errormsg i {
     font-style: normal;
-    background: #ec1b23;
+    background: #da1218;
     border-radius: 50%;
     padding: 1px 7px;
     color: #ffffff;
 }
+
+/*-- CSS Styles --*/
+body {
+    background: #eeeeee;
+  }
+  .app-header--cont {
+    border-bottom: solid 1px #C7C7C7;
+  }
+  
+  .app--footer--container {
+    border-bottom: solid 1px #C7C7C7;
+  }
+  
+  .app-grid--container {
+    background: #fff;
+  }
+  
+  .user-actions--child--f {
+    border-left: 1px solid #c7c7c7;
+    color: #0068d0;
+  }
+  
+  .user-actions--child--f:after {
+    border-top: 5px solid #178bff;
+  }
+  
+  .user-actions--child--e {
+    border-left: 1px solid #c7c7c7;
+  }
+  
+  .grid-headers--container {
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+  }
+  
+  .grid-headers--container--child--def.sortingbg {
+    background: #d6ebfc;
+    border-left: 1px solid #178bff;
+    border-right: 1px solid #178bff;
+  }
+  
+  .grid--row--container {
+    border-bottom: 1px solid #C7C7C7;
+  }
+  
+  .grid--row--container:hover {
+    background-color: #f5fafe;
+  }
+  
+  #search--filter {
+    border: 1px solid #C7C7C7;
+  }
+  
+  /*
+  * Header Navbar
+  */
+  .navbar .search.form-control {
+    background-color: #535353;
+    color: #000;
+  }
+  
+  .navbar .form-control::placeholder {
+    color: #000000;
+  }
+  
+  .form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+  }
+  
+  .form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  }
+  
+  .bg-black {
+    background-color: #000000;
+  }
+  
+  .navbar-nav {
+    border-left: 1px solid #777777;
+  }
+  
+  /*
+  * Sidebar
+  */
+  
+  .sidebar {
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+  
+  .sidebar-sticky {
+    background: rgba(0, 0, 0, .6)
+  }
+  
+  .sidebar .nav-link {
+    color: #333;
+  }
+  
+  .sidebar .nav-link .feather {
+    color: #999;
+  }
+  
+  .sidebar .nav-link:hover {
+    color: #007bff;
+    background-color: #000000;
+  }
+  
+  .sidebar .nav-link.active {
+    color: #007bff;
+    background-color: #000000;
+  }
+  
+  .sidebar .nav-link:hover .feather,
+  .sidebar .nav-link.active .feather {
+    color: inherit;
+  }
+  
+  
+  /*
+  * Pagination
+  */
+  .pagination {
+    border-top: 1px solid #000000;
+  }
+  
+  #prev,
+  #next {
+    color: #0054a7;
+  }
+  
+  #prev.disableClick,
+  #next.disableClick {
+    color: #e7e7e7;
+  }
+  
+  
+  .radio-switch input:focus + .radio-slider.round{
+    outline: #ff0000 auto 5px;
+  }
+  
+  .radio-slider {
+    background-color: #ccc;
+  }
+  
+  .radio-slider:before {
+    background-color: white;
+  }
+  
+  input:checked+.radio-slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus+.radio-slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  /* Rounded sliders */
+  
+  .actionbutton .btn-secondary {
+    color: #212121;
+  }
+  
+  .actionbutton .btn-secondary:not(:disabled):not(.disabled):active,
+  .actionbutton .btn-secondary:not(:disabled):not(.disabled).active,
+  .actionbutton.show>.btn-secondary.dropdown-toggle {
+    color: #4e555b;
+    background-color: transparent;
+    border-color: #4e555b;
+  }
+  
+  .actionbutton .btn-secondary:focus,
+  .btn-secondary.focus,
+  .actionbutton .btn-secondary:not(:disabled):not(.disabled):active:focus,
+  .actionbutton .btn-secondary:not(:disabled):not(.disabled).active:focus,
+  .actionbutton.show>.btn-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0rem rgba(130, 138, 145, 0);
+  }
+  
+  .grid--row--container.rowselected,
+  .grid--row--container.error {
+    background: #d6ebfc;
+  }
+  
+  .rowselected:after {
+    background: #d6ebfc;
+    border-left: 5px solid #2692ff;
+  }
+  
+  .grid--row--container.error:before {
+    border-left: 5px solid #eb0c15;
+  }
+  
+  .error .grid--calender--field {
+    border: 1px solid #ff0000;
+  }
+  
+  /* custom checkbox */
+  
+  .checkmark {
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  
+  .checkbox-container:hover input~.checkmark {
+    background-color: #ccc;
+  }
+  
+  
+  /* When the checkbox is checked, add a blue background */
+  
+  .checkbox-container input:checked~.checkmark {
+    background-color: #000000;
+  }
+  
+  .checkbox-container .checkmark:after {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+  }
+  
+  .btn-save,
+  .btn-delete {
+    background: transparent;
+    border: none;
+  }
+
+  .skiptocontent {
+    background: #000000;
+    color: #ffffff;
+  }
