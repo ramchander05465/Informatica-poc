@@ -7,7 +7,7 @@ const INIT_STATE = {
         { order: 3, Name: 'Order Date', type: 'date', cansort: true },
         { order: 4, Name: 'Unit', type: 'textBox', cansort: true },
         { order: 5, Name: 'Discount', type: 'checkbox', cansort: false },
-        { order: 6, Name: 'In Stock', type: 'textBox', cansort: false },
+        { order: 6, Name: 'In Stock', type: 'combo', cansort: false },
         { order: 7, Name: '  ', type: '', cansort: false },
 
     ],

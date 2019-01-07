@@ -20,7 +20,8 @@ import "react-datepicker/dist/react-datepicker.css";
         unit: this.props.unit,
         discount: this.props.discount,
         in_stock: this.props.in_stock,
-        edit_click : this.props.editMode
+        edit_click : this.props.editMode,
+        edit_error : false
       };
       this.handleChange = this.handleChange.bind(this);
     }
@@ -105,6 +106,15 @@ import "react-datepicker/dist/react-datepicker.css";
   }
 
   handleChange(date) {
+    var d1 = new Date();
+    var x = document.getElementById("errordiv");
+    debugger;
+    if(date >= d1){
+        this.setState({edit_error : true});
+    }
+    else{
+      this.setState({edit_error : false});
+    }
     this.setState({startDate: date});
   }
 
@@ -168,7 +178,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
   render(){
   return (
-      <div  id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":  "flex--cont--def grid--row--container noneEditableGrid" }>
+      <div  id={"row"+this.props.id} className={this.state.edit_click === true ?  this.state.edit_error === true ? "flex--cont--def grid--row--container error" : "flex--cont--def grid--row--container" :  "flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container checkbox-selector">
             <label className="checkbox-container"><span className="displayNone" aria-hidden="true">Checkbox</span>
               <input onChange={(evt) => this.setCheckbox(evt)} id={"chk_"+this.props.id} className={this.props.editMode ? "":"chkdiv" } type="checkbox" tabIndex="0" />
@@ -196,7 +206,7 @@ import "react-datepicker/dist/react-datepicker.css";
             onChange={this.handleChange}
             tabIndex="0" title="Select Date" />
           }
-          <span className="errormsg displayNone"><i>x</i> Order Date must be a valid date.</span>
+          <span id="errordiv" className={ this.state.edit_error == true ? "errormsg" : "errormsg displayNone"}><i>x</i> Order Date must be a valid date.</span>
         </div>
         <div className="grid--row--child--container">
         {this.state.edit_click ?
