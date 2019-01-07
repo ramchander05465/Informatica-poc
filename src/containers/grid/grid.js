@@ -43,8 +43,15 @@ class GridContent extends Component {
         }
     }
 
+
+
     componentWillMount(){
         this.totalRecord = this.props.gridInfo.length;
+    }
+
+    componentDidMount() {
+        var firstrecordfocus = document.getElementById("firstrecord");
+        firstrecordfocus.focus();
     }   
 
     componentWillReceiveProps(nextProps) {
@@ -306,7 +313,7 @@ class GridContent extends Component {
         return (
             <React.Fragment>
                 <div className="flex--cont--def user-actions--container">
-                    <div className="user-actions--child user-actions--child--a" tabIndex="0">
+                    <div id="firstrecord" className="user-actions--child user-actions--child--a" tabIndex="0">
                         Items ({this.state.totalRecord})
                     </div>
                     <div className="user-actions--child user-actions--child--f" tabIndex="0">
