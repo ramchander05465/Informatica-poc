@@ -690,3 +690,7 @@ input:checked+.radio-slider:before {
   .grid--row--child--container.action--container button:focus{
     opacity: 1;
   }
+
+  #firstrecord {
+      outline: none;
+  }

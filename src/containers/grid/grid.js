@@ -311,7 +311,7 @@ class GridContent extends Component {
         return (
             <React.Fragment>
                 <div className="flex--cont--def user-actions--container">
-                    <div id="firstrecord" className="user-actions--child user-actions--child--a" tabIndex="0">
+                    <div className="user-actions--child user-actions--child--a" tabIndex="0">
                         <span class="displayNone" aria-hidden="false">Grid</span>
                         Items ({this.state.totalRecord})
                     </div>
