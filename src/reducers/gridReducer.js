@@ -15,7 +15,7 @@ const INIT_STATE = {
     canUserSort: true,
     canPaggingApply: true,
     canUserSearchData: true,
-    theme: true,
+    theme: false,
     gridInfo: [{
             "id": 1,
             "name_val": "Product1",

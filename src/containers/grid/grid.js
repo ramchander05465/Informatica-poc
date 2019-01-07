@@ -109,7 +109,12 @@ class GridContent extends Component {
     renderGridColumn = () =>{
         let columnList = [];
         columnList = this.props.colInfo;
-        
+        if(this.state.Usertheme){
+            document.getElementById('mainbody').classList.add('theme-t');
+        }
+        else{
+            document.getElementById('mainbody').classList.remove('theme-t');
+        }
         const column_list = columnList.map((item,index) =>
             item.order !== 1 ?
             <div key={index} onClick={(evt) => item.cansort === true ?  this.sortColumn(item.Name,this,evt) : ''} className={this.state.currentsortingcolumn === item.Name ?"grid-headers--container--child--def sortingbg" : "grid-headers--container--child--def"}>{item.Name}
