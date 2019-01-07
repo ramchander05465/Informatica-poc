@@ -17,7 +17,6 @@ import GridRecord from '../../components/grid/gridRecord'
 import Pagination from '../../components/pagination/pagination'
 
 class GridContent extends Component {
-    totalRecord;
     constructor(props) {
         super(props)
         
@@ -31,7 +30,7 @@ class GridContent extends Component {
             current: 1,
             recPerPage:this.props.pagingInfo[0].num,
             filterd:'',
-            totalRecord:0,
+            totalRecord:this.props.gridInfo.length,
             sortingtype : "",
             currentsortingcolumn : "",
             displaysortarrow : "",
@@ -46,8 +45,16 @@ class GridContent extends Component {
 
     componentWillMount(){
         this.totalRecord = this.props.gridInfo.length;
+    }   
+
+    componentWillReceiveProps(nextProps) {
+        
+        if(nextProps.gridInfo.length > this.props.gridInfo.length){
+            console.log(this.state.showAddUserUI)
+            this.setState({showAddUserUI:false,totalRecord:nextProps.gridInfo.length});
+            
+        }
     }    
-    
     onShowSizeChange = (current, recPerPage) => {
         this.setState({recPerPage})
     }
@@ -300,7 +307,7 @@ class GridContent extends Component {
             <React.Fragment>
                 <div className="flex--cont--def user-actions--container">
                     <div className="user-actions--child user-actions--child--a" tabIndex="0">
-                        Items ({this.totalRecord})
+                        Items ({this.state.totalRecord})
                     </div>
                     <div className="user-actions--child user-actions--child--f" tabIndex="0">
                         ({this.state.selectedrecord}) Selected

@@ -110,7 +110,7 @@ const INIT_STATE = {
             "order_date": "01/01/2019",
             "unit": 11,
             "discount": "0",
-            "in_stock": "n2o"
+            "in_stock": "no"
         },
         {
             "id": 13,
@@ -820,6 +820,7 @@ const INIT_STATE = {
 }
 
 const reducer = (state = INIT_STATE, action) => {
+
     switch (action.type) {
         case GRIDINFO:
             return {

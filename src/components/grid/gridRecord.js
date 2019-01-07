@@ -61,6 +61,7 @@ import "react-datepicker/dist/react-datepicker.css";
   }
 
   saveData=()=>{   
+    
     let data = {
       id:this.state.id,
       name_val: this.state.name_val,
@@ -209,8 +210,8 @@ import "react-datepicker/dist/react-datepicker.css";
         </div>
         <div className="grid--row--child--container instockinput">
         { this.state.edit_click ?
-          <select value={this.state.in_stock} onChange={(evt) => this.setState({in_stock: evt.target.value})}>>
-            {this.StockJSON.map((team) => <option key={team.key} value={team.value} tabIndex="0">{team.value}</option>)}
+          <select onChange={(evt) => this.setState({in_stock: evt.target.value})}>>
+            {this.StockJSON.map((team) => <option  key={team.key} value={team.value}  tabIndex="0">{team.value}</option>)}
           </select> : <label className="form-control" tabIndex="0">{this.state.in_stock}</label>
         
       }
