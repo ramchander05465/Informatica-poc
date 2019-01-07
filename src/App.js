@@ -22,6 +22,7 @@ class App extends Component {
     console.log('props',this.props);
     return (
       <div className="flex--cont--def app--container">
+      <a href="#maincontent" className="skiptocontent displayNone" aria-hidden="false" tabindex="0">Skip to main content</a>
        {/* <h2>{t("Welcome to React")}</h2>
        <p>
         <span onClick={() => changeLanguage("de")}>de</span>
