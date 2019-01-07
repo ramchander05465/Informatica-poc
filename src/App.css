@@ -686,3 +686,7 @@ input:checked+.radio-slider:before {
   .grid-add-row-container {
       padding-right: 18px;
   }
+
+  .grid--row--child--container.action--container button:focus{
+    opacity: 1;
+  }
