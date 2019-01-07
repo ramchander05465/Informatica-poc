@@ -4,7 +4,7 @@ const Sidebar = () => {
 
   return (
     <div className="flex--cont--def app-sidebar--container">
-      <nav className="d-none d-md-block bg-light sidebar">
+      <nav className="d-md-block bg-light sidebar">
           <div className="sidebar-sticky">
             <ul className="nav flex-column">
               <li className="nav-item">

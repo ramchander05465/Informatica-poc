@@ -658,6 +658,26 @@ input:checked+.radio-slider:before {
     .hidemobile {
         display: none;
     }
+    .selectLanguage .btn-secondary {
+        margin-right: 10px;
+    }
+    .user-actions--child--a {
+        flex: 10 10;
+    }
+    .app-grid--container {
+        padding: 10px 20px 15px 20px;
+        width: 100%;
+    }
+    .grid-headers--container {
+        white-space: nowrap;
+    }
+    .d-md-block.bg-light.sidebar {
+        left: -999px;
+    }
+    .d-md-block.bg-light.sidebar.show {
+        left: 0;
+        transition: 0.5s;
+    }
   }
 
   .grid-add-row-container {

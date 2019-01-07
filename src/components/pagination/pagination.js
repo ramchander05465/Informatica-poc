@@ -31,7 +31,7 @@ const Pagination = (props) => {
 
     return(
         <ul>
-            <li className="pageCount" tabIndex="0">{renderCurrentPageRecord()}</li>
+            <li className="pageCount hidemobile" tabIndex="0">{renderCurrentPageRecord()}</li>
             <li>{renderCurrentPage()}</li>
             <li className="selectPage" tabIndex="0">Items per page:  <select onChange={(e) => props.onSelectionPageChange(e.target.value)} aria-label="Items per page">{renderRecordPerPage()}</select>
             </li>

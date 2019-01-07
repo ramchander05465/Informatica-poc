@@ -314,28 +314,30 @@ class GridContent extends Component {
             <React.Fragment>
                 <div className="flex--cont--def user-actions--container">
                     <div id="firstrecord" className="user-actions--child user-actions--child--a" tabIndex="0">
+                        <span class="displayNone" aria-hidden="false">Grid</span>
                         Items ({this.state.totalRecord})
                     </div>
                     <div className="user-actions--child user-actions--child--f" tabIndex="0">
+                        <span class="displayNone" aria-hidden="false">Grid Item</span>
                         ({this.state.selectedrecord}) Selected
                     </div>
-                    <div className="user-actions--child user-actions--child--b">
+                    <div className="user-actions--child user-actions--child--b hidemobile">
                         <TiPlusOutline
                             size={28}
                             style={{ display: this.state.showAddUserUI ? 'none' : 'block' }}
-                            onClick={() => this.addUserUI(true)} title="Add Row" tabIndex="0"/>
+                            onClick={() => this.addUserUI(true)} title="Add Row to Grid" tabIndex="0"/>
                         <FaMinus
                             size={25}
                             style={{ display: this.state.showAddUserUI ? 'block' : 'none' }}
-                            onClick={() => this.addUserUI(false)} title="Remove Row" tabIndex="0"/>
+                            onClick={() => this.addUserUI(false)} title="Remove Row from Grid" tabIndex="0"/>
 
                     </div>
-                    <div className="user-actions--child user-actions--child--c">
+                    <div className="user-actions--child user-actions--child--c hidemobile">
                         <FiFilter size={25} title="Advance Filter" tabIndex="0"/>
                     </div>
                     { this.state.enablesearch === true ?  
-                    <div className="user-actions--child user-actions--child--d">
-                        <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Find' aria-label="Type here to search" tabIndex="0" /> 
+                    <div className="user-actions--child user-actions--child--d hidemobile">
+                        <input type='text' name='search--filter' id='search--filter' onChange={(evt)=> this.filterHandler(evt)} placeholder='Find' aria-label="Type here to search the Grid" tabIndex="0" /> 
                     </div>
                     : ''}
                     <div className="user-actions--child user-actions--child--e">
