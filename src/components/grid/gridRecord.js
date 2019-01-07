@@ -169,7 +169,7 @@ import "react-datepicker/dist/react-datepicker.css";
   return (
       <div  id={"row"+this.props.id} className={this.props.editMode ? "flex--cont--def grid--row--container":"flex--cont--def grid--row--container noneEditableGrid" }>
         <div  className="grid--row--child--container checkbox-selector">
-            <label className="checkbox-container">
+            <label className="checkbox-container"><span class="displayNone" aria-hidden="true">Checkbox</span>
               <input onChange={(evt) => this.setCheckbox(evt)} id={"chk_"+this.props.id} className={this.props.editMode ? "":"chkdiv" } type="checkbox" tabIndex="0" />
               <span className="checkmark"></span>
             </label>
@@ -188,7 +188,7 @@ import "react-datepicker/dist/react-datepicker.css";
             selected={new Date(this.state.startDate)}
             onChange={this.handleChange}
             tabIndex="0" /> 
-        
+          <span class="errormsg displayNone"><i>x</i> Order Date must be a valid date.</span>
         </div>
         <div className="grid--row--child--container">
         {this.state.edit_click ?
@@ -198,10 +198,10 @@ import "react-datepicker/dist/react-datepicker.css";
         </div>
         <div className="grid--row--child--container">
         {this.state.edit_click ?
-          <label className="checkbox-container">
+          <label className="checkbox-container"><span class="displayNone" aria-hidden="true">Checkbox</span>
             <input type="checkbox" tabIndex="0"/>
              <span className="checkmark"></span>
-          </label> : <label className="checkbox-container">
+          </label> : <label className="checkbox-container"><span class="displayNone" aria-hidden="true">Checkbox</span>
             <input type="checkbox" disabled />
              <span className="checkmark"></span>
           </label> 
