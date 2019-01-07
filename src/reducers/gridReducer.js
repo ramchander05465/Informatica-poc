@@ -8,7 +8,7 @@ const INIT_STATE = {
         { order: 4, Name: 'Unit', type: 'textBox', cansort: true },
         { order: 5, Name: 'Discount', type: 'checkbox', cansort: false },
         { order: 6, Name: 'In Stock', type: 'textBox', cansort: false },
-        { order: 7, Name: '', type: '', cansort: false },
+        { order: 7, Name: '  ', type: '', cansort: false },
 
     ],
     pagingSize: [{ num: 10 }, { num: 25 }, { num: 50 }],
