@@ -387,8 +387,8 @@ class GridContent extends Component {
                                                 Theme
                                             </div>
                                             <div className="settings-radio">
-                                                <label className="radio-switch">
-                                                    <input id="chk_theme" type="checkbox" />
+                                                <label className="radio-switch" title="Apply Theme"><span className="displayNone" aria-hidden="true">Theme</span>
+                                                    <input id="chk_theme" type="checkbox" title="Apply Theme" />
                                                     <span className="radio-slider round"></span>
                                                 </label>
                                             </div>

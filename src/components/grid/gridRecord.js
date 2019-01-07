@@ -177,7 +177,7 @@ import "react-datepicker/dist/react-datepicker.css";
         </div>    
         <div className="grid--row--child--container">
         {this.state.edit_click ?
-          <Input type="text" onChange={(evt) => this.getData(evt)} name = "name-val" value={this.state.name_val} placeholder="Name" tabIndex="0"/> :
+          <Input type="text" onChange={(evt) => this.getData(evt)} name = "name-val" value={this.state.name_val} placeholder="Name" tabIndex="0" title="Name Input" /> :
           <label className="form-control namecolumn" tabIndex="0">{this.state.name_val}</label>
         }
         </div>
@@ -188,19 +188,19 @@ import "react-datepicker/dist/react-datepicker.css";
             onSelect={this.handleSelect}
             selected={new Date(this.state.startDate)}
             onChange={this.handleChange}
-            tabIndex="0" /> :
+            tabIndex="0" title="Select Date" /> :
              <DatePicker readOnly
             className={this.state.startDate === "Invalid date" ? ".grid--row--container.error":"grid--calender--field form-control"}
             onSelect={this.handleSelect}
             selected={new Date(this.state.startDate)}
             onChange={this.handleChange}
-            tabIndex="0" />
+            tabIndex="0" title="Select Date" />
           }
           <span className="errormsg displayNone"><i>x</i> Order Date must be a valid date.</span>
         </div>
         <div className="grid--row--child--container">
         {this.state.edit_click ?
-          <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" value={this.state.unit} placeholder="with a placeholder" tabIndex="0" /> :
+          <Input type="text" onChange={(evt) => this.getData(evt)} name="text1" value={this.state.unit} placeholder="with a placeholder" tabIndex="0" title="Unit Input" /> :
           <label className="form-control" tabIndex="0">{this.state.unit}</label>
         }
         </div>
@@ -217,7 +217,7 @@ import "react-datepicker/dist/react-datepicker.css";
         </div>
         <div className="grid--row--child--container instockinput">
         { this.state.edit_click ?
-          <select onChange={(evt) => this.setState({in_stock: evt.target.value})}>>
+          <select title="InStock DropDown" onChange={(evt) => this.setState({in_stock: evt.target.value})}>>
             {this.StockJSON.map((team) => <option  key={team.key} value={team.value}  tabIndex="0">{team.value}</option>)}
           </select> : <label className="form-control" tabIndex="0">{this.state.in_stock}</label>
         
