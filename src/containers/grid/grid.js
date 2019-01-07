@@ -39,6 +39,7 @@ class GridContent extends Component {
             enablepaging : this.props.UserPagging,
             enablesearch : this.props.UserSearch,
             pagerInfo : this.props.pagingInfo,
+            Usertheme : this.props.Usertheme,
             selectedrecord : 0
         }
     }
@@ -248,20 +249,31 @@ class GridContent extends Component {
         var is_sort = document.getElementById("chk_sort");
         var is_search = document.getElementById("chk_search");
         var is_ispaging = document.getElementById("chk_paging");
+        var is_theme = document.getElementById("chk_theme");
         is_sort.checked = this.state.canusersort;
         is_search.checked = this.state.enablesearch;
         is_ispaging.checked = this.state.enablepaging;
+        is_theme.checked = this.state.Usertheme;
     }
 
     setConfiguration = () =>{
         var is_sort = document.getElementById("chk_sort");
         var is_search = document.getElementById("chk_search");
         var is_ispaging = document.getElementById("chk_paging");
+        var is_theme = document.getElementById("chk_theme");
         this.setState({
             canusersort : is_sort.checked,
             enablepaging : is_ispaging.checked,
             enablesearch : is_search.checked,
+            Usertheme : is_theme.checked,
+            
         })
+        if(is_theme.checked){
+            document.getElementById('mainbody').classList.add('theme-t');
+        }
+        else{
+            document.getElementById('mainbody').classList.remove('theme-t');
+        }
     }
 
     addUserUI = (info) => this.setState({ showAddUserUI: info })
@@ -351,6 +363,17 @@ class GridContent extends Component {
                                                 </label>
                                             </div>
                                         </div>
+                                        <div className="settings-wrapper">
+                                            <div className="settings-label">
+                                                Theme
+                                            </div>
+                                            <div className="settings-radio">
+                                                <label className="radio-switch">
+                                                    <input id="chk_theme" type="checkbox" />
+                                                    <span className="radio-slider round"></span>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div className="modal-footer">
@@ -410,7 +433,8 @@ const mapStateToProps = state => {
         pagingInfo : state.grid.pagingSize,
         UserSort : state.grid.canUserSort,
         UserPagging : state.grid.canPaggingApply,
-        UserSearch : state.grid.canUserSearchData
+        UserSearch : state.grid.canUserSearchData,
+        Usertheme : state.grid.theme
     }
 }
 
