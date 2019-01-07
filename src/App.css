@@ -645,3 +645,7 @@ input:checked+.radio-slider:before {
         display: none;
     }
   }
+
+  .grid-add-row-container {
+      padding-right: 18px;
+  }
