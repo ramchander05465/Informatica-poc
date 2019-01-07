@@ -4,7 +4,7 @@ const INIT_STATE = {
     gridColumncolumnMap: [
         { order: 1, Name: '', type: 'checkbox', cansort: false },
         { order: 2, Name: 'Name', type: 'textBox', cansort: true },
-        { order: 3, Name: 'Order Date', type: 'date', cansort: false },
+        { order: 3, Name: 'Order Date', type: 'date', cansort: true },
         { order: 4, Name: 'Unit', type: 'textBox', cansort: true },
         { order: 5, Name: 'Discount', type: 'checkbox', cansort: false },
         { order: 6, Name: 'In Stock', type: 'textBox', cansort: false },
@@ -19,7 +19,7 @@ const INIT_STATE = {
     gridInfo: [{
             "id": 1,
             "name_val": "Product1",
-            "order_date": "01/01/2019",
+            "order_date": "01/02/2019",
             "unit": 20,
             "discount": "1",
             "in_stock": "yes"
@@ -35,7 +35,7 @@ const INIT_STATE = {
         {
             "id": 3,
             "name_val": "Product3",
-            "order_date": "01/01/2019",
+            "order_date": "01/03/2019",
             "unit": 6,
             "discount": "0",
             "in_stock": "no"
@@ -43,7 +43,7 @@ const INIT_STATE = {
         {
             "id": 4,
             "name_val": "Product4",
-            "order_date": "02/01/2019",
+            "order_date": "02/04/2019",
             "unit": 8,
             "discount": "0",
             "in_stock": "no"
